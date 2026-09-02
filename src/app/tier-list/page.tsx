@@ -8,7 +8,8 @@ import { SITE } from "@/lib/site";
 const MONTH_YEAR = new Date().toLocaleString("en-US", { month: "long", year: "numeric" });
 
 export const metadata = buildMeta({
-  title: `Dungeon Lootr Class Tier List (${MONTH_YEAR}) - Best Classes`,
+  title: `Dungeon Lootr Class Tier List (${MONTH_YEAR})`,
+  absoluteTitle: true,
   description: `The best classes in Roblox ${SITE.game}, ranked S-D from top-creator consensus and patch data. Updated ${TIERS_LAST_CHECKED}.`,
   path: "/tier-list/",
 });

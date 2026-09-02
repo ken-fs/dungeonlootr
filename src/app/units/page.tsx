@@ -6,6 +6,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata = buildMeta({
   title: "Dungeon Lootr Units - How to Get Every Character",
+  absoluteTitle: true,
   description: `How to get every unit in Roblox ${SITE.game}: Gojo, Sukuna, Asta, Awakened Devil EX and more. Obtain methods and requirements.`,
   path: "/units/",
 });

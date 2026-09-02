@@ -8,7 +8,8 @@ import { SITE } from "@/lib/site";
 const MONTH_YEAR = new Date().toLocaleString("en-US", { month: "long", year: "numeric" });
 
 export const metadata = buildMeta({
-  title: `Dungeon Lootr Aspect Tier List (${MONTH_YEAR}) - Best Aspects`,
+  title: `Dungeon Lootr Aspect Tier List (${MONTH_YEAR})`,
+  absoluteTitle: true,
   description: `The best aspects in Roblox ${SITE.game}, ranked S-D. Which aspects are worth rolling for, updated ${TIERS_LAST_CHECKED}.`,
   path: "/aspect-tier-list/",
 });
