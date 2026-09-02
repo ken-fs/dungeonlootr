@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Diagram: how to redeem Dungeon Lootr codes in 5 steps">
+  <defs>
+    <filter id="emberGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- crypt ground -->
+  <rect width="1200" height="630" fill="#0c0a0d"/>
+  <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#2c2431" stroke-width="2"/>
+
+  <!-- header -->
+  <text x="60" y="86" font-family="Georgia, serif" font-size="44" fill="#f4c95d" letter-spacing="3">HOW TO REDEEM CODES</text>
+  <text x="60" y="118" font-family="Georgia, serif" font-size="20" fill="#9b8f83">Dungeon Lootr · Roblox — the exact flow, no guesswork</text>
+  <line x1="60" y1="138" x2="1140" y2="138" stroke="#2c2431" stroke-width="2"/>
+
+  <!-- ===== step slabs: 5 x 216w, gap 16, start x=28, y=160, h=380 ===== -->
+
+  <!-- STEP 1 · join group -->
+  <g>
+    <rect x="28" y="160" width="216" height="380" fill="#17131a" stroke="#2c2431" stroke-width="2"/>
+    <text x="48" y="208" font-family="Georgia, serif" font-size="30" fill="#ff7d1a">01</text>
+    <!-- group glyph: two heads + shoulders -->
+    <circle cx="118" cy="268" r="17" fill="none" stroke="#35d6c4" stroke-width="4"/>
+    <path d="M92 314 q26 -30 52 0" fill="none" stroke="#35d6c4" stroke-width="4"/>
+    <circle cx="162" cy="276" r="12" fill="none" stroke="#35d6c4" stroke-width="3" opacity="0.65"/>
+    <path d="M144 312 q18 -20 36 0" fill="none" stroke="#35d6c4" stroke-width="3" opacity="0.65"/>
+    <text x="136" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Join the</text>
+    <text x="136" y="406" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">ClickBytes group</text>
+    <text x="136" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">codes refuse to fire</text>
+    <text x="136" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">until you do</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <path d="M250 350 h14 m-6 -8 l8 8 l-8 8" stroke="#ff7d1a" stroke-width="3" fill="none"/>
+
+  <!-- STEP 2 · launch -->
+  <g>
+    <rect x="260" y="160" width="216" height="380" fill="#17131a" stroke="#2c2431" stroke-width="2"/>
+    <text x="280" y="208" font-family="Georgia, serif" font-size="30" fill="#ff7d1a">02</text>
+    <circle cx="368" cy="290" r="46" fill="none" stroke="#ff7d1a" stroke-width="4"/>
+    <path d="M356 266 L392 290 L356 314 Z" fill="#ff7d1a" filter="url(#emberGlow)"/>
+    <text x="368" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Launch</text>
+    <text x="368" y="406" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Dungeon Lootr</text>
+    <text x="368" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">from the Roblox</text>
+    <text x="368" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">game page</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <path d="M482 350 h14 m-6 -8 l8 8 l-8 8" stroke="#ff7d1a" stroke-width="3" fill="none"/>
+
+  <!-- STEP 3 · codes button (phone mock, left rail) -->
+  <g>
+    <rect x="492" y="160" width="216" height="380" fill="#17131a" stroke="#2c2431" stroke-width="2"/>
+    <text x="512" y="208" font-family="Georgia, serif" font-size="30" fill="#ff7d1a">03</text>
+    <!-- phone frame -->
+    <rect x="528" y="226" width="144" height="104" rx="6" fill="#0c0a0d" stroke="#9b8f83" stroke-width="2"/>
+    <!-- left rail with highlighted CODES button -->
+    <rect x="528" y="226" width="40" height="104" fill="#17131a" stroke="#9b8f83" stroke-width="2"/>
+    <rect x="533" y="252" width="30" height="34" rx="3" fill="#f4c95d" filter="url(#emberGlow)"/>
+    <text x="548" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0c0a0d" font-weight="bold">CODE</text>
+    <text x="548" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0c0a0d" font-weight="bold">BTN</text>
+    <!-- callout arrow -->
+    <path d="M600 300 L566 290" stroke="#f4c95d" stroke-width="2"/>
+    <text x="604" y="306" font-family="Arial, sans-serif" font-size="12" fill="#f4c95d">left side</text>
+    <text x="600" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Tap the Codes</text>
+    <text x="600" y="406" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">button</text>
+    <text x="600" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">gift icon on the</text>
+    <text x="600" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">left of the screen</text>
+  </g>
+
+  <!-- arrow 3 -->
+  <path d="M714 350 h14 m-6 -8 l8 8 l-8 8" stroke="#ff7d1a" stroke-width="3" fill="none"/>
+
+  <!-- STEP 4 · type code -->
+  <g>
+    <rect x="724" y="160" width="216" height="380" fill="#17131a" stroke="#2c2431" stroke-width="2"/>
+    <text x="744" y="208" font-family="Georgia, serif" font-size="30" fill="#ff7d1a">04</text>
+    <!-- input field -->
+    <rect x="748" y="262" width="168" height="44" rx="4" fill="#0c0a0d" stroke="#f4c95d" stroke-width="2"/>
+    <text x="760" y="291" font-family="Courier, monospace" font-size="19" fill="#f4c95d">FORGESKIP</text>
+    <rect x="882" y="272" width="3" height="24" fill="#f4c95d"/>
+    <text x="832" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Type it exactly</text>
+    <text x="832" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">codes are case-sensitive,</text>
+    <text x="832" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">copy-paste is safest</text>
+  </g>
+
+  <!-- arrow 4 -->
+  <path d="M946 350 h14 m-6 -8 l8 8 l-8 8" stroke="#ff7d1a" stroke-width="3" fill="none"/>
+
+  <!-- STEP 5 · submit & loot -->
+  <g>
+    <rect x="956" y="160" width="216" height="380" fill="#17131a" stroke="#2c2431" stroke-width="2"/>
+    <text x="976" y="208" font-family="Georgia, serif" font-size="30" fill="#ff7d1a">05</text>
+    <!-- loot chest -->
+    <rect x="1016" y="272" width="96" height="52" rx="4" fill="#17131a" stroke="#f4c95d" stroke-width="3"/>
+    <path d="M1016 272 q48 -34 96 0" fill="#17131a" stroke="#f4c95d" stroke-width="3"/>
+    <circle cx="1064" cy="288" r="7" fill="#f4c95d" filter="url(#emberGlow)"/>
+    <path d="M1046 336 l12 12 l22 -24" stroke="#35d6c4" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <text x="1064" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">Hit Submit,</text>
+    <text x="1064" y="406" text-anchor="middle" font-family="Georgia, serif" font-size="19" fill="#efe7d6">loot lands</text>
+    <text x="1064" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">rewards appear in your</text>
+    <text x="1064" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9b8f83">inventory instantly</text>
+  </g>
+
+  <!-- footer strip -->
+  <line x1="60" y1="568" x2="1140" y2="568" stroke="#2c2431" stroke-width="2"/>
+  <text x="60" y="596" font-family="Georgia, serif" font-size="17" fill="#9b8f83">dungeonlootr.net/codes — list re-verified daily</text>
+  <text x="1140" y="596" text-anchor="end" font-family="Georgia, serif" font-size="17" fill="#9b8f83">fan-made guide, not affiliated with Roblox</text>
+</svg>

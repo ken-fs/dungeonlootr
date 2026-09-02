@@ -57,3 +57,33 @@ export const REDEEM_STEPS: string[] = [
   "Type a code exactly as shown - codes are case-sensitive.",
   "Hit Submit to claim your reward.",
 ];
+
+export interface CodeSource {
+  name: string;
+  href: string;
+  /** What actually shows up there - sets player expectations. */
+  what: string;
+}
+
+/**
+ * Where new codes genuinely drop, ranked by speed. Evidence: the code list
+ * itself - 8KLIKE / 10KFAV / 20KPLAYERS are community milestones, FULLRELEASE
+ * and LOOTRISBACK are update drops. That is the pattern we watch.
+ */
+export const CODE_SOURCES: CodeSource[] = [
+  {
+    name: "Official Discord",
+    href: "https://discord.gg/dungeonlootr",
+    what: "Fastest channel. New codes are announced in the update/announcement channels, usually alongside patch notes.",
+  },
+  {
+    name: "ClickBytes Roblox group",
+    href: "https://www.roblox.com/communities/110427303/ClickBytes",
+    what: "Milestone codes (likes, favorites, player count) celebrate group goals - and you must be a member to redeem anything anyway.",
+  },
+  {
+    name: "In-game update drops",
+    href: "https://www.roblox.com/games/106484206883664/Dungeon-Lootr",
+    what: "Big patches and re-launches ship with a code (FULLRELEASE, LOOTRISBACK). Check the game description after every update.",
+  },
+];
