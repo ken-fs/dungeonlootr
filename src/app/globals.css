@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/*
+  Dungeon Lootr - "Torch-Lit Crypt" theme.
+  Anti-SaaS (see Ship/DESIGN-RULES.md): no indigo/violet, no flat fills, no centered
+  hero+3-cards. The site reads like a lantern-lit dungeon ledger: warm stone-black
+  ground, carved 2px borders, torch-ember orange, loot-gold, arcane teal, blood red.
+*/
+
+@theme {
+  --color-stone: #0c0a0d;        /* crypt ground - warm near-black, not blue */
+  --color-stone-2: #17131a;      /* raised slabs / panels */
+  --color-bezel: #050406;        /* darkest carved edge */
+  --color-edge: #2c2431;         /* 2px borders = carved stone seams, never 1px */
+  --color-fg: #efe7d6;           /* parchment text */
+  --color-dim: #9b8f83;          /* faded ink (secondary) */
+
+  --color-arcane: #35d6c4;       /* arcane rune teal - nav, links */
+  --color-blood: #e5384a;        /* blood crimson - expired, danger */
+  --color-ember: #ff7d1a;        /* torch ember - titles, headings, S-tier */
+  --color-gold: #f4c95d;         /* loot gold - live codes, active, rare drops */
+
+  --font-display: var(--font-cinzel), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-stone);
+  /* Stone grain + faint torch-glow, NOT a smooth SaaS radial gradient. */
+  background-image:
+    radial-gradient(circle at 50% -8%, rgba(255, 125, 26, 0.07), transparent 42%),
+    radial-gradient(circle at 90% 110%, rgba(53, 214, 196, 0.05), transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 3px,
+      rgba(255, 255, 255, 0.012) 3px 4px
+    );
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+a {
+  color: var(--color-arcane);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Torch-glow helpers */
+.glow-arcane { color: var(--color-arcane); text-shadow: 0 0 10px rgba(53, 214, 196, 0.5); }
+.glow-ember { color: var(--color-ember); text-shadow: 0 0 12px rgba(255, 125, 26, 0.45); }
+.glow-gold { color: var(--color-gold); text-shadow: 0 0 10px rgba(244, 201, 93, 0.5); }
+.glow-blood { color: var(--color-blood); text-shadow: 0 0 10px rgba(229, 56, 74, 0.5); }
+
+/* Carved stone slab - 2px seam border, no rounded soft cards */
+.slab {
+  background-color: var(--color-stone-2);
+  border: 2px solid var(--color-edge);
+  border-radius: 4px;
+}
+
+/* Tactile press for interactive slabs/buttons */
+@media (prefers-reduced-motion: no-preference) {
+  .tactile { transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease; }
+  .tactile:active { transform: translateY(1px) scale(0.99); }
+}
+
+/* Framed game art - torch-lit edge */
+.art-frame {
+  border: 2px solid var(--color-edge);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 42px rgba(255, 125, 26, 0.12);
+}
+
+/* Carved divider seam */
+.seam {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-ember) 0 18px,
+    transparent 18px 34px
+  );
+  opacity: 0.32;
+}
+
+/* "LIVE" pulse for working codes */
+@keyframes torch-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.pulse { animation: torch-pulse 1.4s ease-in-out infinite; }
+
+/* Tier rail accent */
+.tier-rail { border-left: 4px solid currentColor; padding-left: 0.75rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse { animation: none; }
+  html { scroll-behavior: auto; }
+}
