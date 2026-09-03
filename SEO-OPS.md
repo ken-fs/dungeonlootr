@@ -85,3 +85,14 @@ GSC 出展示量  → 启动 i18n Phase 1（pt-BR + es × 3 页）
 收藏数近 30K  → 蹲守 30KFAV 码，当天更新 codes 页
 游戏 API updated 字段变化 → 检查新码 + 更新 updates 时间线 + 复验 tier
 ```
+
+### 2026-09-03 日更（触发器驱动）
+
+- **触发器命中**：游戏 API `updated` → 09-03 06:45 UTC；收藏 26,652→**33,112（破 30K）**；访问 4.98M→**5.93M（破 5M）**；在线 11,415
+- codes 日更验证：交叉 IGN / GameRant / Roblox Den / PCGamesN —— **无新码**；5 个 unconfirmed 状态存争议（IGN 标 expired，GameRant/RobloxDen 标 working 且有具体奖励），维持 unconfirmed 不动
+- `LIVE_STATS` + `UPDATES_LAST_CHECKED` → 09-03；时间线新增 "Server patch + two milestones crossed"（API timestamp）
+- `NEXT_MILESTONES`：30KFAV / 5MVISITS 改标 **CROSSED**，进入每日蹲码窗口
+- M4 ✅ `public/_headers`（HSTS / nosniff / Referrer-Policy / DENY）已上线验证
+- M5 ✅ `/llms.txt` 已上线（200）
+- 部署：Version ID `11f9bf8f`
+- **蹲守中**：30KFAV / 5MVISITS 码随时可能掉落，每日检查 codes 源

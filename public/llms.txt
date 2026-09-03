@@ -1,0 +1,20 @@
+# Dungeon Lootr
+
+> Fan-made tracker for the Roblox game Dungeon Lootr (by ClickBytes): verified redeem codes, class tier list, aspect tier list, unit database, beginner guide, and an evidence-labeled update log. Code lists are re-verified daily against official channels; anything unverifiable is marked "unconfirmed" instead of being presented as fact.
+
+## Pages
+
+- [Home](https://dungeonlootr.net/): Overview, live game stats, latest codes summary
+- [Codes](https://dungeonlootr.net/codes/): All working codes with daily verification stamp, redeem steps, where new codes drop
+- [Class Tier List](https://dungeonlootr.net/tier-list/): Ranked classes with reroll guidance
+- [Aspect Tier List](https://dungeonlootr.net/aspect-tier-list/): Ranked aspects and where to spend Aspect Gems
+- [Units](https://dungeonlootr.net/units/): Unit database with unlock methods and quick facts
+- [Beginner Guide](https://dungeonlootr.net/beginner-guide/): Early-game progression, codes to redeem first, common mistakes
+- [Update Log](https://dungeonlootr.net/updates/): Patch timeline with evidence labels, live Roblox API stats, next milestone code watch
+- [About](https://dungeonlootr.net/about/): Site methodology and verification rules
+
+## Data policy
+
+- Codes are never invented; unconfirmed codes are labeled as such.
+- Dates are exact only when backed by API timestamps or screenshots.
+- Live stats come from the official Roblox Games API (universe 9656201728).

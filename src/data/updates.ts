@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-02";
+export const UPDATES_LAST_CHECKED = "2026-09-03";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-09-02",
-  playing: "13,515",
-  visits: "4.98M",
-  favorites: "26,652",
+  asOf: "2026-09-03",
+  playing: "11,415",
+  visits: "5.93M",
+  favorites: "33,112",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-09-03",
+    title: "Server patch + two milestones crossed",
+    detail:
+      "The game was updated again on Sep 3, 2026 (Roblox API last-update timestamp). The same API snapshot shows favorites passing 30K (33,112) and visits passing 5M (5.93M) - both are code-drop thresholds by the game's own milestone pattern (10KFAV, 100KVISITS). No 30KFAV or 5MVISITS code has surfaced yet; we're watching the usual drop channels.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-09-02",
     title: "Latest server-side patch",
@@ -92,7 +99,7 @@ export const UPDATES: UpdateEntry[] = [
  * Labeled speculation - useful for knowing when to check the codes page.
  */
 export const NEXT_MILESTONES: string[] = [
-  "30K favorites - favorites passed 26.6K on 2026-09-02 and 10KFAV is live; the next FAV code is a matter of when.",
-  "5M visits - visits sat at 4.98M on the same snapshot; a 5MVISITS-style code would follow the 100KVISITS precedent.",
+  "30K favorites - CROSSED on 2026-09-03 (33,112). A 30KFAV-style code could drop any day now; check the codes page daily.",
+  "5M visits - CROSSED on 2026-09-03 (5.93M). A 5MVISITS-style code would follow the 100KVISITS precedent.",
   "Next likes goal - 8KLIKE is live, so a 10KLIKES drop is the natural successor.",
 ];

@@ -1,7 +1,10 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-02): Try Hard Guides
- * "Dungeon Lootr Codes (September 2026)" + a YouTube creator description
+ * RULE: never invent codes. Sources this pull (2026-09-03): cross-checked
+ * IGN, GameRant, Roblox Den and PCGamesN - no codes beyond the list below;
+ * the 5 "unconfirmed" entries are disputed (IGN says expired, GameRant and
+ * Roblox Den list them working with specific rewards), so they stay parked.
+ * First pull (2026-09-02): Try Hard Guides + a YouTube creator description
  * (videos 5beyMSb0324 / OdVFoAKzeMU) cross-checking the 3 newest.
  * "active" = reported working by the aggregator; the 3 newest are 2-source.
  * "unconfirmed" = single-source, vague "Freebies" reward - verify in-game.
@@ -14,7 +17,7 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-02";
+export const CODES_LAST_CHECKED = "2026-09-03";
 
 export const CODES: GameCode[] = [
   // 3 newest - corroborated by Try Hard Guides + a YouTube creator description.
