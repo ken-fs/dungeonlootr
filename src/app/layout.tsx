@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
@@ -106,6 +107,16 @@ export default function RootLayout({
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
         <SiteFooter />
         <AdsterraGlobal />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-309WPEZC27"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-309WPEZC27');`}
+        </Script>
       </body>
     </html>
   );
