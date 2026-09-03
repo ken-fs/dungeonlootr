@@ -4,7 +4,7 @@ import { Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteNav, SiteFooter } from "@/components/ui";
-import { AdsterraGlobal } from "@/components/ads";
+import { AdsterraGlobal, AdLeaderboard, AdRect } from "@/components/ads";
 
 const cinzel = Cinzel({
   weight: ["500", "600", "700"],
@@ -104,7 +104,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <SiteNav />
+        <AdLeaderboard />
         <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <AdRect />
         <SiteFooter />
         <AdsterraGlobal />
         <Script
