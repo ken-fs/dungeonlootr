@@ -1,13 +1,13 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-03): cross-checked
- * IGN, GameRant, Roblox Den and PCGamesN - no codes beyond the list below;
- * the 5 "unconfirmed" entries are disputed (IGN says expired, GameRant and
- * Roblox Den list them working with specific rewards), so they stay parked.
- * First pull (2026-09-02): Try Hard Guides + a YouTube creator description
- * (videos 5beyMSb0324 / OdVFoAKzeMU) cross-checking the 3 newest.
- * "active" = reported working by the aggregator; the 3 newest are 2-source.
- * "unconfirmed" = single-source, vague "Freebies" reward - verify in-game.
+ * RULE: never invent codes. Sources this pull (2026-09-05): cross-checked
+ * IGN, Beebom, Rock Paper Shotgun, RadioTimes, Sportskeeda, GameRant and
+ * PCGamesN. No new codes beyond the list below (latest drop is still
+ * FORGESKIP/8KLIKE/10KFAV per Sportskeeda). FORGESKIP's reward is now
+ * 2-source (Beebom + RPS). The 5 disputed codes resolved: IGN, Beebom, RPS
+ * and RadioTimes all list them expired (GameRant/PCGamesN are stale), so
+ * they moved to expired.
+ * "active" = reported working by multiple aggregators.
  */
 export interface GameCode {
   code: string;
@@ -17,11 +17,11 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-03";
+export const CODES_LAST_CHECKED = "2026-09-05";
 
 export const CODES: GameCode[] = [
   // 3 newest - corroborated by Try Hard Guides + a YouTube creator description.
-  { code: "FORGESKIP", reward: "Freebies", status: "active", note: "Newest drop." },
+  { code: "FORGESKIP", reward: "3 Forge Stone Bundles + 3 Reforge Stone Bundles", status: "active", note: "Newest drop." },
   { code: "8KLIKE", reward: "Freebies", status: "active", note: "8K likes milestone." },
   { code: "10KFAV", reward: "Freebies", status: "active", note: "10K favorites milestone." },
   // Specific rewards listed by Try Hard Guides.
@@ -31,13 +31,13 @@ export const CODES: GameCode[] = [
   { code: "20KPLAYERS", reward: "5 Reforge Stone Bundles", status: "active" },
   { code: "GIVEMEGEMSPLEASE", reward: "3 Aspect Gems", status: "active" },
   { code: "LOOTR", reward: "1,000 Coins + Random GM Blessing", status: "active" },
-  // Single-source, vague reward - verify in-game before trusting.
-  { code: "NEWASPECT", reward: "Freebies", status: "unconfirmed" },
-  { code: "BYEMETA", reward: "Freebies", status: "unconfirmed" },
-  { code: "3KLIKES", reward: "Freebies", status: "unconfirmed" },
-  { code: "4KFAV", reward: "Freebies", status: "unconfirmed" },
-  { code: "EARLYACCESSYAY", reward: "Freebies", status: "unconfirmed" },
-  // Reported expired by Try Hard Guides (Sep 2026).
+  // Reported expired (Sep 2026): the five early-access codes resolved
+  // expired by IGN + Beebom + RPS + RadioTimes consensus.
+  { code: "NEWASPECT", reward: "-", status: "expired" },
+  { code: "BYEMETA", reward: "-", status: "expired" },
+  { code: "3KLIKES", reward: "-", status: "expired" },
+  { code: "4KFAV", reward: "-", status: "expired" },
+  { code: "EARLYACCESSYAY", reward: "-", status: "expired" },
   { code: "BOSSRUSH", reward: "-", status: "expired" },
   { code: "MOREEXP", reward: "-", status: "expired" },
   { code: "1KLIKES", reward: "-", status: "expired" },
