@@ -1,6 +1,6 @@
 #!/bin/bash
 # Dungeon Lootr 每日巡检：codes 变化 + 站点健康 + 写报告，需行动时弹通知
-# cron: 0 10 * * * /Users/david/Desktop/david/Ship/dungeonlootr/scripts/patrol.sh
+# cron: 0 11 * * * /Users/david/Desktop/david/Ship/dungeonlootr/scripts/patrol.sh
 set -u
 export PATH="/Users/david/Library/pnpm:/usr/local/bin:/usr/bin:/bin"
 source /Users/david/.zshrc 2>/dev/null || true  # TAVILY_API_KEY
