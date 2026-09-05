@@ -120,13 +120,7 @@ export default async function UnitPage({
           </div>
           <div>
             <dt className="display text-xs uppercase text-dim">Anime</dt>
-            <dd className="text-fg">
-              {unit.origin.includes("Jujutsu")
-                ? "Jujutsu Kaisen"
-                : unit.origin.includes("Devil May Cry")
-                  ? "Devil May Cry"
-                  : "Black Clover"}
-            </dd>
+            <dd className={unit.anime ? "text-fg" : "text-dim"}>{unit.anime || "Original"}</dd>
           </div>
         </dl>
       </header>
