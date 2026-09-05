@@ -22,8 +22,10 @@ export default function ClassTierList() {
           Class Tier List
         </Rune>
         <p className="mt-3 text-dim">
-          Which {SITE.game} classes are actually worth maining, ranked by real
-          performance and top-creator consensus - not guesswork. We re-grade every patch.
+          Every {SITE.game} class ranked S-D as a two-source consensus of IGN&apos;s and
+          GameRant&apos;s tier lists. Where they disagree, the class sits at the lower tier
+          and the split is flagged on the card - you see the spread, not a blended fudge.
+          We re-grade every patch.
         </p>
         <div className="mt-3">
           <VerifiedStamp date={TIERS_LAST_CHECKED} />
@@ -33,8 +35,9 @@ export default function ClassTierList() {
       <TierBoard items={CLASSES} noun="class" />
 
       <p className="text-sm text-dim">
-        See also the <Link href="/aspect-tier-list/">aspect tier list</Link> and{" "}
-        <Link href="/units/">how to get every unit</Link>.
+        Unlock routes for the chase picks are on the{" "}
+        <Link href="/units/">unit guides</Link> (Boss Rush crafts, the Toji quest, Nightmare
+        drops). See also the <Link href="/aspect-tier-list/">aspect tier list</Link>.
       </p>
     </div>
   );

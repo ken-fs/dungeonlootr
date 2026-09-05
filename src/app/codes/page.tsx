@@ -136,6 +136,29 @@ export default function CodesPage() {
         </Slab>
       )}
 
+      {active.length > 0 && (
+        <nav className="slab p-5 sm:p-6">
+          <Rune color="arcane" as="h2" className="text-xl">
+            Redeemed? Spend It Right
+          </Rune>
+          <ul className="mt-3 space-y-2 text-sm text-dim">
+            <li>
+              <span className="display glow-gold">Luck Potions →</span> save them for bulk class
+              spins - the <Link href="/tier-list/">S-tier picks on the class tier list</Link>{" "}
+              are what you want to land.
+            </li>
+            <li>
+              <span className="display glow-gold">Aspect Gems →</span> roll a passive for your
+              main - see the <Link href="/aspect-tier-list/">aspect effects ranked</Link> first.
+            </li>
+            <li>
+              <span className="display glow-gold">Coins & Stones →</span> gear up, then start the{" "}
+              <Link href="/units/">Boss Rush class unlocks</Link> (Sukuna, Gojo, Asta all farmable).
+            </li>
+          </ul>
+        </nav>
+      )}
+
       {unconfirmed.length > 0 && (
         <Slab>
           <Rune color="ember" as="h2" className="text-xl">
