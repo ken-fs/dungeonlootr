@@ -11,7 +11,7 @@
 |---|---|
 | 域名 | dungeonlootr.net（Cloudflare 托管，zone active） |
 | 技术栈 | Next.js 16 `output: export` 静态导出 → Cloudflare Workers Assets |
-| 构建 | `npm run build`（产物 `./out`，23 页） |
+| 构建 | `npm run build`（产物 `./out`，sitemap 27 页：14 核心 + 16 单位页 + 4 信任页，去重后） |
 | 部署 | `npx wrangler deploy`（⚠️ 需代理：`HTTPS_PROXY=http://127.0.0.1:7897`） |
 | 仓库 | github.com/ken-fs/dungeonlootr（main 分支，仓库级 git proxy 已配置） |
 | 网络备忘 | CF API 走代理；访问本站直连即可（代理偶发 SSL 35 错误，切直连刷新） |
@@ -45,10 +45,15 @@
 ## 4. 待办队列
 
 ### Week3（本周收尾）
-- [ ] M4 安全头（HSTS / X-Content-Type-Options / Referrer-Policy —— Workers 中间件或 Transform Rules）
-- [ ] M5 `llms.txt`（AI 搜索就绪，成本 10 分钟）
+- [x] M4 安全头（`public/_headers`，09-03 上线）
+- [x] M5 `llms.txt`（09-03 上线）
 - [ ] L2 内容页作者/审核署名（E-E-A-T）
 - [ ] L3 `/about/` 200→400+ 词（站点故事 + 验证方法论）
+
+### 新增队列（09-05 数据驱动）
+- [ ] **i18n Phase 1 决策**（触发器已命中，见 §7：GSC 日展示 839 → 需运营决议是否启动 pt-BR + es × 3 页，翻译需校对资源）
+- [ ] aspects/[name] 独立页（**暂缓**，等 GSC 出现 "dungeon lootr [aspect名]" 查询再建——brief 原计划的 aspects/sinister-trigger 实为职业，已纠正入 units）
+- [ ] 新职业页候补：Kage / Wanderer / Shinobi 等（tier 表已覆盖词，单页等解锁方法浮出）
 
 ### i18n 多语言（已决议 · 分阶段）
 **触发条件：GSC 出现英语展示量后启动，不提前。**
@@ -81,10 +86,33 @@
 ## 7. 下一步触发器
 
 ```
-GSC 出展示量  → 启动 i18n Phase 1（pt-BR + es × 3 页）
-收藏数近 30K  → 蹲守 30KFAV 码，当天更新 codes 页
+✅ GSC 出展示量（09-04 命中，日均 839）→ i18n Phase 1 待运营决议（见 §4 新增队列）
+收藏数近 30K（已破，码未落）→ 蹲守 30KFAV 码，当天更新 codes 页【每日进行中】
 游戏 API updated 字段变化 → 检查新码 + 更新 updates 时间线 + 复验 tier
+GSC 出现 "dungeon lootr [aspect名]" 查询 → 启动 aspects/[name] 程序化页
+GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 ```
+
+### 2026-09-04/05 日更（首轮流量数据到手）
+
+**流量基线（首次）**
+- GSC 24h：**29 点击 / 839 展示 / CTR 3.5% / 平均排名 8.2**（上线 3 天即进首页；28 天视图仅 1 点击为数据延迟，流量全在最近 48h）
+- GA4 28 天：64 用户（google 34 / direct 25 / bing 5）；互动 12s；codes 页跳出 94.1%
+- 已验证流量引擎：**how-to-get 单位页占总浏览 ~45%**（Sukuna 15 / Gojo·Asta·AzureDevil 各 10），跳出率 16-54% 远优于 codes 页
+- 变体词 "anime lootr" 开始进点击 → Google 已关联站点与游戏实体
+
+**codes 日检 ×2**
+- 09-05 七源交叉（IGN/Beebom/RPS/RadioTimes/Sportskeeda/GameRant/PCGamesN）：**无新码**；30KFAV/5MVISITS 仍蹲守
+- 5 个争议码判定：**NEWASPECT/BYEMETA/3KLIKES/4KFAV/EARLYACCESSYAY 全数过期**（IGN+Beebom+RPS+RadioTimes 四源共识，GameRant/PCGamesN 列表陈旧）→ unconfirmed 区下线
+- FORGESKIP 奖励实锤：3 Forge Stone + 3 Reforge Stone Bundles（Beebom+RPS+IGN）· commit `7b1bb98`
+
+**内容扩张（程序化第二波）**
+- 单位页 7→**16**：新增 dreadlord（冥界之门 Nightmare ~1%）、shadow-vagrant（Sung Jin-Woo，Shadow Monarch 礼包）、jetstream（特殊 NPC）、founder、demonbane、streamline、artemis、forge-archon、vacio
+- **6 页解锁方法实锤升级**：Sukuna/Asta/Gojo = Boss Rush 40层+ 掉落 或 50 碎片锻造；Toji 任务全配方（75级+50万金+Gojo职业25级+10天堂碎片@挑战模式）；Azure Devil 进化补全（50级+100万金+Devil Heart@Frost Spire）· 信源 Sportskeeda/Destructoid/IGN/GameRant/YT×2/wiki · commit `2332256`
+- **tier-list 大升级**：29 职业全量 S-D 表（IGN+GameRant 双源共识；分歧取低级+标注，Boxer "IGN D/GameRant A" 全网独家展示分歧）· aspects 7→10（+Tempest/Phantom/Glaciel + 获取途径）
+- codes 页加「Redeemed? Spend It Right」导流块（针对 94.1% 跳出）
+- 模板修复：anime 字段取代 origin 字符串检测（新职业会误判 Black Clover）
+- 基建备忘：repo 级 git identity 已设（ken lee）；git push 走 `-c http.proxy=127.0.0.1:7897`
 
 ### 2026-09-03 日更（触发器驱动）
 
