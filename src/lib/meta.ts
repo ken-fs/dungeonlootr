@@ -10,17 +10,20 @@ export function buildMeta({
   description,
   path,
   absoluteTitle = false,
+  languages,
 }: {
   title: string;
   description: string;
   path: string; // e.g. "/codes/"
   /** Skip the layout "%s - Site Name" template when the full title already reads right and fits ~60 chars. */
   absoluteTitle?: boolean;
+  /** Full hreflang set (from i18nLanguages) for localized route families. */
+  languages?: Record<string, string>;
 }): Metadata {
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: path, ...(languages ? { languages } : {}) },
     openGraph: {
       type: "website",
       siteName: SITE.name,

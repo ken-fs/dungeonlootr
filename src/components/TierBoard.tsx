@@ -10,7 +10,16 @@ const TIER_META: { tier: Tier; color: string; label: string }[] = [
 ];
 
 /** Renders a ranked tier board, or an honest "ranking pending" state. */
-export function TierBoard({ items, noun }: { items: TierItem[]; noun: string }) {
+export function TierBoard({
+  items,
+  noun,
+  tierLabels,
+}: {
+  items: TierItem[];
+  noun: string;
+  /** Optional localized labels overriding the English defaults, in S-D order. */
+  tierLabels?: [string, string, string, string, string];
+}) {
   const ranked = items.filter((i) => i.tier);
 
   if (ranked.length === 0) {
@@ -40,9 +49,14 @@ export function TierBoard({ items, noun }: { items: TierItem[]; noun: string }) 
     );
   }
 
+  const meta = TIER_META.map((t, i) => ({
+    ...t,
+    label: tierLabels?.[i] ?? t.label,
+  }));
+
   return (
     <div className="space-y-4">
-      {TIER_META.map((t) => {
+      {meta.map((t) => {
         const group = ranked.filter((i) => i.tier === t.tier);
         if (group.length === 0) return null;
         return (

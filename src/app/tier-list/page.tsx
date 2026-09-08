@@ -3,6 +3,7 @@ import { buildMeta } from "@/lib/meta";
 import { Rune, VerifiedStamp } from "@/components/ui";
 import { TierBoard } from "@/components/TierBoard";
 import { CLASSES, TIERS_LAST_CHECKED } from "@/data/tiers";
+import { i18nLanguages } from "@/data/i18n";
 import { SITE } from "@/lib/site";
 
 const MONTH_YEAR = new Date().toLocaleString("en-US", { month: "long", year: "numeric" });
@@ -12,6 +13,7 @@ export const metadata = buildMeta({
   absoluteTitle: true,
   description: `The best classes in Roblox ${SITE.game}, ranked S-D from top-creator consensus and patch data. Updated ${TIERS_LAST_CHECKED}.`,
   path: "/tier-list/",
+  languages: i18nLanguages("/tier-list/"),
 });
 
 export default function ClassTierList() {

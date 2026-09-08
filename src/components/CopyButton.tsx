@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 
-export function CopyButton({ value }: { value: string }) {
+export function CopyButton({
+  value,
+  label = "Copy",
+  copiedLabel = "Copied!",
+}: {
+  value: string;
+  label?: string;
+  copiedLabel?: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   return (
@@ -20,7 +28,7 @@ export function CopyButton({ value }: { value: string }) {
       className="slab tactile px-3 py-1 text-sm font-medium text-arcane hover:border-arcane"
       aria-label={`Copy code ${value}`}
     >
-      {copied ? "Copied!" : "Copy"}
+      {copied ? copiedLabel : label}
     </button>
   );
 }

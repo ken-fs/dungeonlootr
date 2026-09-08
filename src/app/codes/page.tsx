@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Slab, Rune, VerifiedStamp } from "@/components/ui";
 import { CopyButton } from "@/components/CopyButton";
 import { CODES, CODES_LAST_CHECKED, REDEEM_STEPS, CODE_SOURCES } from "@/data/codes";
+import { i18nLanguages } from "@/data/i18n";
 import { SITE } from "@/lib/site";
 import { buildMeta } from "@/lib/meta";
 
@@ -21,6 +22,7 @@ export const metadata = buildMeta({
   description: `All working ${SITE.game} codes for ${MONTH_YEAR}, verified ${CODES_LAST_CHECKED}. How to redeem, where new codes drop, and fixes for codes that fail.`,
   path: "/codes/",
   absoluteTitle: true, // 51 chars as-is; the "- Hub" template would push it to 71 and truncate the hook
+  languages: i18nLanguages("/codes/"),
 });
 
 const faq = [

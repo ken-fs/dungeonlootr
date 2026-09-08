@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Slab, Rune, VerifiedStamp } from "@/components/ui";
 import { CopyButton } from "@/components/CopyButton";
 import { SITE, NAV } from "@/lib/site";
+import { i18nLanguages } from "@/data/i18n";
 import { CODES, CODES_LAST_CHECKED } from "@/data/codes";
 import { UNITS } from "@/data/units";
 
@@ -14,7 +15,7 @@ const MONTH_YEAR = new Date().toLocaleString("en-US", { month: "long", year: "nu
 export const metadata: Metadata = {
   title: { absolute: `Dungeon Lootr Codes (${MONTH_YEAR}) - Working Roblox Codes` },
   description: `Working ${SITE.game} codes for ${MONTH_YEAR}, verified ${CODES_LAST_CHECKED}. Plus class & aspect tier lists and how-to-get guides for Roblox ${SITE.game}.`,
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: i18nLanguages("/") },
   openGraph: {
     type: "website",
     siteName: SITE.name,

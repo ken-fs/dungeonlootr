@@ -132,3 +132,14 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **codes 日检**（Sportskeeda/Beebom/Joytify/IGN/GameRant/PGG）：无新码，9 active 维持；CODES_LAST_CHECKED→9/8
 - **部署**：`npx wrangler deploy --config` 直连成功（Version 226b464b）；注意 Ship 根目录有 game-name-radar 的 wrangler.jsonc，部署必须 --config 显式指定
 - 三站巡检 cron TCC 已修复（cron 获完全磁盘访问），明日 11:00 自动恢复
+
+### 2026-09-08 i18n Phase 1 上线（pt-BR + es × 3 页）
+
+- **范围**：`/` `/codes/` `/tier-list/` × pt-BR + es = 6 新页；子目录方案，权重集中
+- **架构**：`src/data/i18n.ts` 字典（PT_BR/ES）+ `src/components/i18n-pages.tsx` 共享组件 + 6 薄路由；游戏数据（codes/units/tiers/物品名）零改动，只译 UI 文案
+- **hreflang**：HTML head 全网状（en/pt-BR/es/x-default 四向互链 + 自引用 + canonical 对齐）+ sitemap xhtml:link 同步（9 URL × 4 语言 = 36 条）— 已按 seo-hreflang 规范逐项验证
+- **组件参数化**：VerifiedStamp(label) / TierBoard(tierLabels) / CopyButton(label) 默认值兼容英文页，英文页零影响（已验证）
+- **已知取舍**：根 layout 共享，`<html lang>` 仍为 en（Google 不用 html lang 做语言判定，hreflang 才是杠杆）；导航/页脚维持英文（Phase 1 只译 3 页文案）
+- **翻译说明**：AI 初译（非机翻铺量），按运营铁律需母语校对一遍（重点：pt-BR 游戏术语 "resgatar/códigos"、es "canjear"）
+- **后续触发器**：GSC 出现 pt/es 展示量 → Phase 2 扩单位页；评估 id/tr/vi
+- 部署 Version `bb557ad6`

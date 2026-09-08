@@ -91,10 +91,10 @@ export function SiteFooter() {
 }
 
 /** "Last verified" stamp - our freshness wedge vs. slow incumbents. */
-export function VerifiedStamp({ date }: { date: string }) {
+export function VerifiedStamp({ date, label = "Last checked:" }: { date: string; label?: string }) {
   return (
     <p className="text-sm text-dim">
-      Last checked: <span className="glow-gold">{date}</span>
+      {label} <span className="glow-gold">{date}</span>
     </p>
   );
 }
