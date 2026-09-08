@@ -124,3 +124,11 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - M5 ✅ `/llms.txt` 已上线（200）
 - 部署：Version ID `11f9bf8f`
 - **蹲守中**：30KFAV / 5MVISITS 码随时可能掉落，每日检查 codes 源
+
+### 2026-09-08 日更（数据刷新 + 巡检补跑）
+
+- **游戏爆发**：API 快照 visits 5.93M→**14.4M**（5 天 2.4 倍）、favs 33,112→**67,944**、likes 破 40K、CCU 12,476；游戏当日（05:52 UTC）有服务端更新
+- **里程碑重估**：10M visits / 50K favs 均破，无对应码；likes 破 10K 无 10KLIKES → likes 系码或已停发，favs/visits 系为主盯方向
+- **codes 日检**（Sportskeeda/Beebom/Joytify/IGN/GameRant/PGG）：无新码，9 active 维持；CODES_LAST_CHECKED→9/8
+- **部署**：`npx wrangler deploy --config` 直连成功（Version 226b464b）；注意 Ship 根目录有 game-name-radar 的 wrangler.jsonc，部署必须 --config 显式指定
+- 三站巡检 cron TCC 已修复（cron 获完全磁盘访问），明日 11:00 自动恢复
