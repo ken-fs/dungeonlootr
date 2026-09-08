@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-03";
+export const UPDATES_LAST_CHECKED = "2026-09-08";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-09-03",
-  playing: "11,415",
-  visits: "5.93M",
-  favorites: "33,112",
+  asOf: "2026-09-08",
+  playing: "12,476",
+  visits: "14.4M",
+  favorites: "67,944",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-09-08",
+    title: "Server patch + growth doubles in five days",
+    detail:
+      "The game was updated on Sep 8, 2026 (Roblox API last-update timestamp). The same API snapshot shows visits more than doubling since Sep 3 (5.93M to 14.4M), favorites climbing to 67,944 and likes passing 40K - blowing through the 10M-visits and 50K-favorites thresholds. No 10MVISITS or 50KFAV-style milestone code has surfaced yet (checked Sep 8 against Sportskeeda, Beebom, Joytify and IGN); we're watching the usual drop channels.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-09-03",
     title: "Server patch + two milestones crossed",
@@ -99,7 +106,7 @@ export const UPDATES: UpdateEntry[] = [
  * Labeled speculation - useful for knowing when to check the codes page.
  */
 export const NEXT_MILESTONES: string[] = [
-  "30K favorites - CROSSED on 2026-09-03 (33,112). A 30KFAV-style code could drop any day now; check the codes page daily.",
-  "5M visits - CROSSED on 2026-09-03 (5.93M). A 5MVISITS-style code would follow the 100KVISITS precedent.",
-  "Next likes goal - 8KLIKE is live, so a 10KLIKES drop is the natural successor.",
+  "10M visits - CROSSED on 2026-09-08 (14.4M). A 10MVISITS-style code would follow the 100KVISITS precedent; none has surfaced as of Sep 8.",
+  "50K favorites - CROSSED on 2026-09-08 (67,944). A 50KFAV or 100KFAV drop is the natural successor to 10KFAV.",
+  "Likes codes may be done - likes passed 10K without a 10KLIKES successor to 8KLIKE (40K as of Sep 8), so favorites/visits milestones are the active watch.",
 ];

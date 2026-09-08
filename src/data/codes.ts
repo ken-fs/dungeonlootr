@@ -1,12 +1,12 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-05): cross-checked
- * IGN, Beebom, Rock Paper Shotgun, RadioTimes, Sportskeeda, GameRant and
- * PCGamesN. No new codes beyond the list below (latest drop is still
- * FORGESKIP/8KLIKE/10KFAV per Sportskeeda). FORGESKIP's reward is now
- * 2-source (Beebom + RPS). The 5 disputed codes resolved: IGN, Beebom, RPS
- * and RadioTimes all list them expired (GameRant/PCGamesN are stale), so
- * they moved to expired.
+ * RULE: never invent codes. Sources this pull (2026-09-08): cross-checked
+ * Sportskeeda, Beebom, Joytify, IGN, GameRant and ProGameGuides. No new
+ * codes beyond the list below (latest drop is still FORGESKIP/8KLIKE/10KFAV
+ * per Sportskeeda). GameRant still lists the Sep-resolved expired five as
+ * working - known laggard, ignored. PGG shows ancient 400FAV - long dead,
+ * not worth listing. Prior pull (2026-09-05): the 5 disputed codes resolved
+ * expired via IGN+Beebom+RPS+RadioTimes consensus.
  * "active" = reported working by multiple aggregators.
  */
 export interface GameCode {
@@ -17,7 +17,7 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-05";
+export const CODES_LAST_CHECKED = "2026-09-08";
 
 export const CODES: GameCode[] = [
   // 3 newest - corroborated by Try Hard Guides + a YouTube creator description.
