@@ -1,12 +1,13 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-08): cross-checked
- * Sportskeeda, Beebom, Joytify, IGN, GameRant and ProGameGuides. No new
- * codes beyond the list below (latest drop is still FORGESKIP/8KLIKE/10KFAV
- * per Sportskeeda). GameRant still lists the Sep-resolved expired five as
- * working - known laggard, ignored. PGG shows ancient 400FAV - long dead,
- * not worth listing. Prior pull (2026-09-05): the 5 disputed codes resolved
- * expired via IGN+Beebom+RPS+RadioTimes consensus.
+ * RULE: never invent codes. Sources this pull (2026-09-09): IGN (Sep 7,
+ * in-game tested) + Dexerto (Sep 8, verified) dual-source. FULL BATCH
+ * ROTATION: the launch-era codes were retired and six new codes dropped
+ * with the "Update 1" patch wave (matches the Sep 8 Roblox API update
+ * timestamp). Only LOOTR survives from the old batch. Older aggregators
+ * (Beebom/RadioTimes/GameRant/Sportskeeda, all dated Sep 3) still show the
+ * old batch - stale, ignored. WEEKENDBUFFS: Dexerto also lists a second
+ * same-name row (3 Aspect Gems) - likely their typo, unconfirmed.
  * "active" = reported working by multiple aggregators.
  */
 export interface GameCode {
@@ -17,20 +18,27 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-08";
+export const CODES_LAST_CHECKED = "2026-09-09";
 
 export const CODES: GameCode[] = [
-  // 3 newest - corroborated by Try Hard Guides + a YouTube creator description.
-  { code: "FORGESKIP", reward: "3 Forge Stone Bundles + 3 Reforge Stone Bundles", status: "active", note: "Newest drop." },
-  { code: "8KLIKE", reward: "Freebies", status: "active", note: "8K likes milestone." },
-  { code: "10KFAV", reward: "Freebies", status: "active", note: "10K favorites milestone." },
-  // Specific rewards listed by Try Hard Guides.
-  { code: "FULLRELEASE", reward: "25,000 Coins + 3 Luck Potions", status: "active" },
-  { code: "LOOTRISBACK", reward: "3 Forge Stone Bundles", status: "active" },
-  { code: "JACKPOT", reward: "5 Luck Potions", status: "active" },
-  { code: "20KPLAYERS", reward: "5 Reforge Stone Bundles", status: "active" },
-  { code: "GIVEMEGEMSPLEASE", reward: "3 Aspect Gems", status: "active" },
+  // --- Update 1 batch (2026-09-07/08): IGN in-game tested + Dexerto verified ---
+  { code: "UPDATE1", reward: "100 Mage Coins + 10 Reforge Stone + 5 Exotic Ingot", status: "active", note: "Update 1 launch code." },
+  { code: "15KCCU", reward: "100,000 Coins + 5 Luck Potion III", status: "active", note: "15K concurrent-players milestone - a new milestone type beyond likes/favs/visits." },
+  { code: "WEEKENDBUFFS", reward: "2 Luck Potion I + 2 Luck Potion II + 2 Luck Potion III + 10 Reforge Stone", status: "active", note: "Dexerto shows a second same-name row (3 Aspect Gems) - likely their typo, unconfirmed." },
+  { code: "RAIDTIME", reward: "5 Forge Stone Bundle + 10 Reforge Stone", status: "active" },
+  { code: "COURAGE", reward: "5 Random GM Blessing", status: "active" },
+  { code: "LOVETHISGAME", reward: "10 Aspect Gem", status: "active" },
+  // --- Survivor from the launch batch (still active on both IGN and Dexerto) ---
   { code: "LOOTR", reward: "1,000 Coins + Random GM Blessing", status: "active" },
+  // --- Retired in the Update 1 rotation (IGN tested + Dexerto, Sep 7-8) ---
+  { code: "FORGESKIP", reward: "-", status: "expired" },
+  { code: "8KLIKE", reward: "-", status: "expired" },
+  { code: "10KFAV", reward: "-", status: "expired" },
+  { code: "FULLRELEASE", reward: "-", status: "expired" },
+  { code: "LOOTRISBACK", reward: "-", status: "expired" },
+  { code: "JACKPOT", reward: "-", status: "expired" },
+  { code: "20KPLAYERS", reward: "-", status: "expired" },
+  { code: "GIVEMEGEMSPLEASE", reward: "-", status: "expired" },
   // Reported expired (Sep 2026): the five early-access codes resolved
   // expired by IGN + Beebom + RPS + RadioTimes consensus.
   { code: "NEWASPECT", reward: "-", status: "expired" },

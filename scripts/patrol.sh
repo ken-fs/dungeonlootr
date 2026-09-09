@@ -10,6 +10,11 @@ DATE=$(date +%F)
 SHIP=/Users/david/Desktop/david/Ship
 REPOS=(dungeonlootr ghostdriver animeexpeditions howtofish)
 
+# 幂等防护：cron 每小时触发（防睡眠漏跑），但今日已出报告则直接退出
+if [ -f "$SHIP/dungeonlootr/reports/patrol-$DATE.md" ]; then
+  exit 0
+fi
+
 pi -p --no-session "你是游戏工具站群的每日巡检 agent，只报告不改动。巡检 4 个站（Roblox 三站每站 ≥2 个聚合站交叉验证，从 IGN/Beebom/RockPaperShotgun/GameRant/RadioTimes/Dexerto/ProGameGuides/Joytify 中选）：
 
 【1. Dungeon Lootr】码表 $SHIP/dungeonlootr/src/data/codes.ts；线上 https://dungeonlootr.net/codes/

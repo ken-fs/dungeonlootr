@@ -143,3 +143,12 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **翻译说明**：AI 初译（非机翻铺量），按运营铁律需母语校对一遍（重点：pt-BR 游戏术语 "resgatar/códigos"、es "canjear"）
 - **后续触发器**：GSC 出现 pt/es 展示量 → Phase 2 扩单位页；评估 id/tr/vi
 - 部署 Version `bb557ad6`
+
+### 2026-09-09 日更（Update 1 码批次整体轮换 — 巡检系统首次实战捕获）
+
+- **事件**：每日巡检（14:54 手动补跑）捕获 IGN(9/7实测)+Dexerto(9/8) 双源确认的**码批次整体轮换**：6 新码 UPDATE1/15KCCU/WEEKENDBUFFS/RAIDTIME/COURAGE/LOVETHISGAME 上线，8 个 launch 期老码全退役，仅 LOOTR 存活
+- **响应**：codes.ts 重排（6 新 active + LOOTR + 8 转 expired）→ 三语码页同步生效（i18n 数据源共享，零额外成本）→ 部署 f9873108
+- **新洞察**：15KCCU = 首个 CCU 里程碑码（命名维度 likes/fav/visits 之外新增 ccu），NEXT_MILESTONES 已加 20KCCU 盯防
+- **遗留**：WEEKENDBUFFS 在 Dexerto 另有 "3 Aspect Gems" 同名行，疑似笔误，待 Discord 核实
+- **cron 睡眠漏跑修复**：mac 11:00 深度睡眠导致 cron 跳过（cron 不补跑）→ 改为 `0 9-21 * * *` 每小时触发 + 脚本幂等防护（当日报告已存在即退出），唤醒后第一个整点自动补跑
+- 英文首页统计修正 4.5M→14.4M / 10K+→12K+（与 i18n 页一致）

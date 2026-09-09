@@ -34,10 +34,10 @@ export const metadata: Metadata = {
 
 const activeCodes = CODES.filter((c) => c.status === "active");
 
-// Live snapshot from the Roblox games API (2026-09-02). Refresh on rebuild.
+// Live snapshot from the Roblox games API (2026-09-08). Refresh on rebuild.
 const STATS = [
-  { label: "Visits", value: "4.5M" },
-  { label: "Playing now", value: "10K+" },
+  { label: "Visits", value: "14.4M" },
+  { label: "Playing now", value: "12K+" },
   { label: "Approval", value: "96%" },
 ];
 

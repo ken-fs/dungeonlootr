@@ -17,7 +17,7 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-08";
+export const UPDATES_LAST_CHECKED = "2026-09-09";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
@@ -28,6 +28,13 @@ export const LIVE_STATS = {
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-09-09",
+    title: "Update 1 - full code batch rotation",
+    detail:
+      "Six new codes dropped with the Update 1 patch wave (UPDATE1, 15KCCU, WEEKENDBUFFS, RAIDTIME, COURAGE, LOVETHISGAME), verified in-game by IGN (Sep 7) and Dexerto (Sep 8). The entire launch-era batch was retired at the same time - only LOOTR survives. 15KCCU is the game's first concurrent-players milestone code, a new pattern beyond likes/favorites/visits.",
+    evidence: "Code drop",
+  },
   {
     date: "2026-09-08",
     title: "Server patch + growth doubles in five days",
@@ -109,4 +116,5 @@ export const NEXT_MILESTONES: string[] = [
   "10M visits - CROSSED on 2026-09-08 (14.4M). A 10MVISITS-style code would follow the 100KVISITS precedent; none has surfaced as of Sep 8.",
   "50K favorites - CROSSED on 2026-09-08 (67,944). A 50KFAV or 100KFAV drop is the natural successor to 10KFAV.",
   "Likes codes may be done - likes passed 10K without a 10KLIKES successor to 8KLIKE (40K as of Sep 8), so favorites/visits milestones are the active watch.",
+  "Concurrent players joined the mix on Sep 9: 15KCCU dropped with Update 1. If weekend peaks keep growing, a 20KCCU-style code is the next one to watch.",
 ];
