@@ -152,3 +152,10 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **遗留**：WEEKENDBUFFS 在 Dexerto 另有 "3 Aspect Gems" 同名行，疑似笔误，待 Discord 核实
 - **cron 睡眠漏跑修复**：mac 11:00 深度睡眠导致 cron 跳过（cron 不补跑）→ 改为 `0 9-21 * * *` 每小时触发 + 脚本幂等防护（当日报告已存在即退出），唤醒后第一个整点自动补跑
 - 英文首页统计修正 4.5M→14.4M / 10K+→12K+（与 i18n 页一致）
+
+### 2026-09-12 月度复盘（GA4 + GSC 数据驱动）
+
+**数据（28 天）**：GSC 457 点击/7,754 展示/**CTR 5.9%**（基线 3.5% 近翻倍）；GA 542 用户、互动 13s；google 393 / direct 108 / bing 31 / **chatgpt 3（AI 渠道萌芽）**
+**公式验证**：how-to-get 单位页霸榜前 5，shadow-vagrant 单页 144 点击 = 全站 31%；codes 跳出 94.1%→76.9%（导流块起效）；tier-list 跳出 25.6% 最佳
+**动作**：①patrol 加新单位情报盯梢（Kage/Wanderer/Shinobi 解锁方法，浮出即当日发页）②Founder 页结构已全（obtain/steps/route/grind/FAQ 齐），不画蛇添足 ③互动 13s → 后续单位页参照 ghostdriver 嵌视频
+**待运营手动**：GA Admin 核对 G-309WPEZC27 属性归属（visualrefiner/dungeonlootr 两属性都显示本站数据，需去重）；GSC 给 6 个 i18n URL 请求索引；i18n 上线 4 天，下月复盘 pt/es 展示量决定 Phase 2
