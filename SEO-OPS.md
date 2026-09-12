@@ -159,3 +159,11 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 **公式验证**：how-to-get 单位页霸榜前 5，shadow-vagrant 单页 144 点击 = 全站 31%；codes 跳出 94.1%→76.9%（导流块起效）；tier-list 跳出 25.6% 最佳
 **动作**：①patrol 加新单位情报盯梢（Kage/Wanderer/Shinobi 解锁方法，浮出即当日发页）②Founder 页结构已全（obtain/steps/route/grind/FAQ 齐），不画蛇添足 ③互动 13s → 后续单位页参照 ghostdriver 嵌视频
 **待运营手动**：GA Admin 核对 G-309WPEZC27 属性归属（visualrefiner/dungeonlootr 两属性都显示本站数据，需去重）；GSC 给 6 个 i18n URL 请求索引；i18n 上线 4 天，下月复盘 pt/es 展示量决定 Phase 2
+
+### 2026-09-12 内容补缺（Boss Rush 页 + E-E-A-T 收尾）
+
+- **/boss-rush 新页**：补最大内容缺口——16 个单位页引用 Boss Rush 却无落点，竞对 dungeonlooter.online 已在该词排名。内容：核心循环（选 boss 线→爬层→40层+掉落/50碎片锻造保底）+ 3 条 chase 职业线卡片（Sukuna/Gojo/Asta 互链）+ 农场技巧 + Nightmare/Challenge 延伸（Dreadlord/Azure/Toji 互链）+ 5 问 FAQ schema。素材全部来自 units.ts 已验证解锁路线
+- **L3 ✅ /about/ 156→400+ 词**：站点故事（为什么存在：对抗死码+抄错攻略）+ 四支柱验证方法论（码/榜/解锁线/实时数据）+ 日检机制
+- **L2 ✅ E-E-A-T 署名**：VerifiedStamp 默认带 "By Ken Lee" 署名（一处改动全站 7 类页面生效）；单位页新增 Article JSON-LD（author=Person Ken Lee, dateModified=UNITS_LAST_CHECKED）
+- **放弃项记录**：13 个 B/C/D spin 职业单页（需求低+tier 表已覆盖词，薄页稀释质量）；aspects/[name] 等 GSC 触发
+- 部署 Version `65905279`；已验证：/boss-rush/ 200+FAQ schema、about 400+ 词、单位页 Article schema+署名

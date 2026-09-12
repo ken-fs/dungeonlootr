@@ -68,6 +68,26 @@ export default async function UnitPage({
     })),
   };
 
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `How to Get ${unit.name} in Dungeon Lootr`,
+    description: unit.metaDesc,
+    dateModified: UNITS_LAST_CHECKED,
+    author: {
+      "@type": "Person",
+      name: SITE.editor,
+      jobTitle: SITE.editorRole,
+      url: `${SITE.url}/about/`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.name,
+      url: SITE.url,
+    },
+    mainEntityOfPage: `${SITE.url}/units/${unit.slug}/`,
+  };
+
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -86,6 +106,7 @@ export default async function UnitPage({
   return (
     <div className="space-y-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}

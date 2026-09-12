@@ -12,6 +12,9 @@ export const SITE = {
   tagline:
     "Working codes, class & aspect tier lists, and how-to-get guides for Roblox Dungeon Lootr.",
   contactEmail: "contact@dungeonlootr.net",
+  /** Site editor - used for E-E-A-T bylines (VerifiedStamp) and Article schema author. */
+  editor: "Ken Lee",
+  editorRole: "Editor & player-verifier",
 } as const;
 
 /** Primary nav - kept in one place so header/footer/sitemap stay in sync. */
@@ -20,6 +23,7 @@ export const NAV: { href: string; label: string }[] = [
   { href: "/tier-list/", label: "Class Tier List" },
   { href: "/aspect-tier-list/", label: "Aspect Tier List" },
   { href: "/units/", label: "Units" },
+  { href: "/boss-rush/", label: "Boss Rush" },
   { href: "/beginner-guide/", label: "Beginner Guide" },
   { href: "/updates/", label: "Updates" },
 ];

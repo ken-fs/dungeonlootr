@@ -91,9 +91,24 @@ export function SiteFooter() {
 }
 
 /** "Last verified" stamp - our freshness wedge vs. slow incumbents. */
-export function VerifiedStamp({ date, label = "Last checked:" }: { date: string; label?: string }) {
+export function VerifiedStamp({
+  date,
+  label = "Last checked:",
+  editor = SITE.editor,
+}: {
+  date: string;
+  label?: string;
+  /** Pass an empty string to hide the byline (e.g. legal pages). */
+  editor?: string;
+}) {
   return (
     <p className="text-sm text-dim">
+      {editor && (
+        <>
+          By <span className="text-fg">{editor}</span>
+          {" · "}
+        </>
+      )}
       {label} <span className="glow-gold">{date}</span>
     </p>
   );
