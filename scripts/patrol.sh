@@ -10,16 +10,22 @@ DATE=$(date +%F)
 SHIP=/Users/david/Desktop/david/Ship
 REPOS=(dungeonlootr ghostdriver animeexpeditions howtofish)
 
-# 幂等防护：cron 每小时触发（防睡眠漏跑），但今日已出报告则直接退出
+# 幂等防护：今日已出报告则直接退出（cron/launchd 可能多次触发）
 if [ -f "$SHIP/dungeonlootr/reports/patrol-$DATE.md" ]; then
   exit 0
 fi
+
+# 并发锁：防止 cron 与 launchd 同时触发导致重复巡检
+LOCK=/tmp/patrol.lock
+mkdir "$LOCK" 2>/dev/null || exit 0
+trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 
 pi -p --no-session "你是游戏工具站群的每日巡检 agent，只报告不改动。巡检 4 个站（Roblox 三站每站 ≥2 个聚合站交叉验证，从 IGN/Beebom/RockPaperShotgun/GameRant/RadioTimes/Dexerto/ProGameGuides/Joytify 中选）：
 
 【1. Dungeon Lootr】码表 $SHIP/dungeonlootr/src/data/codes.ts；线上 https://dungeonlootr.net/codes/
 - tavily 搜 'Dungeon Lootr codes'（advanced，time_range=week，max 6）
-- 对比：有无未收录新码？我方 active 码有无被 ≥2 源标 expired？重点盯 30KFAV / 5MVISITS 里程碑码
+- 对比：有无未收录新码？我方 active 码有无被 ≥2 源标 expired？重点盯 30KFAV / 5MVISITS / 20KCCU 里程碑码
+- 【新单位情报】另搜 'Dungeon Lootr new class' 或 'Dungeon Lootr Kage Wanderer Shinobi'：Update 1 后有无新职业浮出？Kage/Wanderer/Shinobi 的解锁方法有无被任何信源公开？发现即 ACTION_NEEDED（本站增长引擎是 how-to-get 单位页，shadow-vagrant 单页占全站 31% 点击，新单位当日发页是最高杠杆）
 
 【2. Ghost Driver】码表 $SHIP/ghostdriver/src/data/codes.ts；线上 https://ghostdriver.net/codes/
 - tavily 搜 'Ghost Driver codes Roblox'（advanced，time_range=week，max 6）
