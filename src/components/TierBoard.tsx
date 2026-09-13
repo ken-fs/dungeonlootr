@@ -53,6 +53,7 @@ export function TierBoard({
     ...t,
     label: tierLabels?.[i] ?? t.label,
   }));
+  const unranked = items.filter((i) => !i.tier);
 
   return (
     <div className="space-y-4">
@@ -76,6 +77,22 @@ export function TierBoard({
           </Slab>
         );
       })}
+      {unranked.length > 0 && (
+        <Slab className="flex gap-4">
+          <div className="display text-4xl text-dim">?</div>
+          <div>
+            <p className="text-xs uppercase text-dim">Ungraded - new this patch</p>
+            <ul className="mt-1 space-y-0.5">
+              {unranked.map((i) => (
+                <li key={i.name}>
+                  <span className="text-fg">{i.name}</span>
+                  {i.note && <span className="text-sm text-dim"> - {i.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Slab>
+      )}
     </div>
   );
 }

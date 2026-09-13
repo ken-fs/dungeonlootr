@@ -167,3 +167,11 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **L2 ✅ E-E-A-T 署名**：VerifiedStamp 默认带 "By Ken Lee" 署名（一处改动全站 7 类页面生效）；单位页新增 Article JSON-LD（author=Person Ken Lee, dateModified=UNITS_LAST_CHECKED）
 - **放弃项记录**：13 个 B/C/D spin 职业单页（需求低+tier 表已覆盖词，薄页稀释质量）；aspects/[name] 等 GSC 触发
 - 部署 Version `65905279`；已验证：/boss-rush/ 200+FAQ schema、about 400+ 词、单位页 Article schema+署名
+
+### 2026-09-13 Update 1 新职业当日发页（巡检新情报线首次实战捕获）
+
+- **触发**：昨日新加的 patrol「新单位情报」线捕获 PGG 点名的 Update 1 四职业（Spell Breaker/Cryomancer/Coyote/Dark Professor）+ allthings.how S-tier 评级 + Sportskeeda spin 率表
+- **执行（当日）**：7 个新单位页上线——4 个 Update 1 职业（raid 获取：Spell Breaker/Cryomancer=Magic Unleashed Raid 掉落或商店；Dark Professor=Impossible 稀有掉落；Coyote 解锁方式诚实标"验证中"）+ 3 个 spin 职业（Kage/Shinobi=Legendary 8%/22%，Wanderer=Mythic 2%/16%，Sportskeeda+allthings 双源）
+- **tier-list**：4 新职业入表，Spell Breaker/Coyote=S（单源标注"pending IGN/GameRant"）；TierBoard 新增 Ungraded 区块（Cryomancer/DarkProfessor）
+- **基建修复**：wrangler deploy 必须 `--config` 绝对路径（Ship 根目录有 game-name-radar 的 wrangler.jsonc 会抢跑）
+- 部署 Version `009e9237`，7 页全部 200

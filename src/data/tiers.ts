@@ -18,7 +18,7 @@ export interface TierItem {
   note?: string;
 }
 
-export const TIERS_LAST_CHECKED = "2026-09-05";
+export const TIERS_LAST_CHECKED = "2026-09-13";
 
 /** Confirmed class rarity order, low → high. */
 export const CLASS_RARITIES = [
@@ -35,6 +35,12 @@ export const CLASS_RARITIES = [
  * note flags every disagreement so readers see the spread, not a fake blend.
  */
 export const CLASSES: TierItem[] = [
+  // Update 1 classes (2026-09-13): allthings.how post-update list only -
+  // IGN/GameRant haven't graded them yet. Single-source, flagged on the card.
+  { name: "Spell Breaker", tier: "S", note: "Update 1 - Magic Unleashed Raid drop/shop. S per allthings.how only (pending IGN/GameRant)" },
+  { name: "Coyote", tier: "S", note: "Update 1 - unlock route still unverified. S per allthings.how only (pending IGN/GameRant)" },
+  { name: "Cryomancer", note: "Update 1 - Magic Unleashed Raid drop/shop. Ungraded by tier lists so far" },
+  { name: "Dark Professor", note: "Update 1 - Impossible raid rare drop. Ungraded; PGG says it 'melts health bars'" },
   // Unanimous S - both lists agree.
   { name: "Sinister Trigger", tier: "S", note: "Dante - ~0.05% spin, the only god-tier pullable from spins" },
   { name: "Cursed King", tier: "S", note: "Sukuna - Boss Rush 40+ drop or 50-fragment craft" },

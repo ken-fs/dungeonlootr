@@ -4,7 +4,10 @@
  * RULE: never invent obtain methods. Where a reliable source didn't state the
  * unlock, `obtain` explains what IS known and flags the method as unconfirmed;
  * `verified` is true only when a concrete obtain method is sourced.
- * Sources (2026-09-05): Sportskeeda classes guide (rarity/exclusivity split),
+ * Sources (2026-09-13): Update 1 raid classes - creator video etjS2UV-3GY +
+ * ProGameGuides (obtain routes); spin rates - Sportskeeda (8%/22% Legendary,
+ * 2%/16% Mythic) + allthings.how (rarity assignments + Update 1 tiers).
+ * Earlier (2026-09-05): Sportskeeda classes guide (rarity/exclusivity split),
  * Destructoid tier list (Boss Rush 40+ / Forge-50-fragments crafts, Dreadlord
  * Underworld Gate Nightmare, Unrestricted quest NPC), IGN tier list (kit
  * descriptions), GameRant tier list (special-NPC classes), YouTube unlock
@@ -44,9 +47,202 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-05";
+export const UNITS_LAST_CHECKED = "2026-09-13";
 
 export const UNITS: Unit[] = [
+  // --- Update 1 raid classes (2026-09-13): obtain routes from creator video
+  // etjS2UV-3GY + ProGameGuides tier list; tiers per allthings.how (single
+  // source - IGN/GameRant haven't graded Update 1 classes yet). ---
+  {
+    slug: "spell-breaker",
+    name: "Spell Breaker",
+    origin: "Spell Breaker class (Update 1)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Spell Breaker is an Update 1 class tied to the Magic Unleashed Raid - it drops from the raid or is bought from the raid shop.",
+    steps: [
+      "Update to the current version and find the Magic Unleashed Raid entrance (raid event added in Update 1).",
+      "Run the raid - Spell Breaker can drop from raid clears, and raid currency buys it from the raid shop.",
+      "The guaranteed route is the shop: keep raiding and bank the currency.",
+    ],
+    aliases: ["how to get spell breaker dungeon lootr", "spellbreaker", "magic unleashed raid"],
+    route: "Item unlock",
+    standing:
+      "allthings.how's post-Update-1 tier list puts Spell Breaker in S-tier. IGN and GameRant haven't graded the Update 1 classes yet - treat the S as single-source for now.",
+    grind:
+      "Raid-shop currency makes this a guaranteed farm rather than pure RNG - the grind is raid clears, not luck.",
+    related: ["cryomancer", "dark-professor", "coyote"],
+    extraFaq: [
+      {
+        q: "Is Spell Breaker a spin class?",
+        a: "No - creator coverage of Update 1 shows it tied to the Magic Unleashed Raid (drop or raid shop), not the class spin pool.",
+      },
+    ],
+    metaDesc:
+      "How to get Spell Breaker in Dungeon Lootr: Magic Unleashed Raid drop or raid shop. Update 1 class. Verified 2026-09-13.",
+    videoId: "etjS2UV-3GY",
+    verified: true,
+  },
+  {
+    slug: "cryomancer",
+    name: "Cryomancer",
+    origin: "Cryomancer class (Update 1)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Cryomancer is an Update 1 class from the Magic Unleashed Raid - raid drop or raid shop purchase.",
+    steps: [
+      "Enter the Magic Unleashed Raid (Update 1 raid event).",
+      "Cryomancer drops from raid clears or is bought with raid currency in the raid shop.",
+      "Bank raid currency for the guaranteed shop route if drops don't land.",
+    ],
+    aliases: ["how to get cryomancer dungeon lootr", "cryomancer class", "magic unleashed raid"],
+    route: "Item unlock",
+    standing:
+      "Update 1 class - community tier placement still forming; IGN/GameRant haven't graded it yet.",
+    grind:
+      "Same raid loop as Spell Breaker - raid clears plus a currency-based shop fallback.",
+    related: ["spell-breaker", "dark-professor", "coyote"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Cryomancer in Dungeon Lootr: Magic Unleashed Raid drop or raid shop currency. Update 1 class. Verified 2026-09-13.",
+    videoId: "G-1G3lVOWSg",
+    verified: true,
+  },
+  {
+    slug: "dark-professor",
+    name: "Dark Professor",
+    origin: "Dark Professor class (Update 1)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Dark Professor is the rare Update 1 chase drop: an extremely rare drop from the Magic Unleashed Raid on Impossible difficulty.",
+    steps: [
+      "Unlock and clear the Magic Unleashed Raid.",
+      "Run it on Impossible difficulty - Dark Professor drops there as an extremely rare class drop.",
+      "Expect a long farm: creator coverage calls the drop 'extremely rare', so bring your best build.",
+    ],
+    aliases: ["how to get dark professor dungeon lootr", "dark professor drop rate", "impossible raid"],
+    route: "Item unlock",
+    standing:
+      "ProGameGuides' tier-list entry says Dark Professor 'absolutely melts health bars' - the prestige pick of Update 1.",
+    grind:
+      "The hardest grind of the update: Impossible-difficulty raid clears with a rare drop rate. No pity route is confirmed.",
+    related: ["spell-breaker", "cryomancer", "dreadlord"],
+    extraFaq: [
+      {
+        q: "What difficulty drops Dark Professor?",
+        a: "Impossible difficulty on the Magic Unleashed Raid, per ProGameGuides and creator Update-1 coverage. Lower difficulties don't drop it.",
+      },
+    ],
+    metaDesc:
+      "How to get Dark Professor in Dungeon Lootr: extremely rare drop from the Magic Unleashed Raid on Impossible. Verified 2026-09-13.",
+    verified: true,
+  },
+  {
+    slug: "coyote",
+    name: "Coyote",
+    origin: "Coyote class (Update 1)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Coyote is the fourth Update 1 class. Its unlock method is still being verified - creator coverage of the update links the other three classes to the Magic Unleashed Raid but doesn't pin down Coyote's route. Check in-game and watch this page.",
+    steps: [],
+    aliases: ["how to get coyote dungeon lootr", "coyote class"],
+    route: "Unknown",
+    standing:
+      "allthings.how's post-Update-1 tier list puts Coyote in S-tier (single source - IGN/GameRant haven't graded it yet).",
+    grind: "",
+    related: ["spell-breaker", "cryomancer", "dark-professor"],
+    extraFaq: [
+      {
+        q: "Is Coyote a raid class?",
+        a: "Unclear - the other three Update 1 classes are raid-linked, but no source we trust has confirmed Coyote's unlock method yet. We're checking after each patch.",
+      },
+    ],
+    metaDesc:
+      "How to get Coyote in Dungeon Lootr: Update 1 class, unlock method still being verified. What we know so far. Checked 2026-09-13.",
+    verified: false,
+  },
+  // --- Spin classes with public rates (2026-09-13): Sportskeeda spin-rate
+  // table (Legendary 8% normal / 22% lucky; Mythic 2% / 16%) + allthings.how
+  // rarity assignments. ---
+  {
+    slug: "kage",
+    name: "Kage",
+    origin: "Kage class",
+    anime: "",
+    rarity: "Legendary (per community guides)",
+    obtain:
+      "Kage comes from the class spin pool - community guides place it at Legendary rarity, which lands at 8% on Normal Spins and 22% on Lucky Spins.",
+    steps: [
+      "Open the CLASSES menu in the main hub.",
+      "Spin with Normal Spins (8% Legendary) or save Luck Potions for Lucky Spins (22% Legendary).",
+      "Legendary pool also contains other classes, so expect several Legendary hits before Kage specifically.",
+    ],
+    aliases: ["how to get kage dungeon lootr", "kage spin rate"],
+    route: "Class roll",
+    standing:
+      "B-tier on IGN's list - a defensive clone kit focused on single-target fights.",
+    grind:
+      "Luck-gated like all spin classes: burn Coins on spins after your gear is set; Lucky Spins from codes nearly triple the Legendary rate.",
+    related: ["shinobi", "wanderer"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Kage in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky Spin rates. Details. Verified 2026-09-13.",
+    verified: true,
+  },
+  {
+    slug: "shinobi",
+    name: "Shinobi",
+    origin: "Shinobi class",
+    anime: "",
+    rarity: "Legendary (per community guides)",
+    obtain:
+      "Shinobi comes from the class spin pool - community guides place it at Legendary rarity: 8% on Normal Spins, 22% on Lucky Spins.",
+    steps: [
+      "Open the CLASSES menu in the main hub.",
+      "Spin - Lucky Spins (22% Legendary) are the efficient route; codes like LOVETHISGAME and 15KCCU hand out Luck Potions.",
+      "The Legendary pool is shared, so any Legendary hit may be another class first.",
+    ],
+    aliases: ["how to get shinobi dungeon lootr", "shinobi spin rate"],
+    route: "Class roll",
+    standing:
+      "The widest split on the current lists: IGN moved Shinobi up to A-tier, GameRant has it C - try it before maining it.",
+    grind:
+      "Luck-gated spin class - bank Lucky Spins from milestone codes before rolling.",
+    related: ["kage", "wanderer"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Shinobi in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky rates. Tier split explained. Verified 2026-09-13.",
+    verified: true,
+  },
+  {
+    slug: "wanderer",
+    name: "Wanderer",
+    origin: "Wanderer class",
+    anime: "",
+    rarity: "Mythic (per community guides)",
+    obtain:
+      "Wanderer comes from the class spin pool - community guides place it at Mythic rarity: 2% on Normal Spins, 16% on Lucky Spins.",
+    steps: [
+      "Open the CLASSES menu in the main hub.",
+      "Spin - at Mythic rates, Lucky Spins (16%) are effectively mandatory; Normal Spins (2%) are a coin sink.",
+      "Redeem every active code first - milestone codes are the main Luck Potion source.",
+    ],
+    aliases: ["how to get wanderer dungeon lootr", "wanderer mythic spin"],
+    route: "Class roll",
+    standing:
+      "B-tier on both major lists - wide AoE with only one defensive ability.",
+    grind:
+      "The rarest spin tier in circulation: 2%/16% rates make this a Lucky-Potion stockpile exercise.",
+    related: ["kage", "shinobi"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Wanderer in Dungeon Lootr: Mythic class spin - 2% Normal / 16% Lucky rates. Verified 2026-09-13.",
+    verified: true,
+  },
   {
     slug: "sukuna",
     name: "Sukuna",

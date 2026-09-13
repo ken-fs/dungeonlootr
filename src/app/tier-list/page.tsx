@@ -27,7 +27,8 @@ export default function ClassTierList() {
           Every {SITE.game} class ranked S-D as a two-source consensus of IGN&apos;s and
           GameRant&apos;s tier lists. Where they disagree, the class sits at the lower tier
           and the split is flagged on the card - you see the spread, not a blended fudge.
-          We re-grade every patch.
+          Update 1 classes sit at the bottom as single-source grades until IGN/GameRant
+          weigh in. We re-grade every patch.
         </p>
         <div className="mt-3">
           <VerifiedStamp date={TIERS_LAST_CHECKED} />
