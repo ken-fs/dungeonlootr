@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-09";
+export const UPDATES_LAST_CHECKED = "2026-09-14";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-09-08",
-  playing: "12,476",
-  visits: "14.4M",
-  favorites: "67,944",
+  asOf: "2026-09-14",
+  playing: "11,988",
+  visits: "21.8M",
+  favorites: "87,922",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-09-14",
+    title: "Update 1.5 - Tournament update (5 codes, 5 classes)",
+    detail:
+      "Game updated Sep 14, 2026 ~02:07 UTC (Roblox API). Five new codes dropped with it: TOURNAMENT, SILVERINE, JACKAL, 45KLIKE (45K likes milestone - likes passed 50.8K) and 20mvisit (20M visits milestone - visits now 21.8M). ProGameGuides names five new classes in the same update: Dragoon, Embertide, Hellfiend, Hollow and Blade of Draconia - their unlock routes aren't published by any source yet.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-09-09",
     title: "Update 1 - full code batch rotation",
@@ -113,8 +120,8 @@ export const UPDATES: UpdateEntry[] = [
  * Labeled speculation - useful for knowing when to check the codes page.
  */
 export const NEXT_MILESTONES: string[] = [
-  "10M visits - CROSSED on 2026-09-08 (14.4M). A 10MVISITS-style code would follow the 100KVISITS precedent; none has surfaced as of Sep 8.",
-  "50K favorites - CROSSED on 2026-09-08 (67,944). A 50KFAV or 100KFAV drop is the natural successor to 10KFAV.",
-  "Likes codes may be done - likes passed 10K without a 10KLIKES successor to 8KLIKE (40K as of Sep 8), so favorites/visits milestones are the active watch.",
-  "Concurrent players joined the mix on Sep 9: 15KCCU dropped with Update 1. If weekend peaks keep growing, a 20KCCU-style code is the next one to watch.",
+  "50K likes - CROSSED on 2026-09-14 (50,822) with no 50KLIKES code yet; 45KLIKE dropped instead, so a 50K-likes code may follow any day.",
+  "25M visits - visits hit 21.8M on Sep 14 and 20mvisit dropped with Update 1.5; 25mvisit is the natural successor.",
+  "100K favorites - favorites hit 87,922 on Sep 14; watch for a 100KFAV-style code within weeks at this pace.",
+  "Concurrent players: 15KCCU dropped Sep 9 - watch for a 20KCCU successor if weekend peaks grow.",
 ];

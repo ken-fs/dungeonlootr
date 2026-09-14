@@ -175,3 +175,11 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **tier-list**：4 新职业入表，Spell Breaker/Coyote=S（单源标注"pending IGN/GameRant"）；TierBoard 新增 Ungraded 区块（Cryomancer/DarkProfessor）
 - **基建修复**：wrangler deploy 必须 `--config` 绝对路径（Ship 根目录有 game-name-radar 的 wrangler.jsonc 会抢跑）
 - 部署 Version `009e9237`，7 页全部 200
+
+### 2026-09-14 Update 1.5 当日全量响应（巡检 → 发码 → 发页 4 小时内闭环）
+
+- **事件**：巡检 11:00 捕获 Update 1.5（锦标赛更新）：5 新码（TOURNAMENT/SILVERINE/JACKAL/45KLIKE/20mvisit，GameRant+YouTube 双源）+ 5 新职业（Dragoon/Embertide/Hellfiend/Hollow/Blade of Draconia，PGG 点名）。API 互证：游戏当日 02:07 UTC 更新、likes 50.8K（45KLIKE 吻合）、visits 21.8M（20mvisit 吻合）
+- **执行**：5 码收录（奖励仅 GameRant 有 → 标注 "per GameRant"）+ 5 职业页当日上线（解锁方式无源 → verified:false 诚实占位页，路由/分级待浮出）+ tier-list Ungraded 区 + updates 时间线 + NEXT_MILESTONES 重排（50K likes 已破无码→盯 50KLIKES；25M visits；100K favs=87.9K 在途）
+- **animeexpeditions**：Eclipse 到期争议（GamesRadar+RadioTimes 预告 9/12 到期 vs UrGameTips+Beebom 仍列 active）→ 用 expires 字段展示预警，等实测源
+- **patrol 脚本修正**：animeexpeditions 简报从"0 active"更新为实际状态（Eclipse 批次 4 码）
+- 部署 Version `c992c2f6`

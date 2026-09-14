@@ -18,7 +18,7 @@ export interface TierItem {
   note?: string;
 }
 
-export const TIERS_LAST_CHECKED = "2026-09-13";
+export const TIERS_LAST_CHECKED = "2026-09-14";
 
 /** Confirmed class rarity order, low → high. */
 export const CLASS_RARITIES = [
@@ -41,6 +41,12 @@ export const CLASSES: TierItem[] = [
   { name: "Coyote", tier: "S", note: "Update 1 - unlock route still unverified. S per allthings.how only (pending IGN/GameRant)" },
   { name: "Cryomancer", note: "Update 1 - Magic Unleashed Raid drop/shop. Ungraded by tier lists so far" },
   { name: "Dark Professor", note: "Update 1 - Impossible raid rare drop. Ungraded; PGG says it 'melts health bars'" },
+  // Update 1.5 classes (2026-09-14): named by ProGameGuides, no tier grades yet.
+  { name: "Dragoon", note: "Update 1.5 class - unlock route unverified, ungraded" },
+  { name: "Embertide", note: "Update 1.5 class - unlock route unverified, ungraded" },
+  { name: "Hellfiend", note: "Update 1.5 class - unlock route unverified, ungraded" },
+  { name: "Hollow", note: "Update 1.5 class - unlock route unverified, ungraded" },
+  { name: "Blade of Draconia", note: "Update 1.5 class - unlock route unverified, ungraded" },
   // Unanimous S - both lists agree.
   { name: "Sinister Trigger", tier: "S", note: "Dante - ~0.05% spin, the only god-tier pullable from spins" },
   { name: "Cursed King", tier: "S", note: "Sukuna - Boss Rush 40+ drop or 50-fragment craft" },

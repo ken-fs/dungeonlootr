@@ -1,7 +1,12 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-09): IGN (Sep 7,
- * in-game tested) + Dexerto (Sep 8, verified) dual-source. FULL BATCH
+ * RULE: never invent codes. Sources this pull (2026-09-14): GameRant (new
+ * batch marked NEW) + YouTube creator B乛MaX丨Rohaan (Sep 12, tested) +
+ * Roblox API corroboration (game updated Sep 14 02:07 UTC; 50.8K likes =
+ * 45KLIKE crossed; 21.8M visits = 20mvisit crossed). Reward details are
+ * GameRant-only - treat as approximate until a second source lists them.
+ * Prior pull (2026-09-09): IGN (Sep 7, in-game tested) + Dexerto (Sep 8,
+ * verified) dual-source. FULL BATCH
  * ROTATION: the launch-era codes were retired and six new codes dropped
  * with the "Update 1" patch wave (matches the Sep 8 Roblox API update
  * timestamp). Only LOOTR survives from the old batch. Older aggregators
@@ -18,11 +23,18 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-09";
+export const CODES_LAST_CHECKED = "2026-09-14";
 
 export const CODES: GameCode[] = [
+  // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
+  // GameRant-only, marked approximate ---
+  { code: "TOURNAMENT", reward: "Scrolls + more (per GameRant)", status: "active", note: "Update 1.5 tournament update code." },
+  { code: "SILVERINE", reward: "Coins + Stones (per GameRant)", status: "active" },
+  { code: "JACKAL", reward: "Coins + Blessings (per GameRant)", status: "active" },
+  { code: "45KLIKE", reward: "Coins + Blessings (per GameRant)", status: "active", note: "45K likes milestone - likes passed 50K on Sep 14." },
+  { code: "20mvisit", reward: "3 Luck Potions", status: "active", note: "20M visits milestone - visits passed 21.8M on Sep 14." },
   // --- Update 1 batch (2026-09-07/08): IGN in-game tested + Dexerto verified ---
-  { code: "UPDATE1", reward: "100 Mage Coins + 10 Reforge Stone + 5 Exotic Ingot", status: "active", note: "Update 1 launch code." },
+  { code: "UPDATE1", reward: "100 Mage Coins + 10 Reforge Stone + 5 Exotic Ingot", status: "active", note: "Update 1 launch code; still working per GameRant's Update 1.5 list." },
   { code: "15KCCU", reward: "100,000 Coins + 5 Luck Potion III", status: "active", note: "15K concurrent-players milestone - a new milestone type beyond likes/favs/visits." },
   { code: "WEEKENDBUFFS", reward: "2 Luck Potion I + 2 Luck Potion II + 2 Luck Potion III + 10 Reforge Stone", status: "active", note: "Dexerto shows a second same-name row (3 Aspect Gems) - likely their typo, unconfirmed." },
   { code: "RAIDTIME", reward: "5 Forge Stone Bundle + 10 Reforge Stone", status: "active" },

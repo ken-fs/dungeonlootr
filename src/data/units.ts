@@ -47,9 +47,108 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-13";
+export const UNITS_LAST_CHECKED = "2026-09-14";
 
 export const UNITS: Unit[] = [
+  // --- Update 1.5 classes (2026-09-14): names per ProGameGuides; update
+  // confirmed by Roblox API (Sep 14 02:07 UTC) + the 1.5 code batch. Unlock
+  // routes not yet published by any source - pages stay honest placeholders
+  // until a method is confirmed. ---
+  {
+    slug: "dragoon",
+    name: "Dragoon",
+    origin: "Dragoon class (Update 1.5)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Dragoon is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method hasn't been published by any source we trust yet - Update 1 classes came from the raid, so check the Magic Unleashed Raid and the spin pool in-game. We're checking after each source update.",
+    steps: [],
+    aliases: ["how to get dragoon dungeon lootr"],
+    route: "Unknown",
+    standing: "Too new for tier lists - grading starts once unlock routes are public.",
+    grind: "",
+    related: ["embertide", "hellfiend", "hollow", "blade-of-draconia"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Dragoon in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
+    verified: false,
+  },
+  {
+    slug: "embertide",
+    name: "Embertide",
+    origin: "Embertide class (Update 1.5)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Embertide is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+    steps: [],
+    aliases: ["how to get embertide dungeon lootr"],
+    route: "Unknown",
+    standing: "Too new for tier lists.",
+    grind: "",
+    related: ["dragoon", "hellfiend", "hollow", "blade-of-draconia"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Embertide in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
+    verified: false,
+  },
+  {
+    slug: "hellfiend",
+    name: "Hellfiend",
+    origin: "Hellfiend class (Update 1.5)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Hellfiend is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+    steps: [],
+    aliases: ["how to get hellfiend dungeon lootr"],
+    route: "Unknown",
+    standing: "Too new for tier lists.",
+    grind: "",
+    related: ["dragoon", "embertide", "hollow", "blade-of-draconia"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Hellfiend in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
+    verified: false,
+  },
+  {
+    slug: "hollow",
+    name: "Hollow",
+    origin: "Hollow class (Update 1.5)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Hollow is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+    steps: [],
+    aliases: ["how to get hollow dungeon lootr"],
+    route: "Unknown",
+    standing: "Too new for tier lists.",
+    grind: "",
+    related: ["dragoon", "embertide", "hellfiend", "blade-of-draconia"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Hollow in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
+    verified: false,
+  },
+  {
+    slug: "blade-of-draconia",
+    name: "Blade of Draconia",
+    origin: "Blade of Draconia class (Update 1.5)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Blade of Draconia is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+    steps: [],
+    aliases: ["how to get blade of draconia dungeon lootr", "draconia blade"],
+    route: "Unknown",
+    standing: "Too new for tier lists.",
+    grind: "",
+    related: ["dragoon", "embertide", "hellfiend", "hollow"],
+    extraFaq: [],
+    metaDesc:
+      "How to get Blade of Draconia in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed. Checked 2026-09-14.",
+    verified: false,
+  },
   // --- Update 1 raid classes (2026-09-13): obtain routes from creator video
   // etjS2UV-3GY + ProGameGuides tier list; tiers per allthings.how (single
   // source - IGN/GameRant haven't graded Update 1 classes yet). ---

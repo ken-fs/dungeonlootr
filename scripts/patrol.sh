@@ -33,7 +33,7 @@ pi -p --no-session "你是游戏工具站群的每日巡检 agent，只报告不
 
 【3. Anime Expeditions】码表 $SHIP/animeexpeditions/src/data/codes.ts；线上 https://animeexpeditions.dev/（codes 在首页，无 /codes/ 路径）
 - tavily 搜 'Anime Expeditions codes'（advanced，time_range=week，max 6）
-- 我方当前 0 个 active 码（Update2/EclipseSoon 已过期），任何新码都是 ACTION_NEEDED；重点盯 Eclipse 更新批次码、800M 访问里程碑码
+- 我方当前 4 个 active 码（Eclipse 批次 9/10 上线：Eclipse/250klikes/8thCompany/EvolutionsFix；Eclipse 有 9/12 到期争议标注）。任何新码或 active 码被 ≥2 源标 expired 都是 ACTION_NEEDED；重点盯 800M 访问里程碑码（9/14 已 775M+）、下一更新批次
 
 【4. How to Fish】（Steam 游戏，无 codes，盯补丁）版本数据 $SHIP/howtofish/src/data/game.ts（GAME_VERSION，当前 1.0.12）；线上 https://howtofishthegame.com/updates/
 - curl Steam 新闻 API（无需 key）：'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=4001890&count=5&maxlength=2000&feeds=steam_community_announcements'
