@@ -14,6 +14,11 @@
  * guide -GErvCAZbS4 (Unrestricted recipe, Awakened Devil EX recipe), YouTube
  * wzu1gKTvl7U (Shadow Monarch pack bundle showcase), dungeonlootrguide.wiki
  * (Dreadlord ~1% rate). First pull (2026-09-02): YouTube showcases.
+ * Sinister Trigger refresh (2026-09-16): Sportskeeda classes guide (rarest
+ * class, 0.05% Normal / 0.1% Lucky spin rates), Destructoid UPD1 tier list
+ * (Exotic on spins, top-3 pure DPS with Dark Professor/Spell Breaker,
+ * Alacrity-Ruin aspect pairing), IGN September list (S-Rank, Ranged, self-buff),
+ * UrGameTips September (kit: Crossfire 3 charges, Showstopper/Rainstorm resets).
  */
 export interface Unit {
   slug: string;
@@ -47,7 +52,7 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-14";
+export const UNITS_LAST_CHECKED = "2026-09-16";
 
 export const UNITS: Unit[] = [
   // --- Update 1.5 classes (2026-09-14): names per ProGameGuides; update
@@ -576,34 +581,39 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Sinister Trigger (Dante, Devil May Cry)",
     anime: "Devil May Cry",
     rarity: "Exotic",
-    obtain: "Sinister Trigger is an Exotic class with an extremely low roll chance (~0.05%). You get it by spinning/rolling for classes - it's one of the rarest pulls, prized for high mobility, damage and attack speed.",
+    obtain: "Sinister Trigger is an Exotic-rarity class pulled straight from the class spin pool - Sportskeeda's classes guide rates it at 0.05% on Normal Spins and 0.1% on Lucky Spins, the lowest drop chance of any class.",
     steps: [
-      "Spin for classes (the game's class-roll mechanic).",
-      "Sinister Trigger has roughly a 0.05% chance per roll - expect a long grind.",
+      "Open the CLASSES menu in the main hub.",
+      "Spin with Lucky Spins (0.1%) - at double the Normal-Spin rate (0.05%), they are effectively mandatory for this pull.",
+      "Redeem every active code first - milestone codes like 20mvisit and WEEKENDBUFFS are the main Luck Potion source, then roll in bulk.",
     ],
-    aliases: ["how to get sinister trigger", "dante dungeon lootr", "exotic class"],
+    aliases: ["how to get sinister trigger", "dante dungeon lootr", "exotic class", "sinister trigger spin rate"],
     route: "Class roll",
     standing:
-      "The only top-tier class you can pull straight from spins, no crafting chain - IGN and GameRant both rank it S-tier, prized for mobility, damage and attack speed.",
+      "S-Rank on IGN's September list - a Ranged class with 'the strongest attacks' plus a self-buff - and in Destructoid's top-3 pure DPS trio with Dark Professor and Spell Breaker. Destructoid calls it the best spin class in the game, paired with Alacrity or Ruin aspects.",
     grind:
-      "At ~0.05% per roll you are looking at roughly 1 in 2,000 rolls on average - a stockpile-Luck-Potions-first grind, not a session goal.",
-    related: ["awakened-devil-ex", "azure-devil"],
+      "The math is blunt: 0.05% Normal is ~1 in 2,000 rolls; 0.1% Lucky is ~1 in 1,000. Stockpile Luck Potions from milestone codes, then roll in bulk - a long-term project, not a session goal.",
+    related: ["dark-professor", "spell-breaker", "awakened-devil-ex", "azure-devil"],
     extraFaq: [
       {
         q: "What are the odds of rolling Sinister Trigger?",
-        a: "About 0.05% per roll - roughly 1 in 2,000 on average. Treat it as a long-term goal: some players hit it early, others go far past the average.",
+        a: "0.05% per Normal Spin and 0.1% per Lucky Spin, per Sportskeeda's classes guide - roughly 1 in 2,000 and 1 in 1,000 respectively. Treat it as a long-term goal: some players hit it early, others go far past the average.",
       },
       {
         q: "How do I improve my chances of rolling Sinister Trigger?",
-        a: "Luck Potions boost class-spin odds, so redeem every working code first - JACKPOT alone gives 5 - then roll in bulk instead of trickling single spins.",
+        a: "Lucky Spins double the rate (0.1%), so the grind is Luck Potion logistics: redeem every active code first - milestone codes like 20mvisit and WEEKENDBUFFS hand out potions - stockpile, then roll in bulk instead of trickling single spins.",
       },
       {
         q: "Is Sinister Trigger the rarest class in Dungeon Lootr?",
-        a: "It sits in the Exotic bracket - the top rarity tier - and its ~0.05% rate is the lowest figure cited in showcase videos so far.",
+        a: "Yes - Sportskeeda's classes guide names it the rarest class in the game, and Destructoid's Update 1 tier list confirms it as the Exotic-rarity pull on Spins.",
+      },
+      {
+        q: "What is Sinister Trigger's kit like?",
+        a: "IGN describes it as a Ranged class with the strongest attacks in Dungeon Lootr plus a self-buff that raises its damage further. Per UrGameTips' Update 1 list, Crossfire has three charges with Dodge movement, and Showstopper and Rainstorm can reset each other.",
       },
     ],
     metaDesc:
-      "Sinister Trigger (Dante) in Dungeon Lootr: Exotic class at ~0.05% roll chance. Odds math, Luck Potion tips. Verified 2026-09-05.",
+      "Sinister Trigger (Dante) in Dungeon Lootr: Exotic spin class - 0.05% Normal / 0.1% Lucky rates, S-tier kit. Verified 2026-09-16.",
     verified: true,
   },
   {
