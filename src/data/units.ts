@@ -19,6 +19,16 @@
  * (Exotic on spins, top-3 pure DPS with Dark Professor/Spell Breaker,
  * Alacrity-Ruin aspect pairing), IGN September list (S-Rank, Ranged, self-buff),
  * UrGameTips September (kit: Crossfire 3 charges, Showstopper/Rainstorm resets).
+ * Update 1.5 unlocks (2026-09-17): Dragoon/Embertide = spin pool Exotic 0.05%
+ * (Gamezebo tier list + Gamezebo Embertide-vs-Dragoon guide + robloxden class
+ * table). Hellfiend = Twin Jackals bundle (robloxden class table, corroborated
+ * by creator 1.5 guide j8k3iHjOnZA naming a "Twin Jackle" bundle + showcase
+ * swfn4gpjMwQ titling it "HELLFIEND (Alucard)"). Tiers: allthings.how Embertide
+ * article (Dragoon S, Embertide A, Hellfiend A) + robloxden (Hellfiend S,
+ * Embertide/Dragoon A) + Gamezebo (Dragoon/Embertide top band). Hollow and
+ * Blade of Draconia: shipped per allthings.how + ProGameGuides, but no source
+ * publishes unlock or tier - stay unverified. 500-roll Exotic pity counter is
+ * creator-sourced only (j8k3iHjOnZA) - flagged unconfirmed on the pages.
  */
 export interface Unit {
   slug: string;
@@ -52,69 +62,126 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-16";
+export const UNITS_LAST_CHECKED = "2026-09-17";
 
 export const UNITS: Unit[] = [
-  // --- Update 1.5 classes (2026-09-14): names per ProGameGuides; update
-  // confirmed by Roblox API (Sep 14 02:07 UTC) + the 1.5 code batch. Unlock
-  // routes not yet published by any source - pages stay honest placeholders
-  // until a method is confirmed. ---
+  // --- Update 1.5 classes: names per ProGameGuides; update confirmed by
+  // Roblox API (Sep 14 02:07 UTC) + the 1.5 code batch. Unlock routes sourced
+  // 2026-09-17 (see header): Dragoon/Embertide spins, Hellfiend bundle;
+  // Hollow and Blade of Draconia remain honest placeholders. ---
   {
     slug: "dragoon",
     name: "Dragoon",
     origin: "Dragoon class (Update 1.5)",
     anime: "",
-    rarity: "",
+    rarity: "Exotic",
     obtain:
-      "Dragoon is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method hasn't been published by any source we trust yet - Update 1 classes came from the raid, so check the Magic Unleashed Raid and the spin pool in-game. We're checking after each source update.",
-    steps: [],
-    aliases: ["how to get dragoon dungeon lootr"],
-    route: "Unknown",
-    standing: "Too new for tier lists - grading starts once unlock routes are public.",
-    grind: "",
-    related: ["embertide", "hellfiend", "hollow", "blade-of-draconia"],
-    extraFaq: [],
+      "Dragoon is an Exotic class in the class spin pool - Gamezebo's tier list and its Embertide vs Dragoon guide both list it as a class roll at the Exotic 0.05% rate, and robloxden's class table agrees ('Spin'). No quest or bundle route exists.",
+    steps: [
+      "Redeem every active code first - milestone codes hand out Luck Potions, and potions fuel Lucky Spins.",
+      "Roll class spins - Dragoon sits in the Exotic band, cited at 0.05% per roll by Gamezebo.",
+      "Roll in bulk rather than single spins, and watch the spin UI: creator footage of Update 1.5 shows a new 500-roll Exotic pity counter (single source - treat as unconfirmed until verified in-game).",
+    ],
+    aliases: ["how to get dragoon dungeon lootr", "dragoon class dungeon lootr", "dragoon spin rate"],
+    route: "Class roll",
+    standing:
+      "S-tier on Gamezebo and allthings.how - the latter names Dragoon the standout of the five Update 1.5 arrivals. robloxden places it one step lower in A. Two-to-one consensus: S.",
+    grind:
+      "Same logistics as any Exotic spin: stockpile Luck Potions from codes, then roll in bulk. If the creator-reported 500-roll pity counter is real, that caps the worst case - but treat it as unconfirmed.",
+    related: ["embertide", "hellfiend", "sinister-trigger"],
+    extraFaq: [
+      {
+        q: "Is Dragoon a spin class?",
+        a: "Yes - Gamezebo (tier list and its Embertide vs Dragoon guide) and robloxden both list Dragoon in the class spin pool at Exotic rarity, cited at a 0.05% drop rate. No questline exists: Gamezebo states the new classes 'can only be obtained by using spins.'",
+      },
+      {
+        q: "Is there a pity system for Dragoon?",
+        a: "Creator footage of Update 1.5 shows a 500-roll Exotic pity counter in the spin UI - complete 500 rolls and an Exotic is guaranteed. Only one source reports this so far, so confirm the counter in-game before planning around it.",
+      },
+      {
+        q: "Is Dragoon good?",
+        a: "Yes - allthings.how calls it the one Update 1.5 class that landed in S tier, and Gamezebo rates it in its top band too. robloxden is the dissenter at A-tier.",
+      },
+    ],
     metaDesc:
-      "How to get Dragoon in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
-    verified: false,
+      "How to get Dragoon in Dungeon Lootr: Exotic spin class (~0.05%), S-tier. Spin strategy + pity info. Verified 2026-09-17.",
+    verified: true,
   },
   {
     slug: "embertide",
     name: "Embertide",
     origin: "Embertide class (Update 1.5)",
     anime: "",
-    rarity: "",
+    rarity: "Exotic",
     obtain:
-      "Embertide is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
-    steps: [],
-    aliases: ["how to get embertide dungeon lootr"],
-    route: "Unknown",
-    standing: "Too new for tier lists.",
-    grind: "",
-    related: ["dragoon", "hellfiend", "hollow", "blade-of-draconia"],
-    extraFaq: [],
+      "Embertide is an Exotic class in the class spin pool - Gamezebo's tier list and its Embertide vs Dragoon guide both list it as a class roll at the Exotic 0.05% rate ('unlocked via spins rather than a questline'), and robloxden's class table agrees.",
+    steps: [
+      "Redeem every active code first - milestone codes hand out Luck Potions for Lucky Spins.",
+      "Roll class spins - Embertide sits in the Exotic band, cited at 0.05% per roll by Gamezebo.",
+      "Roll in bulk and watch the spin UI: creator footage shows a 500-roll Exotic pity counter added in Update 1.5 (single source - confirm in-game).",
+    ],
+    aliases: ["how to get embertide dungeon lootr", "embertide class dungeon lootr", "embertide spin rate"],
+    route: "Class roll",
+    standing:
+      "A-tier on allthings.how and robloxden; Gamezebo slots it in its top band. allthings.how describes a Magic (Intelligence) pack-clearer whose ceiling is capped by weak single-target damage, not clear speed.",
+    grind:
+      "Pure spin logistics: stockpile Luck Potions from codes, roll in bulk. The creator-reported 500-roll Exotic pity would cap the worst case, but it is single-source for now.",
+    related: ["dragoon", "hellfiend", "sinister-trigger"],
+    extraFaq: [
+      {
+        q: "Is Embertide a spin class?",
+        a: "Yes - Gamezebo states the Update 1.5 spin classes 'can only be obtained by using spins' at the Exotic 0.05% rate, and robloxden's class table lists Embertide's route as 'Spin.'",
+      },
+      {
+        q: "What is Embertide's kit like?",
+        a: "Per allthings.how, Embertide is an Intelligence-scaling Magic class with four cooldown-driven skills: Flame Stump (fire AoE), Swirling Whirlpool (pulls and groups enemies - the standout CC), Blasting Descent (explosive AoE) and Tidal Tempest (water AoE). Its M1 chain is weak, so damage is measured by cooldown uptime.",
+      },
+      {
+        q: "What stats and aspects work best on Embertide?",
+        a: "allthings.how recommends full Intelligence (Strength/Dexterity do nothing for its skill damage) with Tempest or Ruin aspects - Tempest stacks skill damage per cast up to 40%, Ruin sunders a single target for up to 75% increased damage.",
+      },
+    ],
     metaDesc:
-      "How to get Embertide in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
-    verified: false,
+      "How to get Embertide in Dungeon Lootr: Exotic spin class (~0.05%), Magic AoE kit. Spin strategy + build. Verified 2026-09-17.",
+    verified: true,
   },
   {
     slug: "hellfiend",
     name: "Hellfiend",
-    origin: "Hellfiend class (Update 1.5)",
+    origin: "Hellfiend class (Update 1.5, Alucard-inspired)",
     anime: "",
-    rarity: "",
+    rarity: "Exotic",
     obtain:
-      "Hellfiend is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
-    steps: [],
-    aliases: ["how to get hellfiend dungeon lootr"],
-    route: "Unknown",
-    standing: "Too new for tier lists.",
-    grind: "",
-    related: ["dragoon", "embertide", "hollow", "blade-of-draconia"],
-    extraFaq: [],
+      "Hellfiend is the Alucard-inspired Exotic class, sold in the Twin Jackals bundle per robloxden's class table. Creator Update 1.5 guides corroborate a 'Twin Jackle' bundle existing this patch, and showcase footage titles the class 'HELLFIEND (Alucard)'. No free route is confirmed.",
+    steps: [
+      "Open the in-game shop and find the Twin Jackals bundle (the Update 1.5 bundle line).",
+      "Purchase the bundle - it grants the Hellfiend class directly.",
+    ],
+    aliases: ["how to get hellfiend dungeon lootr", "hellfiend class dungeon lootr", "twin jackals bundle", "alucard dungeon lootr"],
+    route: "Robux bundle",
+    standing:
+      "S-tier on robloxden, which notes paywalled classes are designed to be strong; allthings.how places it in A. Split-source for now - check the tier list as more sites grade it.",
+    grind:
+      "No grind - it is a Robux purchase. Free players should look at the spin-pool 1.5 classes (Dragoon, Embertide) or the Boss Rush crafts instead.",
+    related: ["dragoon", "embertide", "shadow-vagrant"],
+    extraFaq: [
+      {
+        q: "Is Hellfiend the Alucard class?",
+        a: "Yes - showcase footage titles it 'HELLFIEND (Alucard)', the Hellsing-inspired class. It is granted by the Twin Jackals bundle, named after Alucard's paired handguns.",
+      },
+      {
+        q: "Can you get Hellfiend for free?",
+        a: "No free route is confirmed. robloxden lists its only source as the Twin Jackals bundle - the same pattern as the Shadow Monarch pack (Shadow Vagrant). We will update this page if a free path appears.",
+      },
+      {
+        q: "Is Hellfiend good?",
+        a: "robloxden puts it in S-tier (noting paywalled classes are built to be strong), while allthings.how has it in A. Two sources, split verdict - it is at least a strong pick.",
+      },
+    ],
     metaDesc:
-      "How to get Hellfiend in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
-    verified: false,
+      "How to get Hellfiend in Dungeon Lootr: Alucard-inspired Exotic from the Twin Jackals bundle. Rating + F2P options. Verified 2026-09-17.",
+    videoId: "swfn4gpjMwQ",
+    verified: true,
   },
   {
     slug: "hollow",
@@ -123,16 +190,22 @@ export const UNITS: Unit[] = [
     anime: "",
     rarity: "",
     obtain:
-      "Hollow is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+      "Hollow is one of the five Update 1.5 classes (allthings.how and ProGameGuides both confirm it shipped). No source has published its unlock method or rarity yet - the other 1.5 classes split between the spin pool (Dragoon, Embertide) and a Robux bundle (Hellfiend), so check both in-game. We update this page the moment a source confirms it.",
     steps: [],
-    aliases: ["how to get hollow dungeon lootr"],
+    aliases: ["how to get hollow dungeon lootr", "hollow class dungeon lootr"],
     route: "Unknown",
-    standing: "Too new for tier lists.",
+    standing:
+      "Unranked everywhere so far - no tier list has graded Hollow yet.",
     grind: "",
     related: ["dragoon", "embertide", "hellfiend", "blade-of-draconia"],
-    extraFaq: [],
+    extraFaq: [
+      {
+        q: "Why isn't the Hollow unlock method listed here?",
+        a: "Because no reliable source has published it yet. We know it shipped in Update 1.5 (allthings.how, ProGameGuides) but nothing more - we publish methods only once confirmed, never guesses.",
+      },
+    ],
     metaDesc:
-      "How to get Hollow in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed so far. Checked 2026-09-14.",
+      "How to get Hollow in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock method still unpublished. Checked 2026-09-17.",
     verified: false,
   },
   {
@@ -142,16 +215,22 @@ export const UNITS: Unit[] = [
     anime: "",
     rarity: "",
     obtain:
-      "Blade of Draconia is one of the five Update 1.5 classes (named by ProGameGuides). Its unlock method is still unverified - check the raid and spin pool in-game. We update this page the moment a source confirms it.",
+      "Blade of Draconia is one of the five Update 1.5 classes (allthings.how and ProGameGuides both confirm it shipped). No source has published its unlock method or rarity yet - the other 1.5 classes split between the spin pool (Dragoon, Embertide) and a Robux bundle (Hellfiend), so check both in-game. We update this page the moment a source confirms it.",
     steps: [],
-    aliases: ["how to get blade of draconia dungeon lootr", "draconia blade"],
+    aliases: ["how to get blade of draconia dungeon lootr", "draconia blade", "blade of draconia class"],
     route: "Unknown",
-    standing: "Too new for tier lists.",
+    standing:
+      "Unranked everywhere so far - no tier list has graded Blade of Draconia yet.",
     grind: "",
     related: ["dragoon", "embertide", "hellfiend", "hollow"],
-    extraFaq: [],
+    extraFaq: [
+      {
+        q: "Why isn't the Blade of Draconia unlock method listed here?",
+        a: "Because no reliable source has published it yet. We know it shipped in Update 1.5 (allthings.how, ProGameGuides) but nothing more - we publish methods only once confirmed, never guesses.",
+      },
+    ],
     metaDesc:
-      "How to get Blade of Draconia in Dungeon Lootr: Update 1.5 class, unlock method being verified. What's confirmed. Checked 2026-09-14.",
+      "How to get Blade of Draconia in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock unpublished. Checked 2026-09-17.",
     verified: false,
   },
   // --- Update 1 raid classes (2026-09-13): obtain routes from creator video
