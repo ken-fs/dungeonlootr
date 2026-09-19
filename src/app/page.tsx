@@ -54,6 +54,10 @@ const HOME_FAQ = [
     q: "What is the best class in Dungeon Lootr?",
     a: "Cursed King (Sukuna) is the most-cited best class. We rank every class on the class tier list and re-grade each patch.",
   },
+  {
+    q: "Is Anime Lootr the same game as Dungeon Lootr?",
+    a: "Yes - many players search the game as 'Anime Lootr', but the Roblox title is Dungeon Lootr. Same game: the same classes, codes, and tier lists apply.",
+  },
 ];
 
 const HUBS = [

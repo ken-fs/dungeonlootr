@@ -750,7 +750,7 @@ export const UNITS: Unit[] = [
       "IGN S-tier: a dodge-heavy physical class where successful dodges spawn shadows that damage enemies - defense becomes offense. GameRant also places it in S-tier.",
     grind:
       "No grind - it is a Robux purchase. Free players should aim at the Boss Rush crafts instead: Honored One, Cursed King and Anti Magic all come from floor-40+ drops or 50 fragments.",
-    related: ["dreadlord", "sukuna"],
+    related: ["dreadlord", "sukuna", "awakened-devil-ex"], // awakened 是高展示漏水页，从最强页泵内链
     extraFaq: [
       {
         q: "Is Shadow Vagrant Sung Jin-Woo?",
@@ -878,7 +878,7 @@ export const UNITS: Unit[] = [
     standing:
       "IGN A-tier, GameRant B-tier. Its exclusivity makes it a veteran badge more than a meta chase - the tier gap to the S-tier crafts is clear.",
     grind: "",
-    related: ["jetstream", "demonbane"],
+    related: ["jetstream", "demonbane", "azure-devil"], // azure 是高展示漏水页，从强页泵内链
     extraFaq: [
       {
         q: "Can you still get Streamline?",

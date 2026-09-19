@@ -52,8 +52,14 @@ for repo in "${REPOS[@]}"; do
   cd "$SHIP/$repo" || continue
   git add reports/ 2>/dev/null && \
     git -c user.name="ken lee" -c user.email="david@MacBook-Pro.local" \
-      commit -q -m "Patrol $DATE" 2>/dev/null && \
-    git -c http.proxy=http://127.0.0.1:7897 push -q origin main 2>/dev/null || true
+      commit -q -m "Patrol $DATE" 2>/dev/null || true
+  # 推送三级兜底：直连 → 代理 → 代理 rebase 重试；失败必留痕（不再静默吞掉）
+  if git log origin/main..main --oneline | grep -q .; then
+    GIT_TERMINAL_PROMPT=0 git push -q origin main 2>/dev/null \
+      || GIT_TERMINAL_PROMPT=0 git -c http.proxy=http://127.0.0.1:7897 push -q origin main 2>/dev/null \
+      || { git -c http.proxy=http://127.0.0.1:7897 pull -q --rebase origin main 2>/dev/null && GIT_TERMINAL_PROMPT=0 git push -q origin main 2>/dev/null; } \
+      || echo "PATROL_PUSH_FAILED $repo" >> /tmp/patrol-agent-$DATE.log
+  fi
 done
 
 # 汇总通知
