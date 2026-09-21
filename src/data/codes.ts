@@ -32,6 +32,13 @@ export interface GameCode {
   reward: string;
   status: "active" | "expired" | "unconfirmed";
   note?: string;
+  /**
+   * Optional link to the related class/guide page. Only used where the code
+   * name literally IS the thing players will search next - e.g. the
+   * NECROMANCER code and the Necromancer class page. The label stays a proper
+   * noun so the same value works on the en/es/pt-br pages without translation.
+   */
+  link?: { href: string; label: string };
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
@@ -45,8 +52,20 @@ export const CODES: GameCode[] = [
   { code: "PAYLOAD", reward: "5 Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
   { code: "TAURUS", reward: "Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
   { code: "UPDATETWO", reward: "Reforge Stone + Aspect Gem", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
-  { code: "NECROMANCER", reward: "Normal spin + Luck spin", status: "active", note: "Update 2 code; shares its name with a new celestial class." },
-  { code: "MOONWITCH", reward: "Normal spin + 10 Luck spin", status: "active", note: "Update 2 code; shares its name with a new celestial class." },
+  {
+    code: "NECROMANCER",
+    reward: "Normal spin + Luck spin",
+    status: "active",
+    note: "Update 2 code; shares its name with a new celestial class.",
+    link: { href: "/units/necromancer/", label: "Necromancer" },
+  },
+  {
+    code: "MOONWITCH",
+    reward: "Normal spin + 10 Luck spin",
+    status: "active",
+    note: "Update 2 code; shares its name with a new celestial class.",
+    link: { href: "/units/moon-witch/", label: "Moon Witch" },
+  },
   // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
   // GameRant-only, marked approximate. Still active - no second source has
   // retired them (Destructoid's page omits them, but that page is unreliable

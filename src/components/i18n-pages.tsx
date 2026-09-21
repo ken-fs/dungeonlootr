@@ -272,7 +272,15 @@ export function LocalizedCodes({ t }: { t: LocaleDict }) {
               <div className="min-w-0">
                 <code className="glow-gold text-lg font-bold break-all">{x.code}</code>
                 <span className="block text-sm text-dim sm:ml-3 sm:inline">{x.reward}</span>
-              </div>
+              {x.link && (
+                    <Link
+                      href={x.link.href}
+                      className="mt-1 block text-xs text-arcane hover:underline"
+                    >
+                      &rarr; How to get {x.link.label}
+                    </Link>
+                  )}
+                </div>
               <CopyButton value={x.code} label={t.copy} copiedLabel={t.copied} />
             </li>
           ))}

@@ -118,6 +118,14 @@ export default function CodesPage() {
                 <div className="min-w-0">
                   <code className="glow-gold text-lg font-bold break-all">{c.code}</code>
                   <span className="block text-sm text-dim sm:ml-3 sm:inline">{c.reward}</span>
+                  {c.link && (
+                    <Link
+                      href={c.link.href}
+                      className="mt-1 block text-xs text-arcane hover:underline"
+                    >
+                      &rarr; How to get {c.link.label}
+                    </Link>
+                  )}
                 </div>
                 <CopyButton value={c.code} />
               </li>
