@@ -123,7 +123,7 @@ export default function CodesPage() {
                       href={c.link.href}
                       className="mt-1 block text-xs text-arcane hover:underline"
                     >
-                      &rarr; How to get {c.link.label}
+                      &rarr; {c.link.label}
                     </Link>
                   )}
                 </div>

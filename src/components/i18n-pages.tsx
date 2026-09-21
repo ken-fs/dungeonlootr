@@ -277,7 +277,7 @@ export function LocalizedCodes({ t }: { t: LocaleDict }) {
                       href={x.link.href}
                       className="mt-1 block text-xs text-arcane hover:underline"
                     >
-                      &rarr; How to get {x.link.label}
+                      &rarr; {x.link.label}
                     </Link>
                   )}
                 </div>

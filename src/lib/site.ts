@@ -23,6 +23,7 @@ export const NAV: { href: string; label: string }[] = [
   { href: "/tier-list/", label: "Class Tier List" },
   { href: "/aspect-tier-list/", label: "Aspect Tier List" },
   { href: "/units/", label: "Units" },
+  { href: "/payload/", label: "Payload" },
   { href: "/boss-rush/", label: "Boss Rush" },
   { href: "/beginner-guide/", label: "Beginner Guide" },
   { href: "/updates/", label: "Updates" },

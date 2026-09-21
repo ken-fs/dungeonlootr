@@ -33,10 +33,11 @@ export interface GameCode {
   status: "active" | "expired" | "unconfirmed";
   note?: string;
   /**
-   * Optional link to the related class/guide page. Only used where the code
+   * Optional link to the related class/mode page. Only used where the code
    * name literally IS the thing players will search next - e.g. the
-   * NECROMANCER code and the Necromancer class page. The label stays a proper
-   * noun so the same value works on the en/es/pt-br pages without translation.
+   * NECROMANCER code and the Necromancer class page. `label` is the complete
+   * anchor text (the renderer adds only the arrow), so it stays a proper noun
+   * and works on the en/es/pt-br pages without translation.
    */
   link?: { href: string; label: string };
 }
@@ -49,7 +50,13 @@ export const CODES: GameCode[] = [
   // tested. Rewards per AkumaBlox's read-aloud; Rohaan's video shows each
   // code redeeming successfully. Code names match Update 2's new classes
   // (Necromancer and Moon Witch are the two new celestial classes). ---
-  { code: "PAYLOAD", reward: "5 Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
+  {
+    code: "PAYLOAD",
+    reward: "5 Reforge Stone",
+    status: "active",
+    note: "Update 2 code; shares its name with the new Payload game mode.",
+    link: { href: "/payload/", label: "How the Payload mode works" },
+  },
   { code: "TAURUS", reward: "Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
   { code: "UPDATETWO", reward: "Reforge Stone + Aspect Gem", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
   {
@@ -57,14 +64,14 @@ export const CODES: GameCode[] = [
     reward: "Normal spin + Luck spin",
     status: "active",
     note: "Update 2 code; shares its name with a new celestial class.",
-    link: { href: "/units/necromancer/", label: "Necromancer" },
+    link: { href: "/units/necromancer/", label: "How to get Necromancer" },
   },
   {
     code: "MOONWITCH",
     reward: "Normal spin + 10 Luck spin",
     status: "active",
     note: "Update 2 code; shares its name with a new celestial class.",
-    link: { href: "/units/moon-witch/", label: "Moon Witch" },
+    link: { href: "/units/moon-witch/", label: "How to get Moon Witch" },
   },
   // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
   // GameRant-only, marked approximate. Still active - no second source has

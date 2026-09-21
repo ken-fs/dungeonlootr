@@ -182,7 +182,7 @@ export const UNITS: Unit[] = [
     standing:
       "Roblofix puts Fey in S tier: \"crazy physical damage and an extremely fast-paced play style\", with abilities that clear groups of enemies while constantly resetting cooldowns, plus good mobility and defensive options. The one caveat he raises is bosses slowing its momentum.",
     grind:
-      "Marks from the Payload mode. At 7,500 marks it is a farm, but it is one of the three free-to-play Update 2 classes - no Robux needed.",
+      "Aether marks from the Payload mode. At 7,500 marks it is a farm, but it is one of the three free-to-play Update 2 classes - no Robux needed. See the Payload mode guide for how to earn them.",
     related: ["moon-witch", "necromancer", "shadow-vagrant"],
     extraFaq: [
       {
