@@ -1,6 +1,8 @@
 #!/bin/bash
 # 游戏工具站群每日巡检：codes/补丁变化 + 站点健康 + 写报告，需行动时弹通知
-# 覆盖：dungeonlootr.net / ghostdriver.net / animeexpeditions.dev / howtofishthegame.com
+# 覆盖：dungeonlootr.net / ghostdriver.net / animeexpeditions.dev / howtofishthegame.com / commandanarmy.cc
+# 注：AnvilWiki 站的技术健康（孤岛页/schema 长度/sitemap 域名/部署标记/游戏新 badge）
+#     由 scripts/site-hygiene.mjs 每天 10:00 独立跑（确定性、零 AI），不在本脚本内重复。
 # cron: 0 11 * * * /Users/david/Desktop/david/Ship/dungeonlootr/scripts/patrol.sh
 set -u
 export PATH="/Users/david/Library/pnpm:/usr/local/bin:/usr/bin:/bin"
@@ -8,7 +10,7 @@ source /Users/david/.zshrc 2>/dev/null || true  # TAVILY_API_KEY
 
 DATE=$(date +%F)
 SHIP=/Users/david/Desktop/david/Ship
-REPOS=(dungeonlootr ghostdriver animeexpeditions howtofish)
+REPOS=(dungeonlootr ghostdriver animeexpeditions howtofish commandanarmy)
 
 # 幂等防护：今日已出报告则直接退出（cron/launchd 可能多次触发）
 if [ -f "$SHIP/dungeonlootr/reports/patrol-$DATE.md" ]; then
@@ -40,14 +42,26 @@ pi -p --no-session "你是游戏工具站群的每日巡检 agent，只报告不
 - 对比：出现版本号 > GAME_VERSION 的新 PATCH = ACTION_NEEDED；公告提到新内容（新鱼/岛/成就/content update）也 = ACTION_NEEDED。官方已预告本周开始做内容更新
 - curl 评测数：'https://store.steampowered.com/appreviews/4001890?json=1&language=all&purchase_type=all&num_per_page=0'，记录 total_reviews 与好评率变化（上次 57,158 / 95%）
 
+【5. Command An Army】（AnvilWiki 站，有 codes + 有 meta）码表 $SHIP/commandanarmy/src/content/wiki/en/codes/all-codes.mdx；线上 https://commandanarmy.cc/codes/all-codes/
+- tavily 搜 'Command An Army codes'（advanced，time_range=week，max 6）
+- 对比：有无未收录新码？我方 active 码有无被 ≥2 源标 expired？
+- 【meta 情报】另搜 'Command An Army tier list' 或 'Command An Army new unit'（time_range=week，max 6）：出现新单位 / 补丁削弱加强 = ACTION_NEEDED（本站增长引擎是 units/* 深度页 + guides/best-units-tier-list，meta 一变就该重写）
+- 【游戏新内容】确定性检查已由 scripts/site-hygiene.mjs 覆盖（badge API 数增长），这里只看需要人判断的 meta 变化
+
 每站用 curl -sL -o /dev/null -w '%{http_code}' --max-time 20 检查上述线上 URL。
 
 然后为每站各写一份中文 markdown 报告到对应 repo：$SHIP/<repo>/reports/patrol-$DATE.md
 报告结构：# 站名 每日巡检报告 / 日期 / 一、Codes（或补丁）状态 / 二、信源对比表 / 三、线上健康 / 四、建议动作 / 最后一行单独写 VERDICT: OK 或 VERDICT: ACTION_NEEDED（有实质变动=ACTION_NEEDED）。
+Command An Army 报告额外加一节「五、meta 变化」记录单位/补丁变动。
 铁律：绝不修改任何 src 文件；不确定就写'不确定'，禁止编造码、奖励或补丁内容。各 reports/ 目录若不存在用 mkdir -p 创建。" \
   > /tmp/patrol-agent-$DATE.log 2>&1
 
 # 报告入库（每个 repo 单独提交；失败不阻塞）
+#
+# ⚠️ AnvilWiki 站的 .gitignore 明确排除 reports/（模板注释：「daily ops reports
+# (local automation, never committed)」）—— 这是有意设计：报告入库会每天触发一次
+# Cloudflare 构建，纯噪音。这类站的报告只留本地 reports/ 供人工回看，下面的
+# git add 自然为空、commit 失败、push 跳过，整条链路静默降级，不会报错。
 for repo in "${REPOS[@]}"; do
   cd "$SHIP/$repo" || continue
   git add reports/ 2>/dev/null && \

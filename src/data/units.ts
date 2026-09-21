@@ -62,9 +62,196 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-17";
+export const UNITS_LAST_CHECKED = "2026-09-21";
 
 export const UNITS: Unit[] = [
+  // --- Update 2 classes (2026-09-19/20): three free-to-play, one paywalled.
+  // Sources per file header. Creator camps disagree on Moon Witch and
+  // Crescent Blade - both readings are stated rather than smoothed over. ---
+  {
+    slug: "necromancer",
+    name: "Necromancer",
+    origin: "In-game class: Necromancer (Update 2)",
+    anime: "",
+    rarity: "Celestial",
+    obtain:
+      "Necromancer is one of two Celestial classes added in Update 2 and comes from the class summon pool. Creators spun for it directly on stream; no alternative route is confirmed.",
+    steps: [
+      "Open the class summon (spin) menu - the same reroll area the other Celestial classes come from.",
+      "Keep spinning until Necromancer drops. Celestial is the rarest tier in the pool, so treat this as a long-term chase rather than a quick unlock.",
+    ],
+    aliases: [
+      "how to get necromancer dungeon lootr",
+      "dungeon lootr necromancer class",
+      "necromancer celestial dungeon lootr",
+      "dungeon lootr update 2 classes",
+    ],
+    route: "Class roll",
+    standing:
+      "Roblofix's Update 2 tier list puts Necromancer in A tier - a summoner that raises undead allies and supports them, with strong healing and AOE options. Its ceiling depends on managing summons and having enough enemies to raise. MK is more enthusiastic about the kit itself, calling it \"pretty fun\" with most damage coming from the summons, but notes it ships without an ultimate or an awakening NPC.",
+    grind:
+      "Celestial spins. Creators report burning thousands of spins hunting it, so save spins for a Celestial rate-up rather than pulling blind.",
+    related: ["moon-witch", "dark-professor", "sinister-trigger"],
+    extraFaq: [
+      {
+        q: "What does the Necromancer class do?",
+        a: "It is a summoner. The Raise skill revives your last five kills as undead allies, and the kit also mends every undead for half their maximum health while healing allies within 30 studs. The in-game description reads: \"A grave wand caster who drags a recently slain back to their feet and spins them as an undead vanguard.\"",
+      },
+      {
+        q: "How many skeletons does Necromancer summon?",
+        a: "Three. Creator showcases show you can summon three skeletons and then heal them, explode them, or empower them for a damage boost - most of the class's damage comes from the summons rather than your own attacks.",
+      },
+      {
+        q: "Does Necromancer have an ultimate or awakening?",
+        a: "No. Creators report no ultimate and no awakening NPC for Necromancer - the same is true of Moon Witch. Plan around the base kit and the summons rather than waiting for an ultimate.",
+      },
+      {
+        q: "What stats does Necromancer use?",
+        a: "Magic. Dey's Update 2 showcase lists Necromancer as a Celestial magic archetype, so build intelligence and magic damage rather than physical.",
+      },
+    ],
+    metaDesc:
+      "How to get the Necromancer class in Dungeon Lootr: Celestial rarity, from the Update 2 class summon pool, with its Raise skill and three-skeleton kit.",
+    verified: true,
+  },
+  {
+    slug: "moon-witch",
+    name: "Moon Witch",
+    origin: "In-game class: Moon Witch (Update 2)",
+    anime: "",
+    rarity: "Celestial",
+    obtain:
+      "Moon Witch is the second Celestial class from Update 2 and comes from the same class summon pool as Necromancer. No alternative route is confirmed.",
+    steps: [
+      "Open the class summon (spin) menu.",
+      "Spin for it - Celestial is the rarest tier in the pool, and creators describe the hunt for Moon Witch as taking longer than they expected.",
+    ],
+    aliases: [
+      "how to get moon witch dungeon lootr",
+      "dungeon lootr moon witch class",
+      "moon witch celestial dungeon lootr",
+      "dungeon lootr magic witch",
+    ],
+    route: "Class roll",
+    standing:
+      "The two creator camps disagree sharply, and both readings are worth knowing. Roblofix rates Moon Witch S tier - \"an incredibly complete kit\" with strong AOE damage, crowd control, mobility and a shield, calling it one of the strongest and most versatile classes from the update. MK rates it \"pretty mid\", noting the weapon model is nice but it ships without an ultimate and with no awakening NPC found.",
+    grind:
+      "Celestial spins. Same long chase as Necromancer - Dey's showcase describes the Moon Witch hunt as taking longer than expected even with thousands of spins available.",
+    related: ["necromancer", "fey", "dark-professor"],
+    extraFaq: [
+      {
+        q: "What are Moon Witch's skills?",
+        a: "Creator showcases list four: Pressing Strike, Hell Cascade (73 orbiting moons for 6 seconds that also shield you), Moonfall (pulls every enemy within 24 studs toward you and then strikes them) and Lunar Rush (a forward dash with a dodge frame that slams the ground on landing). It also has a Mastery passive.",
+      },
+      {
+        q: "What does the Moon Witch class do?",
+        a: "The in-game description reads: \"A lunar battle mage who cuts crescent into the dark wards herself with the orbiting moons and drags the field into her fall.\" In practice that is AOE damage plus crowd control - Moonfall groups enemies so the rest of the kit hits all of them.",
+      },
+      {
+        q: "What stats does Moon Witch use?",
+        a: "Magic. Dey's showcase lists it as a magic archetype using intelligence stats, so build intelligence and magic damage rather than physical or ranged.",
+      },
+      {
+        q: "Is Moon Witch better than Necromancer?",
+        a: "Creators disagree, which usually means it depends on your build. Roblofix ranks Moon Witch a full tier above Necromancer (S vs A) on the strength of its complete kit; MK rates Moon Witch lower than Necromancer, which he calls \"pretty fun\". Both are Celestial and both come from the same summon pool.",
+      },
+    ],
+    metaDesc:
+      "How to get the Moon Witch class in Dungeon Lootr: Celestial rarity from the Update 2 summon pool, plus its four skills, shield and the creator tier-list split.",
+    verified: true,
+  },
+  {
+    slug: "fey",
+    name: "Fey",
+    origin: "In-game class: Fey (Update 2)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Fey is bought from the Payload shop for 7,500 marks - the currency you earn by playing the new Update 2 Payload mode. No spin or bundle route is confirmed.",
+    steps: [
+      "Play the Payload mode to earn marks (creators note it is soloable on Nightmare, so it is a grind rather than a carry).",
+      "Open the Payload shop and buy the Fey class for 7,500 marks - it sits at the top of the shop list.",
+    ],
+    aliases: [
+      "how to get fey dungeon lootr",
+      "dungeon lootr fey class",
+      "dungeon lootr payload shop",
+      "fey 7500 marks",
+    ],
+    route: "Item unlock",
+    standing:
+      "Roblofix puts Fey in S tier: \"crazy physical damage and an extremely fast-paced play style\", with abilities that clear groups of enemies while constantly resetting cooldowns, plus good mobility and defensive options. The one caveat he raises is bosses slowing its momentum.",
+    grind:
+      "Marks from the Payload mode. At 7,500 marks it is a farm, but it is one of the three free-to-play Update 2 classes - no Robux needed.",
+    related: ["moon-witch", "necromancer", "shadow-vagrant"],
+    extraFaq: [
+      {
+        q: "How much does the Fey class cost?",
+        a: "7,500 marks in the Payload shop. Marks are earned by playing the Payload mode, not bought with Robux - which makes Fey one of the three free-to-play classes from Update 2.",
+      },
+      {
+        q: "What is the Payload shop?",
+        a: "The Payload shop is the new Update 2 store where you spend marks earned in the Payload mode. Alongside the Fey class it stocks Celestial gear, Reforge Stones, Aspect Gems, new titles, resource chests, Exotic ore and Payload cosmetics.",
+      },
+      {
+        q: "What stats does Fey use?",
+        a: "Physical. Dey's showcase lists Fey as an Exotic physical-type class, so build strength and physical damage rather than magic or ranged.",
+      },
+      {
+        q: "Is Fey worth 7,500 marks?",
+        a: "Roblofix rates it S tier for its damage and fast cooldown-resetting playstyle, which is a strong recommendation for a class you unlock with earnable currency rather than Robux. The main limitation is that bosses can slow its momentum.",
+      },
+    ],
+    metaDesc:
+      "How to get the Fey class in Dungeon Lootr: 7,500 marks in the Update 2 Payload shop, a free-to-play Exotic with S-tier physical damage.",
+    verified: true,
+  },
+  {
+    slug: "crescent-blade",
+    name: "Crescent Blade",
+    origin: "In-game class: Crescent Blade (Kokushibo, Demon Slayer) - Update 2",
+    anime: "Demon Slayer",
+    rarity: "Exotic",
+    obtain:
+      "Crescent Blade is the Update 2 paywalled class, sold as a Robux bundle. It is the Kokushibo class. Creators confirmed no free route exists - one noted the developers have made no attempt to make previous paywall classes obtainable later.",
+    steps: [
+      "Open the in-game shop and find the Update 2 bundle line.",
+      "Purchase the bundle that grants the Crescent Blade (Kokushibo) class. Creators report the displayed price drops with Roblox Plus, so the number you see may not be the list price.",
+    ],
+    aliases: [
+      "how to get crescent blade dungeon lootr",
+      "dungeon lootr kokushibo class",
+      "kokushibo dungeon lootr",
+      "dungeon lootr crescent blade bundle",
+    ],
+    route: "Robux bundle",
+    standing:
+      "Roblofix places Crescent Blade in high A tier but flags it as untested - \"I honestly haven't had enough time to fully test this class yet\" - and says it looks strong with potential to move up to S. MK's review is the counterweight: he reports the ultimate dealing zero damage across multiple attempts on both bosses and normal mobs, and calls the class disappointing for a paid bundle.",
+    grind:
+      "No grind - it is a Robux purchase, and the most expensive way to get an Update 2 class. The other three (Necromancer, Moon Witch, Fey) are all free-to-play.",
+    related: ["shadow-vagrant", "dreadlord", "necromancer"],
+    extraFaq: [
+      {
+        q: "Is Crescent Blade the Kokushibo class?",
+        a: "Yes. Creators covering Update 2 refer to it as Kokushibo, the Demon Slayer character, and it is sold as a Robux bundle - the only one of the four Update 2 classes behind a paywall.",
+      },
+      {
+        q: "Is the Crescent Blade ultimate bugged?",
+        a: "At least one creator reports yes: MK tested the ultimate repeatedly on bosses and normal mobs and says it dealt zero damage. Treat that as a report rather than a confirmed permanent state - it may be patched, so check in-game before buying the bundle for the ultimate specifically.",
+      },
+      {
+        q: "Can you get Crescent Blade for free?",
+        a: "No free route is confirmed. Creators note the developers have not made previous paywall classes obtainable, so do not count on a future free unlock. The free Update 2 alternatives are Necromancer and Moon Witch (summons) and Fey (7,500 marks).",
+      },
+      {
+        q: "What stats does Crescent Blade use?",
+        a: "Physical. Dey's showcase lists it as an Exotic physical-type class.",
+      },
+    ],
+    metaDesc:
+      "How to get the Crescent Blade (Kokushibo) class in Dungeon Lootr: the paywalled Update 2 Robux bundle, plus the bugged-ultimate report and free alternatives.",
+    verified: true,
+  },
   // --- Update 1.5 classes: names per ProGameGuides; update confirmed by
   // Roblox API (Sep 14 02:07 UTC) + the 1.5 code batch. Unlock routes sourced
   // 2026-09-17 (see header): Dragoon/Embertide spins, Hellfiend bundle;
