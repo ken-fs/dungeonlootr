@@ -1,10 +1,22 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
- * RULE: never invent codes. Sources this pull (2026-09-14): GameRant (new
- * batch marked NEW) + YouTube creator B乛MaX丨Rohaan (Sep 12, tested) +
- * Roblox API corroboration (game updated Sep 14 02:07 UTC; 50.8K likes =
- * 45KLIKE crossed; 21.8M visits = 20mvisit crossed). Reward details are
- * GameRant-only - treat as approximate until a second source lists them.
+ * RULE: never invent codes. Sources this pull (2026-09-21, Update 2): two
+ * INDEPENDENT creator videos that agree on all five codes - B乛MaX丨Rohaan
+ * (2026-09-19, shows each redemption succeeding in-game) + AkumaBlox
+ * (2026-09-19 guide, reads each code aloud with its reward). Dual-source,
+ * and one of the two is in-game tested.
+ *
+ * ⚠️ REJECTED SOURCE: Destructoid's Sep 20 page lists four "new" codes
+ * (RAIDS / MASTERY / GHOULUPDATE / SORRYFORRESTARTGUYSTPBUG3) that share
+ * ZERO overlap with what both creators actually redeemed. Its active list
+ * also omits every code we have ever verified. Treat that page as unreliable
+ * for this game and do not re-add those four without in-game confirmation.
+ *
+ * Prior pull (2026-09-14): GameRant (new batch marked NEW) + YouTube creator
+ * B乛MaX丨Rohaan (Sep 12, tested) + Roblox API corroboration (game updated
+ * Sep 14 02:07 UTC; 50.8K likes = 45KLIKE crossed; 21.8M visits = 20mvisit
+ * crossed). Reward details are GameRant-only - treat as approximate until a
+ * second source lists them.
  * Prior pull (2026-09-09): IGN (Sep 7, in-game tested) + Dexerto (Sep 8,
  * verified) dual-source. FULL BATCH
  * ROTATION: the launch-era codes were retired and six new codes dropped
@@ -23,11 +35,22 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-14";
+export const CODES_LAST_CHECKED = "2026-09-21";
 
 export const CODES: GameCode[] = [
+  // --- Update 2 batch (2026-09-19/20): dual creator source, one in-game
+  // tested. Rewards per AkumaBlox's read-aloud; Rohaan's video shows each
+  // code redeeming successfully. Code names match Update 2's new classes
+  // (Necromancer and Moon Witch are the two new celestial classes). ---
+  { code: "PAYLOAD", reward: "5 Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
+  { code: "TAURUS", reward: "Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
+  { code: "UPDATETWO", reward: "Reforge Stone + Aspect Gem", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
+  { code: "NECROMANCER", reward: "Normal spin + Luck spin", status: "active", note: "Update 2 code; shares its name with a new celestial class." },
+  { code: "MOONWITCH", reward: "Normal spin + 10 Luck spin", status: "active", note: "Update 2 code; shares its name with a new celestial class." },
   // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
-  // GameRant-only, marked approximate ---
+  // GameRant-only, marked approximate. Still active - no second source has
+  // retired them (Destructoid's page omits them, but that page is unreliable
+  // for this game - see the file header). ---
   { code: "TOURNAMENT", reward: "Scrolls + more (per GameRant)", status: "active", note: "Update 1.5 tournament update code." },
   { code: "SILVERINE", reward: "Coins + Stones (per GameRant)", status: "active" },
   { code: "JACKAL", reward: "Coins + Blessings (per GameRant)", status: "active" },
