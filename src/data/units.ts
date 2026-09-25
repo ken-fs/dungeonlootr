@@ -291,7 +291,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Dragoon in Dungeon Lootr: Exotic spin class (~0.05%), S-tier. Spin strategy + pity info. Verified 2026-09-17.",
+      "How to get Dragoon in Dungeon Lootr: Exotic spin class (~0.05%), S-tier. Spin strategy + pity info. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -329,7 +329,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Embertide in Dungeon Lootr: Exotic spin class (~0.05%), Magic AoE kit. Spin strategy + build. Verified 2026-09-17.",
+      "How to get Embertide in Dungeon Lootr: Exotic spin class (~0.05%), Magic AoE kit. Spin strategy + build. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -366,7 +366,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Hellfiend in Dungeon Lootr: Alucard-inspired Exotic from the Twin Jackals bundle. Rating + F2P options. Verified 2026-09-17.",
+      "How to get Hellfiend in Dungeon Lootr: Alucard-inspired Exotic from the Twin Jackals bundle. Rating + F2P options. Updated Sep 2026.",
     videoId: "swfn4gpjMwQ",
     verified: true,
   },
@@ -392,7 +392,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Hollow in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock method still unpublished. Checked 2026-09-17.",
+      "How to get Hollow in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock method still unpublished. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -417,7 +417,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Blade of Draconia in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock unpublished. Checked 2026-09-17.",
+      "How to get Blade of Draconia in Dungeon Lootr: Update 1.5 class confirmed shipped, unlock unpublished. Updated Sep 2026.",
     verified: false,
   },
   // --- Update 1 raid classes (2026-09-13): obtain routes from creator video
@@ -450,7 +450,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Spell Breaker in Dungeon Lootr: Magic Unleashed Raid drop or raid shop. Update 1 class. Verified 2026-09-13.",
+      "How to get Spell Breaker in Dungeon Lootr: Magic Unleashed Raid drop or raid shop. Update 1 class. Updated Sep 2026.",
     videoId: "etjS2UV-3GY",
     verified: true,
   },
@@ -476,7 +476,7 @@ export const UNITS: Unit[] = [
     related: ["spell-breaker", "dark-professor", "coyote"],
     extraFaq: [],
     metaDesc:
-      "How to get Cryomancer in Dungeon Lootr: Magic Unleashed Raid drop or raid shop currency. Update 1 class. Verified 2026-09-13.",
+      "How to get Cryomancer in Dungeon Lootr: Magic Unleashed Raid drop or raid shop currency. Update 1 class. Updated Sep 2026.",
     videoId: "G-1G3lVOWSg",
     verified: true,
   },
@@ -507,7 +507,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Dark Professor in Dungeon Lootr: extremely rare drop from the Magic Unleashed Raid on Impossible. Verified 2026-09-13.",
+      "How to get Dark Professor in Dungeon Lootr: extremely rare drop from the Magic Unleashed Raid on Impossible. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -532,7 +532,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Coyote in Dungeon Lootr: Update 1 class, unlock method still being verified. What we know so far. Checked 2026-09-13.",
+      "How to get Coyote in Dungeon Lootr: Update 1 class, unlock method still being verified. What we know so far. Updated Sep 2026.",
     verified: false,
   },
   // --- Spin classes with public rates (2026-09-13): Sportskeeda spin-rate
@@ -560,7 +560,7 @@ export const UNITS: Unit[] = [
     related: ["shinobi", "wanderer"],
     extraFaq: [],
     metaDesc:
-      "How to get Kage in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky Spin rates. Details. Verified 2026-09-13.",
+      "How to get Kage in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky Spin rates. Details. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -585,7 +585,7 @@ export const UNITS: Unit[] = [
     related: ["kage", "wanderer"],
     extraFaq: [],
     metaDesc:
-      "How to get Shinobi in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky rates. Tier split explained. Verified 2026-09-13.",
+      "How to get Shinobi in Dungeon Lootr: Legendary class spin - 8% Normal / 22% Lucky rates. Tier split explained. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -610,7 +610,7 @@ export const UNITS: Unit[] = [
     related: ["kage", "shinobi"],
     extraFaq: [],
     metaDesc:
-      "How to get Wanderer in Dungeon Lootr: Mythic class spin - 2% Normal / 16% Lucky rates. Verified 2026-09-13.",
+      "How to get Wanderer in Dungeon Lootr: Mythic class spin - 2% Normal / 16% Lucky rates. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -648,7 +648,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Sukuna (Cursed King) in Dungeon Lootr: Boss Rush floor 40+ drop or craft with 50 Sukuna Fragments. Full steps. Verified 2026-09-05.",
+      "How to get Sukuna (Cursed King) in Dungeon Lootr: Boss Rush floor 40+ drop or craft with 50 Sukuna Fragments. Full steps. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -687,7 +687,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Gojo (Honored One) in Dungeon Lootr: Boss Rush 40+ drop or 50 Infinity Fragments craft. Needed for Toji. Verified 2026-09-05.",
+      "How to get Gojo (Honored One) in Dungeon Lootr: Boss Rush 40+ drop or 50 Infinity Fragments craft. Needed for Toji. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -725,7 +725,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Unrestricted (Toji) in Dungeon Lootr: level 75 + 500K coins + Gojo 25 + 10 Heavenly Fragments quest. Verified 2026-09-05.",
+      "How to get Unrestricted (Toji) in Dungeon Lootr: level 75 + 500K coins + Gojo 25 + 10 Heavenly Fragments quest. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -763,7 +763,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Asta (Anti Mage) in Dungeon Lootr: Boss Rush floor 40+ drop or Forge craft with 50 fragments. Full steps. Verified 2026-09-05.",
+      "How to get Asta (Anti Mage) in Dungeon Lootr: Boss Rush floor 40+ drop or Forge craft with 50 fragments. Full steps. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -801,7 +801,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Azure Devil (Vergil) in Dungeon Lootr: evolve at level 50 + 1M coins + Devil Heart from Frost Spire. Steps and tips. Verified 2026-09-05.",
+      "Azure Devil (Vergil) in Dungeon Lootr: evolve at level 50 + 1M coins + Devil Heart from Frost Spire. Steps and tips. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -838,7 +838,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Awakened Devil EX in Dungeon Lootr: evolve Azure Devil at level 50 with 1M coins + Devil Heart for Judgement's Edge. Verified 2026-09-05.",
+      "Awakened Devil EX in Dungeon Lootr: evolve Azure Devil at level 50 with 1M coins + Devil Heart for Judgement's Edge. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -879,7 +879,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Sinister Trigger (Dante) in Dungeon Lootr: Exotic spin class - 0.05% Normal / 0.1% Lucky rates, S-tier kit. Verified 2026-09-16.",
+      "Sinister Trigger (Dante) in Dungeon Lootr: Exotic spin class - 0.05% Normal / 0.1% Lucky rates, S-tier kit. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -917,7 +917,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Dreadlord in Dungeon Lootr: Underworld Gate Nightmare drop via Underworld Glaive, ~1% rate. Gear tips. Verified 2026-09-05.",
+      "How to get Dreadlord in Dungeon Lootr: Underworld Gate Nightmare drop via Underworld Glaive, ~1% rate. Gear tips. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -953,7 +953,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "How to get Shadow Vagrant (Sung Jin-Woo) in Dungeon Lootr: Shadow Monarch pack in the Robux shop. Kit, rating, F2P alternatives. Verified 2026-09-05.",
+      "How to get Shadow Vagrant (Sung Jin-Woo) in Dungeon Lootr: Shadow Monarch pack in the Robux shop. Kit, rating, F2P alternatives. Updated Sep 2026.",
     verified: true,
   },
   {
@@ -985,7 +985,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Jetstream in Dungeon Lootr: Exotic class from a special NPC route, not spins. What's confirmed about the unlock. Verified 2026-09-05.",
+      "Jetstream in Dungeon Lootr: Exotic class from a special NPC route, not spins. What's confirmed about the unlock. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1017,7 +1017,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Founder (Sun Wukong) in Dungeon Lootr: Exotic exclusive class - what's known about the unlock route and rating. Verified 2026-09-05.",
+      "Founder (Sun Wukong) in Dungeon Lootr: Exotic exclusive class - what's known about the unlock route and rating. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1049,7 +1049,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Demonbane (Frieren) in Dungeon Lootr: Celestial exclusive, beginner-friendly - what's known about the unlock. Verified 2026-09-05.",
+      "Demonbane (Frieren) in Dungeon Lootr: Celestial exclusive, beginner-friendly - what's known about the unlock. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1081,7 +1081,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Streamline in Dungeon Lootr: the Early-Access exclusive Celestial class - can you still get it? What's confirmed. Verified 2026-09-05.",
+      "Streamline in Dungeon Lootr: the Early-Access exclusive Celestial class - can you still get it? What's confirmed. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1113,7 +1113,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Artemis in Dungeon Lootr: Celestial class - spin pool odds, mixed tier ratings and what's confirmed. Verified 2026-09-05.",
+      "Artemis in Dungeon Lootr: Celestial class - spin pool odds, mixed tier ratings and what's confirmed. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1145,7 +1145,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Forge Archon in Dungeon Lootr: the A-tier class both big tier lists agree on - unlock status and what's known. Verified 2026-09-05.",
+      "Forge Archon in Dungeon Lootr: the A-tier class both big tier lists agree on - unlock status and what's known. Updated Sep 2026.",
     verified: false,
   },
   {
@@ -1177,7 +1177,7 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "VACIO in Dungeon Lootr: tier-list split verdict, unlock status and what's confirmed about the class. Verified 2026-09-05.",
+      "VACIO in Dungeon Lootr: tier-list split verdict, unlock status and what's confirmed about the class. Updated Sep 2026.",
     verified: false,
   },
 ];
