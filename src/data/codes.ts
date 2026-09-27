@@ -6,11 +6,23 @@
  * (2026-09-19 guide, reads each code aloud with its reward). Dual-source,
  * and one of the two is in-game tested.
  *
- * ⚠️ REJECTED SOURCE: Destructoid's Sep 20 page lists four "new" codes
- * (RAIDS / MASTERY / GHOULUPDATE / SORRYFORRESTARTGUYSTPBUG3) that share
- * ZERO overlap with what both creators actually redeemed. Its active list
- * also omits every code we have ever verified. Treat that page as unreliable
- * for this game and do not re-add those four without in-game confirmation.
+ * Pull (2026-09-27): names + rewards re-checked against in-game footage, and the
+ * Update 1 batch retired.
+ *  - TORUS, not TAURUS - and UPDATE2, not UPDATETWO. Evidence: the Update 2
+ *    overview video (youtube Ug91Zwbm_Lo, Sep 19) shows both strings typed into
+ *    the in-game code box with the claim succeeding. Beebom, RadioTimes,
+ *    Destructoid and UrGameTips all spell them the same way; our earlier
+ *    spellings came from a read-aloud that the captions mangled.
+ *  - Rewards for the whole Update 2 batch re-read from that video's redemption
+ *    toasts (250 Aether Marks for PAYLOAD, 30 normal + 10 lucky spins for both
+ *    class codes), matching the aggregators. Numerals now, not prose.
+ *  - Update 1 batch retired in the Update 2 rotation, LOOTR included: Beebom +
+ *    RadioTimes + Destructoid all list UPDATE1 / WEEKENDBUFFS / 15KCCU /
+ *    RAIDTIME / COURAGE / LOVETHISGAME / LOOTR expired.
+ *  - Destructoid has since caught up with the verified batch (same five Update-2
+ *    codes, same expiries), so it is no longer a rejected source. Its four extra
+ *    codes (RAIDS / MASTERY / GHOULUPDATE / SORRYFORRESTARTGUYSTPBUG3) still
+ *    appear nowhere else - keep them out until something corroborates them.
  *
  * Prior pull (2026-09-14): GameRant (new batch marked NEW) + YouTube creator
  * B乛MaX丨Rohaan (Sep 12, tested) + Roblox API corroboration (game updated
@@ -43,7 +55,7 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-09-21";
+export const CODES_LAST_CHECKED = "2026-09-27";
 
 export const CODES: GameCode[] = [
   // --- Update 2 batch (2026-09-19/20): dual creator source, one in-game
@@ -52,45 +64,46 @@ export const CODES: GameCode[] = [
   // (Necromancer and Moon Witch are the two new celestial classes). ---
   {
     code: "PAYLOAD",
-    reward: "5 Reforge Stone",
+    reward: "250 Aether Marks + 5 Reforge Stone",
     status: "active",
     note: "Update 2 code; shares its name with the new Payload game mode.",
     link: { href: "/payload/", label: "How the Payload mode works" },
   },
-  { code: "TAURUS", reward: "Reforge Stone", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
-  { code: "UPDATETWO", reward: "Reforge Stone + Aspect Gem", status: "active", note: "Update 2 code. Reward per AkumaBlox." },
+  { code: "TORUS", reward: "5 Exotic Ingot + 10 Reforge Stone", status: "active", note: "Named after the Taurus boss at the end of a Payload run - the code itself has no A." },
+  { code: "UPDATE2", reward: "300 Aether Marks + 10 Reforge Stone + 2 Aspect Gem", status: "active", note: "Update 2 code. Typed as UPDATE2 in-game, not UPDATETWO." },
   {
     code: "NECROMANCER",
-    reward: "Normal spin + Luck spin",
+    reward: "30 Normal spin + 10 Luck spin",
     status: "active",
     note: "Update 2 code; shares its name with a new celestial class.",
     link: { href: "/units/necromancer/", label: "How to get Necromancer" },
   },
   {
     code: "MOONWITCH",
-    reward: "Normal spin + 10 Luck spin",
+    reward: "30 Normal spin + 10 Luck spin",
     status: "active",
     note: "Update 2 code; shares its name with a new celestial class.",
     link: { href: "/units/moon-witch/", label: "How to get Moon Witch" },
   },
   // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
-  // GameRant-only, marked approximate. Still active - no second source has
-  // retired them (Destructoid's page omits them, but that page is unreliable
-  // for this game - see the file header). ---
+  // GameRant-only, marked approximate. Beebom (Sep 21) lists all five as
+  // expired, RadioTimes and Destructoid still list them active - one source
+  // cannot retire a code, so they stay up until a second one agrees. ---
   { code: "TOURNAMENT", reward: "Scrolls + more (per GameRant)", status: "active", note: "Update 1.5 tournament update code." },
   { code: "SILVERINE", reward: "Coins + Stones (per GameRant)", status: "active" },
   { code: "JACKAL", reward: "Coins + Blessings (per GameRant)", status: "active" },
   { code: "45KLIKE", reward: "Coins + Blessings (per GameRant)", status: "active", note: "45K likes milestone - likes passed 50K on Sep 14." },
   { code: "20mvisit", reward: "3 Luck Potions", status: "active", note: "20M visits milestone - visits passed 21.8M on Sep 14." },
-  // --- Update 1 batch (2026-09-07/08): IGN in-game tested + Dexerto verified ---
-  { code: "UPDATE1", reward: "100 Mage Coins + 10 Reforge Stone + 5 Exotic Ingot", status: "active", note: "Update 1 launch code; still working per GameRant's Update 1.5 list." },
-  { code: "15KCCU", reward: "100,000 Coins + 5 Luck Potion III", status: "active", note: "15K concurrent-players milestone - a new milestone type beyond likes/favs/visits." },
-  { code: "WEEKENDBUFFS", reward: "2 Luck Potion I + 2 Luck Potion II + 2 Luck Potion III + 10 Reforge Stone", status: "active", note: "Dexerto shows a second same-name row (3 Aspect Gems) - likely their typo, unconfirmed." },
-  { code: "RAIDTIME", reward: "5 Forge Stone Bundle + 10 Reforge Stone", status: "active" },
-  { code: "COURAGE", reward: "5 Random GM Blessing", status: "active" },
-  { code: "LOVETHISGAME", reward: "10 Aspect Gem", status: "active" },
-  // --- Survivor from the launch batch (still active on both IGN and Dexerto) ---
-  { code: "LOOTR", reward: "1,000 Coins + Random GM Blessing", status: "active" },
+  // --- Retired in the Update 2 rotation (2026-09-27): the whole Update 1 batch
+  // plus LOOTR, the last launch-era survivor. Beebom + RadioTimes + Destructoid
+  // all list these seven expired; rewards kept here for the record. ---
+  { code: "UPDATE1", reward: "100 Mage Coins + 10 Reforge Stone + 5 Exotic Ingot", status: "expired" },
+  { code: "15KCCU", reward: "100,000 Coins + 5 Luck Potion III", status: "expired" },
+  { code: "WEEKENDBUFFS", reward: "2 Luck Potion I + 2 Luck Potion II + 2 Luck Potion III + 10 Reforge Stone", status: "expired" },
+  { code: "RAIDTIME", reward: "5 Forge Stone Bundle + 10 Reforge Stone", status: "expired" },
+  { code: "COURAGE", reward: "5 Random GM Blessing", status: "expired" },
+  { code: "LOVETHISGAME", reward: "10 Aspect Gem", status: "expired" },
+  { code: "LOOTR", reward: "1,000 Coins + Random GM Blessing", status: "expired" },
   // --- Retired in the Update 1 rotation (IGN tested + Dexerto, Sep 7-8) ---
   { code: "FORGESKIP", reward: "-", status: "expired" },
   { code: "8KLIKE", reward: "-", status: "expired" },
