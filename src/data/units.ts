@@ -29,6 +29,13 @@
  * Blade of Draconia: shipped per allthings.how + ProGameGuides, but no source
  * publishes unlock or tier - stay unverified. 500-roll Exotic pity counter is
  * creator-sourced only (j8k3iHjOnZA) - flagged unconfirmed on the pages.
+ * Update 2.5 Berserk collab (2026-09-27): Dragon Slayer (Guts) + White Hawk
+ * (Griffith). Costs (75 Dragon Slayer Fragments / 50 White Hawk Crests) come
+ * from the creator full quest guide (LUXR II, x9cr6GcupZQ, description + chapter
+ * markers); the fragment farm route (Luck Potions, Boss Rush Skip Tickets, and
+ * the class also dropping from the boss rush itself) from the same creator's
+ * follow-up (V_NBVHZz9Y4). Both are described as limited-time, no end date
+ * published. No tier list has ranked either one yet.
  */
 export interface Unit {
   slug: string;
@@ -62,9 +69,105 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-21";
+export const UNITS_LAST_CHECKED = "2026-09-27";
 
 export const UNITS: Unit[] = [
+  // --- Update 2.5 (2026-09-25, Berserk collab) — two limited-time classes.
+  // Source: creator full quest guide (LUXR II, x9cr6GcupZQ, Sep 25) — description
+  // states the costs verbatim (75 Dragon Slayer Fragments / 50 White Hawk Crests),
+  // plus its chapter markers for the quest line, the boss and the exchange.
+  // Fragment farming route + the Boss-Rush-can-drop-the-class detail: second
+  // video from the same creator (V_NBVHZz9Y4). No tier list has ranked either
+  // class yet — standing says so instead of guessing. ---
+  {
+    slug: "dragon-slayer",
+    name: "Dragon Slayer",
+    origin: "In-game class: Dragon Slayer (Guts, Berserk)",
+    anime: "Berserk",
+    rarity: "",
+    obtain:
+      "Dragon Slayer is Guts' limited-time Berserk class. Collect 75 Dragon Slayer Fragments from the Eclipse March event and its Boss Rush, then exchange them for the class — or skip the grind with the event bundle in the shop. The class can also drop straight from the Boss Rush reward pool.",
+    steps: [
+      "Open the limited quest line (Eclipse March) and run the event and its Boss Rush on the hardest difficulty you can clear — the fragments come from those rewards.",
+      "Pop Luck Potions before the runs and use Boss Rush Skip Tickets to repeat them faster; the creator who farmed the class calls both the difference-maker.",
+      "Bank 75 Dragon Slayer Fragments, then exchange them for the class at the quest panel.",
+      "Alternative routes: the Boss Rush reward pool can hand you the class outright, and the shop sells the event bundle while the collab lasts.",
+    ],
+    aliases: [
+      "how to get dragon slayer dungeon lootr",
+      "dungeon lootr guts class",
+      "berserk dungeon lootr",
+      "dragon slayer fragments",
+    ],
+    route: "Item unlock",
+    standing:
+      "No tier list has ranked it yet — it shipped with Update 2.5 on 2026-09-25. Creator coverage of the Berserk pair (Dey, Sep 26) rates both classes highly, but that is a showcase opinion, not a tier list consensus.",
+    grind:
+      "75 fragments from event runs — a multi-run grind, compressed by Luck Potions and Boss Rush Skip Tickets. The boss rush can also drop the class outright, which shortens it to luck.",
+    related: ["white-hawk", "shadow-vagrant", "hellfiend"],
+    extraFaq: [
+      {
+        q: "Is Dragon Slayer Guts in Dungeon Lootr?",
+        a: "Yes — Dragon Slayer is the Guts class from the Berserk collab, and the game's Roblox title changed to [GUTS] Dungeon Lootr for the event.",
+      },
+      {
+        q: "Is Dragon Slayer free?",
+        a: "Yes. 75 Dragon Slayer Fragments from the event and its Boss Rush buy the class outright — the shop bundle is only the paid shortcut. The class itself can also drop from the Boss Rush reward pool.",
+      },
+      {
+        q: "How long is Dragon Slayer available?",
+        a: "It is a limited-time collab class tied to the Berserk event, and the creator guide describes the quest line as limited. No end date has been published, so treat every fragment run as time-sensitive.",
+      },
+    ],
+    metaDesc:
+      "How to get Dragon Slayer (Guts) in Dungeon Lootr: 75 fragments from the Eclipse March event and Boss Rush, or the shop bundle. Updated Sep 2026.",
+    videoId: "x9cr6GcupZQ",
+    verified: true,
+  },
+  {
+    slug: "white-hawk",
+    name: "White Hawk",
+    origin: "In-game class: White Hawk (Griffith, Berserk)",
+    anime: "Berserk",
+    rarity: "",
+    obtain:
+      "White Hawk is Griffith's limited-time Berserk class, farmed from the same event as Dragon Slayer: collect 50 White Hawk Crests from the Eclipse March quest line and its bosses, then exchange them for the class.",
+    steps: [
+      "Start the Berserk limited quest line (the Eclipse March event) — the same run that feeds Dragon Slayer.",
+      "Farm the event and its Boss Rush for White Hawk Crests.",
+      "Bank 50 White Hawk Crests, then exchange them for the class at the quest panel.",
+    ],
+    aliases: [
+      "how to get white hawk dungeon lootr",
+      "dungeon lootr griffith class",
+      "white hawk crest",
+      "berserk collab classes dungeon lootr",
+    ],
+    route: "Item unlock",
+    standing:
+      "Not ranked by any tier list yet — it arrived with Update 2.5 on 2026-09-25. Creators covering the Berserk pair (Dey, Sep 26) rate both classes highly, but no consensus ranking exists.",
+    grind:
+      "50 crests from event runs — cheaper on paper than Dragon Slayer's 75 fragments, but the same multi-run loop.",
+    related: ["dragon-slayer", "shadow-vagrant", "crescent-blade"],
+    extraFaq: [
+      {
+        q: "Is White Hawk Griffith in Dungeon Lootr?",
+        a: "Yes — White Hawk is the Griffith class from the Berserk collab, named after his Band of the Hawk title.",
+      },
+      {
+        q: "How many White Hawk Crests do you need?",
+        a: "50 White Hawk Crests buy the class. They drop from the same limited quest line and bosses that supply Dragon Slayer Fragments.",
+      },
+      {
+        q: "Is there a third Berserk class?",
+        a: "Creator footage mentions a Hawk Commander spin alongside the pair. We have not been able to confirm whether it is a class, a reskin or a cosmetic, so it gets no page until a second source spells it out.",
+      },
+    ],
+    metaDesc:
+      "How to get White Hawk (Griffith) in Dungeon Lootr: 50 White Hawk Crests from the Berserk Eclipse March event. Steps, grind and FAQs. Sep 2026.",
+    videoId: "x9cr6GcupZQ",
+    verified: true,
+  },
   // --- Update 2 classes (2026-09-19/20): three free-to-play, one paywalled.
   // Sources per file header. Creator camps disagree on Moon Witch and
   // Crescent Blade - both readings are stated rather than smoothed over. ---
