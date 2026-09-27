@@ -17,17 +17,31 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-14";
+export const UPDATES_LAST_CHECKED = "2026-09-27";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-09-14",
-  playing: "11,988",
-  visits: "21.8M",
-  favorites: "87,922",
+  asOf: "2026-09-27",
+  playing: "5,929",
+  visits: "28.7M",
+  favorites: "100,935",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-09-26",
+    title: "Update 2.5 - Berserk collab (Guts & Griffith, Eclipse March event)",
+    detail:
+      "Game updated Sep 26, 2026 07:23 UTC (Roblox API) and the Roblox listing now reads [GUTS] Dungeon Lootr - the Berserk collab. Two limited-time classes: Dragon Slayer (Guts) costs 75 Dragon Slayer Fragments and White Hawk (Griffith) costs 50 White Hawk Crests, both traded at the event quest line (guide: LUXR II, Sep 25); the same guide walks the Eclipse March event, its bosses and the Boss Rush wave 0-25 loop. Creator overviews (Frost God, Sep 25) report that every class got a buff/rework, that the Perfect Reforge Stone roll went 50% to 70%, and that the update added new gear (celestial gauntlet, a new ring). Three codes shipped with it: SLAYER, UPDATE2_5 and HAWK.",
+    evidence: "API timestamp",
+  },
+  {
+    date: "2026-09-19",
+    title: "Update 2 - Payload mode, Aether marks and 4 new classes",
+    detail:
+      "The update that added the Payload mode: a checkpoint run on the winged ship that pays Aether marks, spent in the new Payload shop (Fey sits at the top of it at 7,500 marks). Four classes arrived with it - Necromancer, Moon Witch, Crescent Blade and Fey - and five codes dropped in the same window (PAYLOAD, TORUS, UPDATE2, NECROMANCER, MOONWITCH), which is what dates this entry.",
+    evidence: "Code drop",
+  },
   {
     date: "2026-09-14",
     title: "Update 1.5 - Tournament update (5 codes, 5 classes)",
