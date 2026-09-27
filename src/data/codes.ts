@@ -6,6 +6,13 @@
  * (2026-09-19 guide, reads each code aloud with its reward). Dual-source,
  * and one of the two is in-game tested.
  *
+ * Pull (2026-09-27, same day, later): Update 2.5 shipped - the Berserk collab
+ * (Roblox now shows the game as "[GUTS] Dungeon Lootr", updated 2026-09-26
+ * 07:23 UTC). Three new codes, all dual-source: a creator showcase ("Blaze
+ * Stars 2.0", Sep 25) types each one into the in-game box with the claim
+ * succeeding, and Destructoid's Sep 26 list carries the same three with the
+ * same rewards. UPDATE2_5 keeps its underscore.
+ *
  * Pull (2026-09-27): names + rewards re-checked against in-game footage, and the
  * Update 1 batch retired.
  *  - TORUS, not TAURUS - and UPDATE2, not UPDATETWO. Evidence: the Update 2
@@ -58,6 +65,12 @@ export interface GameCode {
 export const CODES_LAST_CHECKED = "2026-09-27";
 
 export const CODES: GameCode[] = [
+  // --- Update 2.5 batch (2026-09-25/26, Berserk collab). Rewards verbatim from
+  // Destructoid's Sep 26 list; the creator video confirms the Aspect Gem /
+  // Exotic Ingot / Perfect Reforge Stone part of each toast. ---
+  { code: "SLAYER", reward: "6 Aspect Gem + 30 Lucky spin + 4 Exotic Ingot + 2 Perfect Reforge Stone", status: "active", note: "Update 2.5 code. Creator reading called it 'winter slayer' - the box takes SLAYER." },
+  { code: "UPDATE2_5", reward: "4 Aspect Gem + 25 Lucky spin + 3 Exotic Ingot + 3 Perfect Reforge Stone", status: "active", note: "Update 2.5 code. The underscore is part of it - typed UPDATE2_5 in-game, not UPDATE2.5." },
+  { code: "HAWK", reward: "5 Aspect Gem + 20 Lucky spin + 2 Exotic Ingot + 4 Perfect Reforge Stone", status: "active", note: "Update 2.5 code, Berserk's Band of the Hawk. His toast shows 5 Aspect Gem." },
   // --- Update 2 batch (2026-09-19/20): dual creator source, one in-game
   // tested. Rewards per AkumaBlox's read-aloud; Rohaan's video shows each
   // code redeeming successfully. Code names match Update 2's new classes
@@ -86,9 +99,11 @@ export const CODES: GameCode[] = [
     link: { href: "/units/moon-witch/", label: "How to get Moon Witch" },
   },
   // --- Update 1.5 batch (2026-09-14): GameRant + creator video; rewards
-  // GameRant-only, marked approximate. Beebom (Sep 21) lists all five as
-  // expired, RadioTimes and Destructoid still list them active - one source
-  // cannot retire a code, so they stay up until a second one agrees. ---
+  // GameRant-only, marked approximate. Split sources: Beebom and UrGameTips
+  // (both Sep 21, same list order) list all five as expired; RadioTimes and
+  // Destructoid still list them active. Two sources can retire a code, but two
+  // say otherwise - so they stay up until something decisive (creator footage)
+  // shows a redemption failing. ---
   { code: "TOURNAMENT", reward: "Scrolls + more (per GameRant)", status: "active", note: "Update 1.5 tournament update code." },
   { code: "SILVERINE", reward: "Coins + Stones (per GameRant)", status: "active" },
   { code: "JACKAL", reward: "Coins + Blessings (per GameRant)", status: "active" },
