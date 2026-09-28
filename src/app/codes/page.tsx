@@ -19,7 +19,9 @@ const MONTH_YEAR = new Date().toLocaleString("en-US", {
 
 export const metadata = buildMeta({
   title: `Dungeon Lootr Codes (${MONTH_YEAR}) - Free Rewards`,
-  description: `All working ${SITE.game} codes for ${MONTH_YEAR}, verified ${CODES_LAST_CHECKED}. How to redeem, where new codes drop, and fixes for codes that fail.`,
+  // "Anime Lootr" 别名写入描述：GSC 实证 "anime lootr code" 月均 ~75 展示，
+  // 但首页/pt-br 在接这个词，codes 页零命中（2026-09-28）
+  description: `All working Dungeon Lootr (Anime Lootr) codes for ${MONTH_YEAR}, verified ${CODES_LAST_CHECKED}. How to redeem, where new codes drop, and fixes for codes that fail.`,
   path: "/codes/",
   absoluteTitle: true, // 51 chars as-is; the "- Hub" template would push it to 71 and truncate the hook
   languages: i18nLanguages("/codes/"),
@@ -100,7 +102,9 @@ export default function CodesPage() {
         </Rune>
         <p className="mt-3 text-dim">
           Every working {SITE.game} code for {MONTH_YEAR}, cross-checked and dated. Redeem
-          them fast - Roblox codes expire quickly.
+          them fast - Roblox codes expire quickly. Dungeon Lootr is also widely searched as
+          &quot;Anime Lootr&quot; - same game, same codes, whether you call it Dungeon Lootr or
+          Anime Lootr.
         </p>
         <div className="mt-3">
           <VerifiedStamp date={CODES_LAST_CHECKED} />

@@ -17,10 +17,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const unit = getUnit(slug);
   if (!unit) return {};
-  const title = `How to Get ${unit.name} in Dungeon Lootr`;
+  const displayName = unit.searchName ? `${unit.searchName} (${unit.name})` : unit.name;
+  // Lead with the name players actually search (e.g. Toji, not "Unrestricted")
+  const title = `How to Get ${displayName} in Dungeon Lootr`;
   const description = unit.metaDesc;
   return {
-    title,
+    // absolute: " - Dungeon Lootr Hub" 模板后缀会把部分标题推到 66+ 字符被 SERP 截断
+    // （2026-09-28：awakened-devil-ex 246 展示 0 点击，codes 页同样教训）
+    title: { absolute: title },
     description,
     alternates: { canonical: `/units/${unit.slug}/` },
     openGraph: {
@@ -44,13 +48,16 @@ export default async function UnitPage({
   const unit = getUnit(slug);
   if (!unit) notFound();
 
+  // 搜索名优先：玩家搜 "toji" 不搜 "Unrestricted"（GSC 实证，见 units.ts searchName 注释）
+  const displayName = unit.searchName ? `${unit.searchName} (${unit.name})` : unit.name;
+
   const relatedUnits = unit.related
     .map((r) => getUnit(r))
     .filter((u): u is NonNullable<typeof u> => Boolean(u));
 
   const faq = [
     {
-      q: `How do you get ${unit.name} in Dungeon Lootr?`,
+      q: `How do you get ${displayName} in Dungeon Lootr?`,
       a:
         unit.obtain ||
         `We are verifying exactly how to get ${unit.name} in ${SITE.game}. Check back - we update this the moment it's confirmed.`,
@@ -71,7 +78,7 @@ export default async function UnitPage({
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: `How to Get ${unit.name} in Dungeon Lootr`,
+    headline: `How to Get ${displayName} in Dungeon Lootr`,
     description: unit.metaDesc,
     dateModified: UNITS_LAST_CHECKED,
     author: {
@@ -97,7 +104,7 @@ export default async function UnitPage({
       {
         "@type": "ListItem",
         position: 3,
-        name: `How to Get ${unit.name}`,
+        name: `How to Get ${displayName}`,
         item: `${SITE.url}/units/${unit.slug}/`,
       },
     ],
@@ -117,7 +124,7 @@ export default async function UnitPage({
           <Link href="/">Home</Link> / <Link href="/units/">Units</Link> / {unit.name}
         </p>
         <Rune as="h1" color="ember" className="mt-1 text-3xl sm:text-5xl">
-          How to Get {unit.name}
+          How to Get {displayName}
         </Rune>
         <p className="mt-2 text-sm text-dim">{unit.origin}</p>
         <div className="mt-3">
@@ -148,7 +155,7 @@ export default async function UnitPage({
 
       <Slab>
         <Rune color="gold" as="h2" className="text-xl">
-          How to Get {unit.name}
+          How to Get {displayName}
         </Rune>
         {unit.obtain ? (
           <>

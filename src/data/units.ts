@@ -42,6 +42,12 @@ export interface Unit {
   name: string;
   /** In-game class name + origin character. */
   origin: string;
+  /** Anime-name variant players search instead of the in-game class name.
+   *  When set, page title/H1 lead with it: "How to Get {searchName} ({name})".
+   *  Evidence: GSC 2026-09 shows "how to get toji" (209 imp) landing on
+   *  "How to Get Unrestricted", and "dungeon lootr vergil" (114 imp) split
+   *  across azure-devil + awakened-devil-ex. */
+  searchName?: string;
   /** Source anime for the hub stat block - "" if original/unconfirmed. */
   anime: string;
   /** e.g. "Exotic" - "" until confirmed. */
@@ -795,6 +801,7 @@ export const UNITS: Unit[] = [
   },
   {
     slug: "unrestricted",
+  searchName: "Toji",
     name: "Unrestricted",
     origin: "In-game class: Unrestricted (Toji Fushiguro, Jujutsu Kaisen)",
     anime: "Jujutsu Kaisen",
@@ -871,6 +878,7 @@ export const UNITS: Unit[] = [
   },
   {
     slug: "azure-devil",
+  searchName: "Vergil",
     name: "Azure Devil",
     origin: "In-game class: Azure Devil (Vergil, Devil May Cry)",
     anime: "Devil May Cry",
