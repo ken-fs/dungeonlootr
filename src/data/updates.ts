@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-09-27";
+export const UPDATES_LAST_CHECKED = "2026-10-02";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-09-27",
-  playing: "5,929",
-  visits: "28.7M",
-  favorites: "100,935",
+  asOf: "2026-10-02",
+  playing: "2,514",
+  visits: "30.2M",
+  favorites: "105,361",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-10-01",
+    title: "Server update - Berserk branding removed",
+    detail:
+      "Game updated Oct 1, 2026 22:44 UTC (Roblox API) and the Roblox listing dropped the [GUTS] prefix - it reads as plain \"[swords] Dungeon Lootr\" again. No code shipped with this update: Beebom, RadioTimes and UrGameTips were all re-checked on Oct 2 and none of them moved, and their expired list still matches ours exactly. The three Update 2.5 codes (SLAYER, UPDATE2_5, HAWK) are still listed active despite the branding change, so they stay active here until something contradicts it. Whether the collab classes (Dragon Slayer, White Hawk) are still obtainable is not published anywhere - treat that as unconfirmed rather than over.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-09-26",
     title: "Update 2.5 - Berserk collab (Guts & Griffith, Eclipse March event)",

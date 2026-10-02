@@ -31,6 +31,22 @@
  *    codes (RAIDS / MASTERY / GHOULUPDATE / SORRYFORRESTARTGUYSTPBUG3) still
  *    appear nowhere else - keep them out until something corroborates them.
  *
+ * Pull (2026-10-02): re-checked all three active-source aggregators (Beebom,
+ * RadioTimes, UrGameTips; Destructoid now 403s). NO code has been added or has
+ * expired since the Sep 27 pull - every active code above is still listed
+ * active, and UrGameTips' expired list (23 codes) matches ours exactly. Two
+ * things did move:
+ *  - Blanket facts became specific facts: the whole Update-1.5 batch
+ *    (TOURNAMENT, SILVERINE, JACKAL, 45KLIKE, 20mvisit) had been carried as
+ *    "per GameRant" prose. RadioTimes now prints per-code numbers, so the rows
+ *    carry them - flagged in each note, because this is still one aggregator,
+ *    not an in-game redemption toast.
+ *  - The Berserk branding came off the game on Oct 1 22:44 UTC: the Roblox
+ *    listing is back to a plain "[swords] Dungeon Lootr". No new code shipped
+ *    with that update, and the three Update 2.5 codes (SLAYER, UPDATE2_5, HAWK)
+ *    are still listed active by all three sources - so they stay active here
+ *    until something contradicts that.
+ *
  * Prior pull (2026-09-14): GameRant (new batch marked NEW) + YouTube creator
  * B乛MaX丨Rohaan (Sep 12, tested) + Roblox API corroboration (game updated
  * Sep 14 02:07 UTC; 50.8K likes = 45KLIKE crossed; 21.8M visits = 20mvisit
@@ -104,11 +120,11 @@ export const CODES: GameCode[] = [
   // Destructoid still list them active. Two sources can retire a code, but two
   // say otherwise - so they stay up until something decisive (creator footage)
   // shows a redemption failing. ---
-  { code: "TOURNAMENT", reward: "Scrolls + more (per GameRant)", status: "active", note: "Update 1.5 tournament update code." },
-  { code: "SILVERINE", reward: "Coins + Stones (per GameRant)", status: "active" },
-  { code: "JACKAL", reward: "Coins + Blessings (per GameRant)", status: "active" },
-  { code: "45KLIKE", reward: "Coins + Blessings (per GameRant)", status: "active", note: "45K likes milestone - likes passed 50K on Sep 14." },
-  { code: "20mvisit", reward: "3 Luck Potions", status: "active", note: "20M visits milestone - visits passed 21.8M on Sep 14." },
+  { code: "TOURNAMENT", reward: "5 Aspect Gem + 10 Protection Scroll + 25k Coins", status: "active", note: "Update 1.5 tournament update code. Reward figures from RadioTimes (Oct 2 pull) - aggregator-sourced, not yet read off a redemption toast." },
+  { code: "SILVERINE", reward: "5 Exotic Ingot + 10 Reforge Stone + 10k Coins", status: "active", note: "Reward figures from RadioTimes (Oct 2 pull) - aggregator-sourced." },
+  { code: "JACKAL", reward: "2 Random GM Blessing + 10k Coins", status: "active", note: "Reward figures from RadioTimes (Oct 2 pull) - aggregator-sourced." },
+  { code: "45KLIKE", reward: "3 Random GM Blessing + 25k Coins", status: "active", note: "45K likes milestone - likes passed 50K on Sep 14. Reward figures from RadioTimes (Oct 2 pull) - aggregator-sourced." },
+  { code: "20mvisit", reward: "3 Luck Potion III + 50k Coins", status: "active", note: "20M visits milestone - visits passed 21.8M on Sep 14. Reward figures from RadioTimes (Oct 2 pull) - aggregator-sourced." },
   // --- Retired in the Update 2 rotation (2026-09-27): the whole Update 1 batch
   // plus LOOTR, the last launch-era survivor. Beebom + RadioTimes + Destructoid
   // all list these seven expired; rewards kept here for the record. ---
