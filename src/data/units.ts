@@ -75,9 +75,254 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-09-27";
+export const UNITS_LAST_CHECKED = "2026-10-06";
 
 export const UNITS: Unit[] = [
+  // --- Update 3 (2026-10-03/05, Expedition + Pets) — five free classes.
+  // Two independent sources agree on the names AND the obtain route:
+  //   1. dungeonlootr.org /classes/ + /expedition/ (stamped updated 2026-10-04)
+  //      — lists all five, states "All five are free. Beat Okami in Expedition
+  //      for their class items or buy them with Expedition Points", and carries
+  //      an Ultimate yes/no column we reproduce per class.
+  //   2. theclick.gg's Update 3 article (found by the 2026-10-06 patrol) — same
+  //      route, plus the OKAMI code's 200 Expedition Points, which feed exactly
+  //      this shop. Creator video titles ("[Dungeon Lootr] NEW EXOTIC CLASS
+  //      DEVOURER!!") independently confirm at least one name is real.
+  // NOT sourced in anything readable: per-class kits, spin-style rarity rates,
+  // and any tier ranking. ProGameGuides has an Update 3 tier list but it sits
+  // behind Cloudflare with only the title visible, so `standing` says that
+  // rather than guessing. Update date: dungeonlootr.org logs Update 3 as Oct 3,
+  // the Roblox API shows the listing's most recent update at Oct 5 21:13 UTC —
+  // read as launch Oct 3 plus a patch Oct 5, and neither entry claims more.
+  // Seen but deliberately NOT added: "Hawk Commander", which dungeonlootr.org
+  // lists as a third Update 2.5 Exotic from normal class spins. Single source,
+  // and a targeted search surfaces nothing on it — held for the next patrol.
+  {
+    slug: "shrine-fox",
+    name: "Shrine Fox",
+    origin: "In-game class: Shrine Fox (Update 3, Expedition)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Shrine Fox is one of five free classes added with Update 3's Expedition mode. There are two routes to its class item: beat Okami — the boss that appears every 10 stages of an Expedition run — or buy it from the Expedition Shop with Expedition Points.",
+    steps: [
+      "Play Expedition, the endless Update 3 mode for 1 to 4 players. Every run starts you with a temporary class and temporary gear, so your own roster does not gate you.",
+      "Push to stage 10, where Okami shows up. It returns every 10 stages after that.",
+      "Beat Okami and the Update 3 class items drop — the free route, and the one both sources lead with.",
+      "Or bank Expedition Points and buy the class item from the Expedition Shop instead. That shop also stocks Pet Whistles, Spirit Prisms, Revive Sigils, Reforge Stones, Aspect Gems and cosmetics.",
+      "Both routes end with you holding the class item, so use whichever your runs are already feeding.",
+    ],
+    aliases: [
+      "how to get shrine fox dungeon lootr",
+      "dungeon lootr shrine fox",
+      "dungeon lootr update 3 classes",
+      "dungeon lootr expedition class",
+    ],
+    route: "Item unlock",
+    standing:
+      "No tier list ranks the Update 3 classes in any source we can read. ProGameGuides has published an Update 3 tier list — its title names Pet and Expedition — but the page sits behind Cloudflare and only the title is visible, so we cannot report what it concludes.",
+    grind:
+      "Expedition runs are the only route: reach stage 10, beat Okami, repeat. The OKAMI code shipped with the same update hands you 200 Expedition Points, the fastest head start on the shop route.",
+    related: ["devourer", "fallen-magi", "petal-captain", "sound-hashira"],
+    extraFaq: [
+      {
+        q: "Does Shrine Fox have an ultimate?",
+        a: "No. The class table on dungeonlootr.org marks Shrine Fox as not having one, unlike Devourer, Fallen Magi and Sound Hashira from the same batch.",
+      },
+      {
+        q: "Is Shrine Fox free or Robux-only?",
+        a: "Free. All five Update 3 classes are obtainable by playing Expedition — as Okami drops or bought with Expedition Points. No Robux bundle is needed for any of them.",
+      },
+      {
+        q: "Who is Okami in Dungeon Lootr?",
+        a: "Okami is the boss of the Expedition mode. It appears every 10 stages of a run and drops the Update 3 class items.",
+      },
+    ],
+    metaDesc:
+      "How to get Shrine Fox in Dungeon Lootr: the Update 3 Expedition class from Okami drops or the Expedition Shop. No ultimate. Updated Oct 2026.",
+    verified: true,
+  },
+  {
+    slug: "devourer",
+    name: "Devourer",
+    origin: "In-game class: Devourer (Update 3, Expedition)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Devourer is one of five free classes added with Update 3's Expedition mode. Get its class item by beating Okami — the boss every 10 stages of an Expedition run — or buy it from the Expedition Shop with Expedition Points.",
+    steps: [
+      "Play Expedition, the endless Update 3 mode for 1 to 4 players. Every run opens with a temporary class and gear, so you do not need a built account to attempt it.",
+      "Reach stage 10 to meet Okami, then every 10 stages after that.",
+      "Beat Okami for the Update 3 class item drops — the free route.",
+      "Alternatively, spend Expedition Points in the Expedition Shop, which stocks the class items alongside Pet Whistles, Spirit Prisms, Revive Sigils, Reforge Stones, Aspect Gems and cosmetics.",
+      "Devourer is the class creators singled out by name before the update was fully documented — a video titled NEW EXOTIC CLASS DEVOURER is independent confirmation the class exists.",
+    ],
+    aliases: [
+      "how to get devourer dungeon lootr",
+      "dungeon lootr devourer",
+      "dungeon lootr devourer class",
+      "dungeon lootr new exotic class",
+      "dungeon lootr update 3 classes",
+    ],
+    route: "Item unlock",
+    standing:
+      "No readable tier list ranks the Update 3 classes yet, so there is no sourced verdict on Devourer. It is the one the update's creator coverage picked out by name, which is attention rather than a ranking.",
+    grind:
+      "Same loop as the rest of the batch: reach stage 10, beat Okami, repeat. Redeem the OKAMI code for 200 Expedition Points if you would rather buy the item than lean on drop luck.",
+    related: ["shrine-fox", "fallen-magi", "petal-captain", "sound-hashira"],
+    extraFaq: [
+      {
+        q: "Does Devourer have an ultimate?",
+        a: "Yes. dungeonlootr.org's Update 3 class table marks Devourer as having an ultimate, along with Fallen Magi and Sound Hashira.",
+      },
+      {
+        q: "Is Devourer free or Robux-only?",
+        a: "Free. It comes from Expedition play — an Okami drop or an Expedition Shop purchase. No Robux is required for any of the five Update 3 classes.",
+      },
+      {
+        q: "Is Devourer the best Update 3 class?",
+        a: "Nothing we can read has ranked them, so we do not know. ProGameGuides published an Update 3 tier list but the page is Cloudflare-blocked and only its title is visible to us. Anything claiming a confident Devourer ranking right now is going past the published evidence.",
+      },
+    ],
+    metaDesc:
+      "How to get Devourer in Dungeon Lootr: the Update 3 Expedition class from Okami drops or the Expedition Shop. Has an ultimate. Updated Oct 2026.",
+    verified: true,
+  },
+  {
+    slug: "fallen-magi",
+    name: "Fallen Magi",
+    origin: "In-game class: Fallen Magi (Update 3, Expedition)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Fallen Magi is one of five free classes added with Update 3's Expedition mode. Its class item comes from beating Okami — the boss that appears every 10 stages of an Expedition run — or from the Expedition Shop, paid for with Expedition Points.",
+    steps: [
+      "Play Expedition, the endless Update 3 mode, solo or with up to three other players.",
+      "Push to stage 10 where Okami appears, then on each further 10-stage mark.",
+      "Beat Okami for the Update 3 class item drops.",
+      "Or spend Expedition Points at the Expedition Shop. Alongside the class items it carries Pet Whistles, Spirit Prisms, Revive Sigils, Reforge Stones, Aspect Gems and cosmetics.",
+      "You keep the class item either way, so use whichever route your runs are already feeding.",
+    ],
+    aliases: [
+      "how to get fallen magi dungeon lootr",
+      "dungeon lootr fallen magi",
+      "dungeon lootr fallen magi class",
+      "dungeon lootr update 3 classes",
+    ],
+    route: "Item unlock",
+    standing:
+      "No tier list we can read ranks the Update 3 classes, so there is no sourced verdict on Fallen Magi. Its point of difference within the batch is that it is one of three carrying an ultimate.",
+    grind:
+      "Expedition runs to stage 10 and back. The OKAMI code gives 200 Expedition Points if you would rather take the shop route than lean on drop luck.",
+    related: ["shrine-fox", "devourer", "petal-captain", "sound-hashira"],
+    extraFaq: [
+      {
+        q: "Does Fallen Magi have an ultimate?",
+        a: "Yes. The class table on dungeonlootr.org marks Fallen Magi as having an ultimate — the other two with one in this batch are Devourer and Sound Hashira.",
+      },
+      {
+        q: "Is Fallen Magi free or Robux-only?",
+        a: "Free. Every Update 3 class comes from Expedition play, either as an Okami drop or through the Expedition Shop. None of them are Robux-gated.",
+      },
+      {
+        q: "Do I need a good class to reach Okami?",
+        a: "No. Expedition hands you a temporary class and temporary gear at the start of every run, so reaching stage 10 depends on the run, not your collection. Run Coins upgrade that temporary kit at the Expedition Forge mid-run.",
+      },
+    ],
+    metaDesc:
+      "How to get Fallen Magi in Dungeon Lootr: the Update 3 Expedition class from Okami drops or the Expedition Shop. Has an ultimate. Updated Oct 2026.",
+    verified: true,
+  },
+  {
+    slug: "petal-captain",
+    name: "Petal Captain",
+    origin: "In-game class: Petal Captain (Update 3, Expedition)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Petal Captain is one of five free classes added with Update 3's Expedition mode. Beat Okami — the boss that turns up every 10 stages of an Expedition run — for its class item, or buy it from the Expedition Shop with Expedition Points.",
+    steps: [
+      "Play Expedition, the endless Update 3 mode for 1 to 4 players. Each run starts with a temporary class and temporary gear.",
+      "Reach stage 10 to meet Okami, and every 10 stages after that.",
+      "Beat Okami for the Update 3 class item drops — the free route both sources describe.",
+      "Or bank Expedition Points and buy the class item in the Expedition Shop, which also sells Pet Whistles, Spirit Prisms, Revive Sigils, Reforge Stones, Aspect Gems and cosmetics.",
+      "Petal Captain is grouped with Shrine Fox as the two classes in this batch without an ultimate.",
+    ],
+    aliases: [
+      "how to get petal captain dungeon lootr",
+      "dungeon lootr petal captain",
+      "dungeon lootr petal captain class",
+      "dungeon lootr update 3 classes",
+    ],
+    route: "Item unlock",
+    standing:
+      "No readable tier list ranks the Update 3 classes, so there is no sourced verdict on Petal Captain. What is sourced is the shape of it: one of two in the batch without an ultimate.",
+    grind:
+      "Reach stage 10, beat Okami, repeat — the same loop as the rest of the batch. The OKAMI code's 200 Expedition Points shortens it if you take the shop route.",
+    related: ["shrine-fox", "devourer", "fallen-magi", "sound-hashira"],
+    extraFaq: [
+      {
+        q: "Does Petal Captain have an ultimate?",
+        a: "No. dungeonlootr.org's Update 3 class table marks Petal Captain as not having one — Shrine Fox is the only other class in this batch without an ultimate.",
+      },
+      {
+        q: "Is Petal Captain free or Robux-only?",
+        a: "Free. It comes from Expedition — an Okami drop or an Expedition Shop purchase. No Update 3 class sits behind a Robux bundle.",
+      },
+      {
+        q: "What difficulties does Expedition have?",
+        a: "Three: Adventurer, Veteran and Abyssal. Community advice is to learn the stages on Adventurer before moving up, and to save the team's single revive for Okami.",
+      },
+    ],
+    metaDesc:
+      "How to get Petal Captain in Dungeon Lootr: the Update 3 Expedition class from Okami drops or the Expedition Shop. No ultimate. Updated Oct 2026.",
+    verified: true,
+  },
+  {
+    slug: "sound-hashira",
+    name: "Sound Hashira",
+    origin: "In-game class: Sound Hashira (Update 3, Expedition)",
+    anime: "",
+    rarity: "Exotic",
+    obtain:
+      "Sound Hashira is one of five free classes added with Update 3's Expedition mode. Beat Okami — the boss every 10 stages of an Expedition run — for its class item, or buy it from the Expedition Shop with Expedition Points.",
+    steps: [
+      "Play Expedition, the endless Update 3 mode for 1 to 4 players. Every run opens with a temporary class and temporary gear.",
+      "Push to stage 10 where Okami appears, and every 10 stages after.",
+      "Beat Okami for the Update 3 class item drops.",
+      "Or spend Expedition Points in the Expedition Shop, which stocks the class items plus Pet Whistles, Spirit Prisms, Revive Sigils, Reforge Stones, Aspect Gems and cosmetics.",
+      "Sound Hashira is one of three classes in this batch with an ultimate, alongside Devourer and Fallen Magi.",
+    ],
+    aliases: [
+      "how to get sound hashira dungeon lootr",
+      "dungeon lootr sound hashira",
+      "dungeon lootr sound hashira class",
+      "dungeon lootr update 3 classes",
+    ],
+    route: "Item unlock",
+    standing:
+      "No tier list we can read ranks the Update 3 classes, so there is no sourced verdict on Sound Hashira. It is one of the three in the batch that carry an ultimate.",
+    grind:
+      "Same Expedition loop as the rest of the batch. The OKAMI code's 200 Expedition Points is the quickest way onto the shop route instead.",
+    related: ["shrine-fox", "devourer", "fallen-magi", "petal-captain"],
+    extraFaq: [
+      {
+        q: "Does Sound Hashira have an ultimate?",
+        a: "Yes. dungeonlootr.org's Update 3 class table marks Sound Hashira as having one, along with Devourer and Fallen Magi.",
+      },
+      {
+        q: "Is Sound Hashira free or Robux-only?",
+        a: "Free. All five Update 3 classes are earned through Expedition — an Okami drop or an Expedition Shop purchase with Expedition Points.",
+      },
+      {
+        q: "What is the Expedition Shop currency?",
+        a: "Expedition Points buy the class items and the rest of the shop stock. Do not confuse that with Run Coins, which are spent inside a run at the Expedition Forge on your temporary gear — two currencies, two different jobs.",
+      },
+    ],
+    metaDesc:
+      "How to get Sound Hashira in Dungeon Lootr: the Update 3 Expedition class from Okami drops or the Expedition Shop. Has an ultimate. Updated Oct 2026.",
+    verified: true,
+  },
   // --- Update 2.5 (2026-09-25, Berserk collab) — two limited-time classes.
   // Source: creator full quest guide (LUXR II, x9cr6GcupZQ, Sep 25) — description
   // states the costs verbatim (75 Dragon Slayer Fragments / 50 White Hawk Crests),

@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-10-02";
+export const UPDATES_LAST_CHECKED = "2026-10-06";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-10-02",
-  playing: "2,514",
-  visits: "30.2M",
-  favorites: "105,361",
+  asOf: "2026-10-06",
+  playing: "1,430",
+  visits: "31.1M",
+  favorites: "109,295",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-10-03",
+    title: "Update 3 - Expedition mode, five free classes and pets",
+    detail:
+      "The biggest drop since launch. Expedition is an endless mode for 1 to 4 players: you start each run with a temporary class and temporary gear, pick a Stat Boon every 3 stages and a Modifier every 5 (Silver, Gold or Prismatic), and Okami - the mode's boss - appears every 10 stages. Three difficulties: Adventurer, Veteran and Abyssal. Two separate currencies: Run Coins are spent mid-run at the Expedition Forge on your temporary kit, while Expedition Points buy class items from the Expedition Shop. Five free classes arrived with it - Shrine Fox, Devourer, Fallen Magi, Petal Captain and Sound Hashira - all obtained from Okami drops or the Expedition Shop, never from spins or a Robux bundle. A permanent pet system shipped alongside: tame pets in Spirit Dens and raise their Bond for passives. Two codes came with the update: OKAMI (200 Expedition Points) and the Update 3 batch. Dating note: dungeonlootr.org logs Update 3 as Oct 3, while the Roblox API shows the listing's most recent update at Oct 5 21:13 UTC and the name changed to [Pets + UPD] - read as launch Oct 3 plus a patch Oct 5.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-10-01",
     title: "Server update - Berserk branding removed",
