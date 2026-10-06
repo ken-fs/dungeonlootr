@@ -36,6 +36,31 @@
  * the class also dropping from the boss rush itself) from the same creator's
  * follow-up (V_NBVHZz9Y4). Both are described as limited-time, no end date
  * published. No tier list has ranked either one yet.
+ *
+ * Source added 2026-10-06: dungeonlootrwiki.com's "All 33 Classes Ranked" (page
+ * dated 2026-09-08) carries a class route table with an obtain route + gate per
+ * class. Before using it we cross-checked it against entries we already had from
+ * independent outlets: it matched all eleven we could test - Dreadlord
+ * (Underworld Gate, Nightmare), Sinister Trigger (the only Exotic in the spin
+ * pool), Unrestricted (Fighter NPC, level 75 + 500k coins + Honored One 25 + 10
+ * Heavenly Fragments), Shadow Vagrant (Shadow Monarch Pack), Dark Professor
+ * (First Test on Impossible), Spell Breaker / Cryomancer (Magic Unleashed shop),
+ * Kage / Shinobi / Wanderer (spin), Azure Devil (Celestial spin, feeding
+ * Awakened Devil EX at class 50). It also labels its own uncertainty explicitly
+ * ("kit undocumented", "route disputed", "no usable data yet"), which is the
+ * same discipline this file tries to keep. That is why it was treated as strong
+ * enough to resolve SIX entries that had been stuck at route Unknown:
+ *   Founder      -> Grand Sovereign Bundle (limited)  -> route "Robux bundle"
+ *   Demonbane    -> Battle Pass reward, time- not luck-gated -> new route kind
+ *   Streamline   -> Early Access+, gate now closed    -> new kind "Unobtainable"
+ *   Artemis      -> Celestial spin pull               -> route "Class roll"
+ *   Forge Archon -> Celestial spin pull (rarity also confirmed Celestial)
+ *   VACIO        -> Celestial spin pull (rarity also confirmed Celestial)
+ * Deliberately NOT upgraded: Coyote (the same table records its route as
+ * disputed across three claims - left unverified, with the claims now spelled
+ * out) and Jetstream (route confirmed by two independent lists, requirements
+ * still unpublished - route stays Quest, verified stays false). Hollow and Blade
+ * of Draconia are absent from a 2026-09-08 roster entirely, so they stay Unknown.
  */
 export interface Unit {
   slug: string;
@@ -59,7 +84,7 @@ export interface Unit {
   /** Search-intent aliases. */
   aliases: string[];
   /** Unlock route category - "Unknown" until a method is verified (never guess). */
-  route: "Item unlock" | "Evolution" | "Class roll" | "Quest" | "Robux bundle" | "Unknown";
+  route: "Item unlock" | "Evolution" | "Class roll" | "Quest" | "Robux bundle" | "Battle Pass" | "Unobtainable" | "Unknown";
   /** Community standing, sourced from tier lists/showcases. */
   standing: string;
   /** Practical grind expectation derived from the sourced method - "" if no method. */
@@ -871,7 +896,7 @@ export const UNITS: Unit[] = [
     anime: "",
     rarity: "",
     obtain:
-      "Coyote is the fourth Update 1 class. Its unlock method is still being verified - creator coverage of the update links the other three classes to the Magic Unleashed Raid but doesn't pin down Coyote's route. Check in-game and watch this page.",
+      "Coyote is the fourth Update 1 class, and its route is the one genuinely disputed class in the game. Three different claims are circulating: El Hueco, a Coyote Bundle, and a Game Pass. One class list that tracks obtain routes records all three side by side and marks the entry 'route disputed' rather than picking one. We are not going to guess between them - check in-game and watch this page.",
     steps: [],
     aliases: ["how to get coyote dungeon lootr", "coyote class"],
     route: "Unknown",
@@ -1318,7 +1343,7 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Jetstream",
     anime: "",
     rarity: "Exotic",
-    obtain: "Jetstream is an Exotic class that comes from a special NPC rather than spins, per GameRant's tier list. The exact NPC and quest steps are still being verified - we will publish them once confirmed. (The old JETSTREAM code was unrelated to the unlock.)",
+    obtain: "Jetstream is an Exotic class that comes from a dedicated NPC quest rather than spins - two independent lists say so, GameRant's tier list and the class route table on dungeonlootrwiki.com. What neither publishes is the requirement: no source states which NPC, what the quest asks for, or what it costs. So the route is confirmed and the steps are not. (The old JETSTREAM code was unrelated to the unlock.)",
     steps: [],
     aliases: ["how to get jetstream dungeon lootr", "jetstream class dungeon lootr", "jetstream npc"],
     route: "Quest",
@@ -1350,13 +1375,18 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Founder (Sun Wukong-inspired)",
     anime: "",
     rarity: "Exotic",
-    obtain: "Founder is the Sun Wukong-inspired class. It is excluded from the normal spin pool (Sportskeeda lists it among the Exotic exclusives), and creator footage references one specific unlock method - but no reliable source has spelled out the steps yet.",
-    steps: [],
+    obtain: "Founder is the Sun Wukong-inspired class, and it is not in the normal spin pool. It comes from the Grand Sovereign Bundle - a limited-availability shop bundle - so how long it stays obtainable depends on when that bundle is rotated out.",
+    steps: [
+      "Open the shop and find the Grand Sovereign Bundle. Sportskeeda already listed Founder among the Exotic exclusives, and the class route table on dungeonlootrwiki.com names this bundle as the source.",
+      "Buy the bundle while it is listed. It is a purchase, not a roll - exclusion from the spin pool means luck never enters into it.",
+      "Treat the timing as the only risk: limited-availability bundles rotate out, and nothing published says whether or when this one returns.",
+    ],
     aliases: ["how to get founder dungeon lootr", "wukong dungeon lootr", "founder class dungeon lootr"],
-    route: "Unknown",
+    route: "Robux bundle",
     standing:
       "IGN A-tier, GameRant A-tier - a strong mid-to-late pick. A 'Brand Founder' cosmetic also appears in the shop's bundle line, named after the same class.",
-    grind: "",
+    grind:
+      "No grind - it is a straight purchase while the bundle is listed. The only uncertainty is availability, not effort.",
     related: ["sukuna", "demonbane"],
     extraFaq: [
       {
@@ -1364,8 +1394,8 @@ export const UNITS: Unit[] = [
         a: "Yes - Founder is the class inspired by Sun Wukong, the Monkey King. Showcase videos refer to it by the Founder name.",
       },
       {
-        q: "Why isn't the Founder unlock method listed here?",
-        a: "Because no reliable source has published the full steps yet. We know it is not in the spin pool (Sportskeeda) and that a single specific method exists (creator footage) - we publish methods only once confirmed, never guesses.",
+        q: "Can you still get Founder?",
+        a: "It comes from the Grand Sovereign Bundle, so it is obtainable while that bundle is on the shop. Nothing published says how long the bundle stays - treat it as a limited window rather than a permanent listing.",
       },
       {
         q: "Is Founder good?",
@@ -1373,8 +1403,8 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Founder (Sun Wukong) in Dungeon Lootr: Exotic exclusive class - what's known about the unlock route and rating. Updated Sep 2026.",
-    verified: false,
+      "Founder (Sun Wukong) in Dungeon Lootr: the Grand Sovereign Bundle class, not a spin pull. How to get it and why timing is the risk. Updated Oct 2026.",
+    verified: true,
   },
   {
     slug: "demonbane",
@@ -1382,13 +1412,18 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Demonbane (Frieren-inspired)",
     anime: "Frieren",
     rarity: "Celestial",
-    obtain: "Demonbane is a Celestial class excluded from the normal spin pool (Sportskeeda). Destructoid calls it easy to get and beginner-friendly, and its tier-list graphic ties it to the Battle Pass - the exact claim is still being verified.",
-    steps: [],
+    obtain: "Demonbane is a Celestial class that comes from the Battle Pass rather than the spin pool. That makes it time-gated instead of luck-gated: you get it by buying into the pass and progressing it while it is live. Destructoid's tier graphic already tied it to the Battle Pass; the class route table on dungeonlootrwiki.com states it outright.",
+    steps: [
+      "Buy into the current Battle Pass.",
+      "Progress the pass - Demonbane is a pass reward, so it unlocks through pass levels rather than spins.",
+      "Note the timing: pass rewards cycle. Unlike a spin-pool class, waiting costs you the window rather than costing you luck.",
+    ],
     aliases: ["how to get demonbane dungeon lootr", "frieren dungeon lootr", "demonbane class"],
-    route: "Unknown",
+    route: "Battle Pass",
     standing:
       "Destructoid: an easy, beginner-friendly class that stays good into mid-game - showcase footage highlights its Castroia damage field and gravity-well pull for AoE clears. IGN B-tier, GameRant B-tier.",
-    grind: "",
+    grind:
+      "Pass progress while the season is live. Time-gated, not luck-gated - the opposite of the Celestial spin band it sits beside.",
     related: ["asta", "founder"],
     extraFaq: [
       {
@@ -1405,8 +1440,8 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Demonbane (Frieren) in Dungeon Lootr: Celestial exclusive, beginner-friendly - what's known about the unlock. Updated Sep 2026.",
-    verified: false,
+      "Demonbane (Frieren) in Dungeon Lootr: the Battle Pass Celestial class - time-gated, not luck-gated. How to get it and why it works. Updated Oct 2026.",
+    verified: true,
   },
   {
     slug: "streamline",
@@ -1414,18 +1449,23 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Streamline",
     anime: "",
     rarity: "Celestial",
-    obtain: "Streamline was the Early-Access exclusive class, granted during the game's early-access window. Whether it can still be obtained after full release is unconfirmed - Sportskeeda lists it among the Celestial classes outside the spin pool.",
-    steps: [],
+    obtain: "Streamline was the Early-Access exclusive class, granted to players during the game's early-access window. A class route table that tracks obtain methods now marks that gate as closed, so there is no documented way to get it after release.",
+    steps: [
+      "There is no current method. Streamline was handed out during early access, and that window is over.",
+      "If you already have it, nothing changes - it stays yours. This is a veteran badge rather than a chase.",
+      "If a future re-run or bundle makes it obtainable again, this page updates. Until then, treat any listing that offers it as resale or account trading, not an in-game route.",
+    ],
     aliases: ["streamline dungeon lootr", "early access class dungeon lootr"],
-    route: "Unknown",
+    route: "Unobtainable",
     standing:
       "IGN A-tier, GameRant B-tier. Its exclusivity makes it a veteran badge more than a meta chase - the tier gap to the S-tier crafts is clear.",
-    grind: "",
+    grind:
+      "None available - the route is closed. It is one of three classes in the launch roster that most accounts simply cannot get.",
     related: ["jetstream", "demonbane", "azure-devil"], // azure 是高展示漏水页，从强页泵内链
     extraFaq: [
       {
         q: "Can you still get Streamline?",
-        a: "Unconfirmed. It was the Early-Access exclusive class, and no reliable source has stated whether it returned after full release. We will update this page the moment it does.",
+        a: "No documented way. It was the Early-Access exclusive, and the class route table on dungeonlootrwiki.com marks that gate as closed. If you signed up during early access you have it; otherwise there is no in-game route today.",
       },
       {
         q: "What rarity is Streamline?",
@@ -1437,8 +1477,8 @@ export const UNITS: Unit[] = [
       },
     ],
     metaDesc:
-      "Streamline in Dungeon Lootr: the Early-Access exclusive Celestial class - can you still get it? What's confirmed. Updated Sep 2026.",
-    verified: false,
+      "Streamline in Dungeon Lootr: the Early-Access exclusive Celestial class. Why the gate is closed and what it means if you already have it. Updated Oct 2026.",
+    verified: true,
   },
   {
     slug: "artemis",
@@ -1446,18 +1486,23 @@ export const UNITS: Unit[] = [
     origin: "In-game class: Artemis",
     anime: "",
     rarity: "Celestial",
-    obtain: "Artemis sits in the Celestial bracket. Whether it comes from the Lucky Spin pool or an exclusive route is not confirmed by a reliable source yet - Lucky Spins are cited with ~3% Celestial odds vs ~0.5% on Normal Spins.",
-    steps: [],
+    obtain: "Artemis comes from the spin pool in the Celestial bracket - the top band below Exotic. Celestial sits at roughly 3% odds on Lucky Spins against ~0.5% on Normal Spins, which is why the practical advice is to bank Lucky Spins for this bracket.",
+    steps: [
+      "Roll the spin pool. Artemis is a standard Celestial pull, not an exclusive and not a raid or quest class.",
+      "Use Lucky Spins rather than Normal Spins - Lucky carries roughly 3% Celestial odds against ~0.5% on Normal.",
+      "Expect luck, not a grind. There is no fragment count or quest chain to work through here.",
+    ],
     aliases: ["artemis dungeon lootr", "how to get artemis dungeon lootr", "celestial class dungeon lootr"],
-    route: "Unknown",
+    route: "Class roll",
     standing:
       "IGN B-tier, GameRant A-tier - the sources disagree, which usually means it is strong in specific modes. We will pin down its standing as more creators test it.",
-    grind: "",
+    grind:
+      "Pure luck. Bank Lucky Spins for the Celestial band rather than burning Normal Spins, and do not chase it if what you actually want is an Exotic craft.",
     related: ["forge-archon", "vacio"],
     extraFaq: [
       {
         q: "What rarity is Artemis in Dungeon Lootr?",
-        a: "Celestial - the bracket just below Exotic. Celestial classes are cited at roughly 3% odds on Lucky Spins and ~0.5% on Normal Spins, though Artemis's exact pool is unconfirmed.",
+        a: "Celestial - the bracket just below Exotic. Celestial classes sit at roughly 3% odds on Lucky Spins and ~0.5% on Normal Spins.",
       },
       {
         q: "Is Artemis good?",
@@ -1465,26 +1510,31 @@ export const UNITS: Unit[] = [
       },
       {
         q: "How do you get Artemis?",
-        a: "Not confirmed yet. If it follows the standard Celestial pattern it should sit in the Lucky Spin pool, but we publish methods only once a reliable source states them.",
+        a: "Celestial - the bracket just below Exotic. Celestial carries roughly 3% odds on Lucky Spins against ~0.5% on Normal, which is the practical reason to bank Lucky Spins for this bracket.",
       },
     ],
     metaDesc:
-      "Artemis in Dungeon Lootr: Celestial class - spin pool odds, mixed tier ratings and what's confirmed. Updated Sep 2026.",
-    verified: false,
+      "Artemis in Dungeon Lootr: Celestial spin-pull class - Lucky Spin odds, the tier split, and how to actually land a pull. Updated Oct 2026.",
+    verified: true,
   },
   {
     slug: "forge-archon",
     name: "Forge Archon",
     origin: "In-game class: Forge Archon",
     anime: "",
-    rarity: "",
-    obtain: "Forge Archon's unlock route is not confirmed by a reliable source yet. Tier lists include it among the standard obtainable classes rather than the Exotic exclusives, so it likely sits in the spin pool - publishing steps once confirmed.",
-    steps: [],
+    rarity: "Celestial",
+    obtain: "Forge Archon is a Celestial spin-pull class - it sits in the standard spin pool rather than the Exotic-exclusive group. Celestial carries roughly 3% odds on Lucky Spins against ~0.5% on Normal.",
+    steps: [
+      "Roll the spin pool. Nothing published puts Forge Archon in a raid, quest or bundle route.",
+      "Use Lucky Spins for the better Celestial odds rather than Normal Spins.",
+      "There is no shortcut - it is a luck pull with no fragment or quest alternative documented.",
+    ],
     aliases: ["forge archon dungeon lootr", "how to get forge archon dungeon lootr"],
-    route: "Unknown",
+    route: "Class roll",
     standing:
       "IGN A-tier, GameRant A-tier - a quiet overperformer that both lists agree on, which is rare for the mid brackets.",
-    grind: "",
+    grind:
+      "Pure luck. Forge Archon's kit is undocumented on every list we checked, so the ranking rests on tier placements rather than demonstrated play.",
     related: ["artemis", "vacio"],
     extraFaq: [
       {
@@ -1493,30 +1543,35 @@ export const UNITS: Unit[] = [
       },
       {
         q: "How do you get Forge Archon?",
-        a: "Not confirmed yet. It is absent from the Exotic-exclusive lists, which points to the spin pool, but we are verifying before publishing steps.",
+        a: "It is a Celestial spin pull. It is absent from the Exotic-exclusive lists, and the class route table on dungeonlootrwiki.com records it as spin-only, so Lucky Spins are the play.",
       },
       {
         q: "What rarity is Forge Archon?",
-        a: "Unconfirmed - no reliable source has stated its bracket. Its A-tier placement suggests at least Mythic, but we don't guess rarities.",
+        a: "Celestial - the bracket just below Exotic. Celestial sits at roughly 3% odds on Lucky Spins against ~0.5% on Normal Spins, so pull on Lucky Spins if this is what you are after.",
       },
     ],
     metaDesc:
-      "Forge Archon in Dungeon Lootr: the A-tier class both big tier lists agree on - unlock status and what's known. Updated Sep 2026.",
-    verified: false,
+      "Forge Archon in Dungeon Lootr: the Celestial spin class both A-tier lists agree on. Odds, route, and why its kit is still a blank. Updated Oct 2026.",
+    verified: true,
   },
   {
     slug: "vacio",
     name: "VACIO",
     origin: "In-game class: VACIO",
     anime: "",
-    rarity: "",
-    obtain: "VACIO's unlock route is not confirmed by a reliable source yet. It appears in tier lists among the standard obtainable classes rather than the Exotic exclusives, so the spin pool is the likely home - steps publish once confirmed.",
-    steps: [],
+    rarity: "Celestial",
+    obtain: "VACIO is a Celestial spin-pull class, in the same band as Artemis and Forge Archon - standard spin pool, not an Exotic exclusive. Celestial is roughly 3% on Lucky Spins against ~0.5% on Normal.",
+    steps: [
+      "Roll the spin pool. VACIO is recorded as a standard Celestial pull with no raid, quest or bundle route attached.",
+      "Prefer Lucky Spins - they carry the better Celestial odds.",
+      "No grind exists for it. If it does not land, the only lever you have is more spins.",
+    ],
     aliases: ["vacio dungeon lootr", "how to get vacio dungeon lootr"],
-    route: "Unknown",
+    route: "Class roll",
     standing:
       "GameRant A-tier, IGN B-tier - another split verdict. Worth using if you pull it; not a priority chase.",
-    grind: "",
+    grind:
+      "Pure luck, with no quest or fragment alternative. Like the rest of the Celestial band, it is a bonus pull rather than a target you can work toward.",
     related: ["forge-archon", "artemis"],
     extraFaq: [
       {
@@ -1525,16 +1580,16 @@ export const UNITS: Unit[] = [
       },
       {
         q: "How do you get VACIO?",
-        a: "Not confirmed yet. No reliable source lists it among the exclusives, so spins are the expected route - we will publish the confirmed method once stated.",
+        a: "It is a Celestial spin pull. The class route table on dungeonlootrwiki.com lists it under Spin, and nothing places it among the exclusives.",
       },
       {
         q: "What rarity is VACIO?",
-        a: "Unconfirmed - no reliable source has stated its bracket yet.",
+        a: "Celestial - the bracket just below Exotic. Confirmed by the class route table on dungeonlootrwiki.com, which lists VACIO under Spin in the same band as Artemis and Forge Archon.",
       },
     ],
     metaDesc:
-      "VACIO in Dungeon Lootr: tier-list split verdict, unlock status and what's confirmed about the class. Updated Sep 2026.",
-    verified: false,
+      "VACIO in Dungeon Lootr: Celestial spin-pull class - how to get it, the Lucky Spin odds, and its split tier verdict. Updated Oct 2026.",
+    verified: true,
   },
 ];
 
