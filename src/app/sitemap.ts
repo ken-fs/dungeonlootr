@@ -11,6 +11,9 @@ export const dynamic = "force-static";
 /** Route families that exist in en + pt-BR + es (i18n Phase 1). */
 const I18N_PATHS = ["/", "/codes/", "/tier-list/"];
 
+/** Pages with no data file behind them - listed here so the sitemap covers them. */
+const EXTRA_PATHS = ["/npcs/valen/"];
+
 /**
  * Per-page lastmod, taken from the data that actually drives each page.
  *
@@ -40,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...I18N_PATHS,
     ...NAV.map((n) => n.href).filter((h) => !I18N_PATHS.includes(h)),
     ...unitPaths,
+    ...EXTRA_PATHS,
     ...LEGAL_NAV.map((n) => n.href),
   ];
 
