@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Cinzel, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import { SiteNav, SiteFooter } from "@/components/ui";
 import { AdsterraGlobal, AdLeaderboard, AdRect } from "@/components/ads";
 
-const cinzel = Cinzel({
-  weight: ["500", "600", "700"],
-  subsets: ["latin"],
+// Fonts are self-hosted (src/fonts, OFL). next/font/google downloads them during the build,
+// and when that download flakes on Cloudflare's builders the whole build fails
+// ("Can't resolve '@vercel/turbopack-next/internal/font/google/font'", 2026-10-06).
+const cinzel = localFont({
+  src: "../fonts/cinzel-latin-wght-normal.woff2",
+  weight: "400 900",
   variable: "--font-cinzel",
   display: "swap",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "../fonts/inter-latin-wght-normal.woff2",
+  weight: "100 900",
   variable: "--font-inter",
   display: "swap",
 });
