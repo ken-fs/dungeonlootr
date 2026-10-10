@@ -84,12 +84,26 @@ for repo in "${REPOS[@]}"; do
   git add reports/ 2>/dev/null && \
     git -c user.name="ken lee" -c user.email="david@MacBook-Pro.local" \
       commit -q -m "Patrol $DATE" 2>/dev/null || true
-  # 推送四级兜底：直连 → 代理 → SSH（cron 无 keychain 凭据时）→ 代理 rebase 重试；失败必留痕（不再静默吞掉）
+  # 同步远端（2026-10-10 修复：ghostdriver 连积 3 天的根因）：
+  #   仓库的 update-and-deploy GitHub Action 每 6h 往 main 推 stats commit，本地 origin/main ref
+  #   过期时 push 必被拒（non-ff）；而原末端兜底的 rebase 走 HTTPS（cron 拿不到 keychain 凭据）
+  #   永远失败 —— 兜底链断在最后一环，PATROL_PUSH_FAILED 连续 3 天。
+  # 现在：先 fetch 刷新 ref（代理 → SSH；SSH 显式 refspec 写回 origin/main）→ 有分歧先 rebase
+  # （同样带 SSH 兜底，失败则 abort 并留痕）→ 再走推送链。
+  SSH="ssh -i $HOME/.ssh/id_ed25519 -o IdentitiesOnly=yes"
+  GIT_TERMINAL_PROMPT=0 git -c http.proxy=http://127.0.0.1:7897 fetch -q origin main 2>/dev/null \
+    || GIT_SSH_COMMAND="$SSH" git fetch -q "git@github.com:ken-fs/$repo.git" "+main:refs/remotes/origin/main" 2>/dev/null \
+    || true
+  if ! git merge-base --is-ancestor origin/main main 2>/dev/null; then
+    { GIT_TERMINAL_PROMPT=0 git -c http.proxy=http://127.0.0.1:7897 pull -q --rebase origin main 2>/dev/null \
+        || GIT_SSH_COMMAND="$SSH" git pull -q --rebase "git@github.com:ken-fs/$repo.git" main 2>/dev/null; } \
+      || { git rebase --abort 2>/dev/null; echo "PATROL_REBASE_FAILED $repo" >> /tmp/patrol-agent-$DATE.log; }
+  fi
+  # 推送三级兜底：直连 → 代理 → SSH；失败必留痕（不再静默吞掉）
   if git log origin/main..main --oneline | grep -q .; then
     GIT_TERMINAL_PROMPT=0 git push -q origin main 2>/dev/null \
       || GIT_TERMINAL_PROMPT=0 git -c http.proxy=http://127.0.0.1:7897 push -q origin main 2>/dev/null \
-      || GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_ed25519 -o IdentitiesOnly=yes" git push -q "git@github.com:ken-fs/$repo.git" main 2>/dev/null \
-      || { git -c http.proxy=http://127.0.0.1:7897 pull -q --rebase origin main 2>/dev/null && GIT_TERMINAL_PROMPT=0 git push -q origin main 2>/dev/null; } \
+      || GIT_SSH_COMMAND="$SSH" git push -q "git@github.com:ken-fs/$repo.git" main 2>/dev/null \
       || echo "PATROL_PUSH_FAILED $repo" >> /tmp/patrol-agent-$DATE.log
   fi
 done
