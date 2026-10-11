@@ -919,7 +919,7 @@ export const UNITS: Unit[] = [
     standing:
       "allthings.how's post-Update-1 tier list puts Coyote in S-tier (single source — IGN/GameRant haven't graded it yet). In play it is the twin-hand-cannon DPS class, with Savage Whale, Blinds Idol, Wolf Pack and Feeding Frenzy as its four abilities.",
     grind:
-      "No grind — it is a Robux purchase. Gifting marketplaces list the Coyote Pack at 4,999 Robux; the El Hueco bundle that also carries the class costs more. Free players should aim at the raid classes instead.",
+      "No grind — it is a Robux purchase. The dedicated Coyote Pack lists at 4,999 Robux; the bigger El Hueco Pack, which also carries a Coyote Class Item among its contents, lists at 9,999 Robux (both prices from the reseller listings that mirror the in-game shop). Free players should aim at the raid classes instead.",
     related: ["spell-breaker", "cryomancer", "dark-professor"],
     extraFaq: [
       {
@@ -929,6 +929,10 @@ export const UNITS: Unit[] = [
       {
         q: "Is Coyote the same as Starrk?",
         a: "Yes — the class is named Coyote after Coyote Starrk from Bleach, and creators use both names. The item it grants is the Demon Twin Guns, the class's permanent weapon item.",
+      },
+      {
+        q: "Do I need the 9,999-Robux El Hueco Pack for Coyote?",
+        a: "No — the dedicated Coyote Pack at 4,999 Robux is the direct route. The El Hueco Pack at 9,999 Robux also includes a Coyote Class Item (alongside the El Hueco cosmetic set and other items), which is why some creator videos quote a ~9,000 Robux figure for the class: they bought the bigger bundle.",
       },
     ],
     metaDesc:
