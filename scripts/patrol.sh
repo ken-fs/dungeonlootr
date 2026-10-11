@@ -1,4 +1,5 @@
 #!/bin/bash
+source /Users/david/Desktop/david/Ship/scripts/notify.sh  # ship_notify：推飞书（2026-10-11）
 # 游戏工具站群每日巡检：codes/补丁变化 + 站点健康 + 写报告，需行动时弹通知
 # 覆盖：dungeonlootr.net / ghostdriver.net / animeexpeditions.dev / howtofishthegame.com / commandanarmy.cc
 # 注：AnvilWiki 站的技术健康（孤岛页/schema 长度/sitemap 域名/部署标记/游戏新 badge）
@@ -117,7 +118,9 @@ for repo in "${REPOS[@]}"; do
 done
 
 if [ -n "$ACTION" ]; then
-  osascript -e "display notification \"有变动：$ACTION — 查看各 repo reports/patrol-$DATE.md\" with title \"🎣 巡检行动项\" sound name \"Glass\""
+  ship_notify "📋 内容同步提醒" "有变动：$ACTION
+
+查看各 repo reports/patrol-$DATE.md"
 else
-  osascript -e "display notification \"三站 codes 无变化，站点正常\" with title \"🎣 站群巡检\""
+  ship_notify "📋 内容同步正常" "三站 codes 无变化，站点正常"
 fi
