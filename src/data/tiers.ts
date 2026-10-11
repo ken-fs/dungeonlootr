@@ -38,7 +38,7 @@ export const CLASSES: TierItem[] = [
   // Update 1 classes (2026-09-13): allthings.how post-update list only -
   // IGN/GameRant haven't graded them yet. Single-source, flagged on the card.
   { name: "Spell Breaker", tier: "S", note: "Update 1 - Magic Unleashed Raid drop/shop. S per allthings.how only (pending IGN/GameRant)" },
-  { name: "Coyote", tier: "S", note: "Update 1 - unlock route still unverified. S per allthings.how only (pending IGN/GameRant)" },
+  { name: "Coyote", tier: "S", note: "Update 1 - Robux pack class (Coyote Pack; the El Hueco bundle also carries it). S per allthings.how only (pending IGN/GameRant)" },
   { name: "Cryomancer", note: "Update 1 - Magic Unleashed Raid drop/shop. Ungraded by tier lists so far" },
   { name: "Dark Professor", note: "Update 1 - Impossible raid rare drop. Ungraded; PGG says it 'melts health bars'" },
   // Update 1.5 classes (2026-09-14): named by ProGameGuides, no tier grades yet.

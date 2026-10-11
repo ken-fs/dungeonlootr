@@ -56,6 +56,17 @@
  *   Artemis      -> Celestial spin pull               -> route "Class roll"
  *   Forge Archon -> Celestial spin pull (rarity also confirmed Celestial)
  *   VACIO        -> Celestial spin pull (rarity also confirmed Celestial)
+ * Coyote route resolved (pulled 2026-10-11, frame-read of release-window footage):
+ * MK's "I Finally Got STARRK" (etjS2UV-3GY, 2026-09-05) shows the shop's LIMITED
+ * tab with the Coyote Pack on screen (Demon Twin Guns permanent class item + 100
+ * Lucky Spins / 200 Normal Spins / 20 Aspect Gems / 5 T3 Luck Potions) and the
+ * class played afterwards, with skills Savage Whale / Blinds Idol / Wolf Pack /
+ * Feeding Frenzy in the HUD. The second frame-read (jVqIYNc7jvo, 2026-09-06)
+ * shows both pack panels: the El Hueco Pack lists "Coyote Class Item" as its
+ * first item — that is where the circulating "El Hueco" claim came from. It is
+ * a Robux bundle class; no raid or spin route exists. The earlier "route
+ * disputed / verified: false" state is cleared.
+ *
  * Deliberately NOT upgraded: Coyote (the same table records its route as
  * disputed across three claims - left unverified, with the claims now spelled
  * out) and Jetstream (route confirmed by two independent lists, requirements
@@ -892,27 +903,37 @@ export const UNITS: Unit[] = [
   {
     slug: "coyote",
     name: "Coyote",
-    origin: "Coyote class (Update 1)",
-    anime: "",
+    searchName: "Starrk",
+    origin: "In-game class: Coyote (Coyote Starrk, Bleach)",
+    anime: "Bleach",
     rarity: "",
     obtain:
-      "Coyote is the fourth Update 1 class, and its route is the one genuinely disputed class in the game. Three different claims are circulating: El Hueco, a Coyote Bundle, and a Game Pass. One class list that tracks obtain routes records all three side by side and marks the entry 'route disputed' rather than picking one. We are not going to guess between them - check in-game and watch this page.",
-    steps: [],
-    aliases: ["how to get coyote dungeon lootr", "coyote class"],
-    route: "Unknown",
+      "Coyote is a paid class, not a grind: it comes from the Coyote Pack in the in-game shop's LIMITED tab (Robux), which grants the Demon Twin Guns permanent class item plus 100 Lucky Spins, 200 Normal Spins, 20 Aspect Gems and 5 T3 Luck Potions. The circulating 'El Hueco' claim is real but second-hand: the bigger El Hueco Pack lists a Coyote Class Item among its contents, so that bundle also delivers the class at a higher price. No gameplay unlock exists.",
+    steps: [
+      "Open the Shop from the left rail and switch to the LIMITED tab — the pack carousel reads El Hueco, Coyote Pack, Grand Sovereign.",
+      "Buy the Coyote Pack: it pays out the Demon Twin Guns permanent class item plus the spins, gems and potions.",
+      "Equip the class item from your inventory to play Coyote.",
+    ],
+    aliases: ["how to get coyote dungeon lootr", "coyote class", "dungeon lootr starrk", "coyote pack", "coyote starrk dungeon lootr"],
+    route: "Robux bundle",
     standing:
-      "allthings.how's post-Update-1 tier list puts Coyote in S-tier (single source - IGN/GameRant haven't graded it yet).",
-    grind: "",
+      "allthings.how's post-Update-1 tier list puts Coyote in S-tier (single source — IGN/GameRant haven't graded it yet). In play it is the twin-hand-cannon DPS class, with Savage Whale, Blinds Idol, Wolf Pack and Feeding Frenzy as its four abilities.",
+    grind:
+      "No grind — it is a Robux purchase. Gifting marketplaces list the Coyote Pack at 4,999 Robux; the El Hueco bundle that also carries the class costs more. Free players should aim at the raid classes instead.",
     related: ["spell-breaker", "cryomancer", "dark-professor"],
     extraFaq: [
       {
         q: "Is Coyote a raid class?",
-        a: "Unclear - the other three Update 1 classes are raid-linked, but no source we trust has confirmed Coyote's unlock method yet. We're checking after each patch.",
+        a: "No. The other three Update 1 classes (Spell Breaker, Cryomancer, Dark Professor) are tied to the Magic Unleashed raid, but Coyote is a Robux pack class — no raid or spin route exists.",
+      },
+      {
+        q: "Is Coyote the same as Starrk?",
+        a: "Yes — the class is named Coyote after Coyote Starrk from Bleach, and creators use both names. The item it grants is the Demon Twin Guns, the class's permanent weapon item.",
       },
     ],
     metaDesc:
-      "How to get Coyote in Dungeon Lootr: Update 1 class, unlock method still being verified. What we know so far. Updated Sep 2026.",
-    verified: false,
+      "How to get Coyote (Starrk) in Dungeon Lootr: the Robux pack class from the LIMITED shop tab — Demon Twin Guns item, pack contents and the El Hueco bundle route. Updated Oct 2026.",
+    verified: true,
   },
   // --- Spin classes with public rates (2026-09-13): Sportskeeda spin-rate
   // table (Legendary 8% normal / 22% lucky; Mythic 2% / 16%) + allthings.how

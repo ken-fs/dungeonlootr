@@ -17,17 +17,24 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-10-06";
+export const UPDATES_LAST_CHECKED = "2026-10-11";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-10-06",
-  playing: "1,430",
-  visits: "31.1M",
-  favorites: "109,295",
+  asOf: "2026-10-11",
+  playing: "2,444",
+  visits: "31.9M",
+  favorites: "111,545",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
+  {
+    date: "2026-10-10",
+    title: "Update 3.5 - Guilds, Hollow Realm and hardcore mode",
+    detail:
+      "Game updated Oct 10, 2026 19:18 UTC and the Roblox listing now reads [\ud83d\udee1\ufe0f GUILDS] Dungeon Lootr. Creator overview coverage from the same day reports a guild system, a new dungeon called Hollow Realm, the level cap raised to 350, an equipment infusion system, a hardcore mode and a limited Hollow vs Reaper event — plus three new classes and two new Aspects whose names no list we trust has published yet. Unlike every major update before it, the code list did not rotate: four aggregators were re-checked on Oct 11 and all still carry the same five active codes.",
+    evidence: "API timestamp",
+  },
   {
     date: "2026-10-03",
     title: "Update 3 - Expedition mode, five free classes and pets",
