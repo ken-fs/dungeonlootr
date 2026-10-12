@@ -1,5 +1,16 @@
 /**
  * Dungeon Lootr redeem codes - single source of truth.
+ * Pull (2026-10-12, GUILDS update): the game renamed to "[🛡️ GUILDS] Dungeon
+ * Lootr" and updated 2026-10-12 00:22 UTC. Three new codes are dual-sourced
+ * (TryHardGuides' Oct-11 update note + UrGameTips' "Latest code update: On
+ * October 11, 2026, we added VASTO, HOLLOWREALM, UPDATE3.5", both re-checked
+ * Oct 12): VASTO, HOLLOWREALM, UPDATE3.5. Reward figures come from UrGameTips'
+ * rewards table (numerals converted to our style); TryHard carries all three
+ * as "Freebies" only. TryHard's two extra codes STARK and TOWER appear on no
+ * second source - held back per our dual-source rule. The Update 3 batch
+ * (SorryForDelay/UPDATE3/SLIME/EXPEDITION/OKAMI) stays active: all three
+ * trackers still list all five.
+ *
  * RULE: never invent codes. Sources this pull (2026-09-21, Update 2): two
  * INDEPENDENT creator videos that agree on all five codes - B乛MaX丨Rohaan
  * (2026-09-19, shows each redemption succeeding in-game) + AkumaBlox
@@ -102,7 +113,7 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-10-06";
+export const CODES_LAST_CHECKED = "2026-10-12";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
@@ -118,6 +129,15 @@ export const CODES: GameCode[] = [
   { code: "SLIME", reward: "50 Lucky Spin + 5 Perfect Reforge Stone + 5 Spirit Prism", status: "active", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
   { code: "EXPEDITION", reward: "15 Exotic Ingot + 10 GM Blessing III + 50 Mystery Box + 5k Stars", status: "active", note: "Update 3 code, named after the new Expedition mode. Aggregator-sourced reward figures." },
   { code: "OKAMI", reward: "200 Expedition Point + 1 Revive Sigil + 5 Reforge Stone", status: "active", note: "Update 3 code. RadioTimes + Destructoid agree on these figures; Beebom lists a different OKAMI reward (Revive Sigils + 3 Perfect Reforge Stone) that no other source matches, so we do not use it." },
+
+  // --- GUILDS update batch (2026-10-12). Dual source: TryHardGuides +
+  // UrGameTips, both dated within a day of the update. Reward figures from
+  // UrGameTips' rewards table - aggregator-sourced, no in-game toast read
+  // yet (same upgrade path as the Update 3 batch). STARK and TOWER sit on
+  // TryHard only; they stay out until a second source corroborates them. ---
+  { code: "VASTO", reward: "15 Lucky Spin + 3 Aspect Gem + 5 Exotic Ingot + 10 Mystery Box", status: "active", note: "GUILDS update code. TryHardGuides + UrGameTips agree it is new; figures from UrGameTips." },
+  { code: "HOLLOWREALM", reward: "20 Lucky Spin + 3 Perfect Reforge Stone + 3 Spirit Prism", status: "active", note: "GUILDS update code. Dual source; figures from UrGameTips." },
+  { code: "UPDATE3.5", reward: "25 Lucky Spin + 3 Aspect Gem + 5 Affix Seal + 10 Reforge Stone Bundle", status: "active", note: "GUILDS update code - the dot is part of it. Dual source; figures from UrGameTips." },
 
   // --- Retired in the Update 3 rotation (2026-10-06). Every one of these was
   // active in our list until this pull. Destructoid's expired rows name all
