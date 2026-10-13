@@ -118,9 +118,11 @@ for repo in "${REPOS[@]}"; do
 done
 
 if [ -n "$ACTION" ]; then
-  ship_notify "📋 内容同步提醒" "有变动：$ACTION
-
-查看各 repo reports/patrol-$DATE.md"
+  # 2026-10-13：有变动直接交给自动更新引擎（scripts/autopilot），它改完上线后推飞书；这里不再让用户手动处理
+  for repo in $ACTION; do
+    /opt/homebrew/bin/node "$SHIP/scripts/autopilot/trigger.mjs" "$repo" "每日巡检报告 ACTION_NEEDED，先读 reports/patrol-$DATE.md，按报告里的变化（新码 / 过期码 / 新补丁 / 新单位）同步站点" \
+      || ship_notify "📋 内容同步提醒" "$repo 有变动，自动更新没接上：查看 $repo/reports/patrol-$DATE.md"
+  done
 else
   ship_notify "📋 内容同步正常" "三站 codes 无变化，站点正常"
 fi
