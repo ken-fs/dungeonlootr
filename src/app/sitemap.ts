@@ -12,7 +12,7 @@ export const dynamic = "force-static";
 const I18N_PATHS = ["/", "/codes/", "/tier-list/"];
 
 /** Pages with no data file behind them - listed here so the sitemap covers them. */
-const EXTRA_PATHS = ["/npcs/valen/"];
+const EXTRA_PATHS = ["/npcs/valen/", "/hollows-realm/"];
 
 /**
  * Per-page lastmod, taken from the data that actually drives each page.

@@ -111,9 +111,161 @@ export interface Unit {
   verified: boolean;
 }
 
-export const UNITS_LAST_CHECKED = "2026-10-06";
+// 
+// Update 3.5 classes (2026-10-14) — GUILDS / Hollows vs Reapers.
+// Source: creator Update 3.5 overview 41ZazrgEo2s (subtitles pulled 10-14),
+// read line by line by the daily patrol. Steps and costs below are what the
+// video states on screen; nothing is inferred. Keep rarity "" until a
+// readable list publishes one — unlike earlier batches, no tier list we can
+// read has graded 3.5 classes yet.
+
+export const UNITS_LAST_CHECKED = "2026-10-14";
 
 export const UNITS: Unit[] = [
+  // --- Update 3.5 (2026-10-10, GUILDS / Hollows vs Reapers) — three new classes.
+  // Single source: creator overview 41ZazrgEo2s ("MASSIVE UPDATE 3.5 OVERVIEW",
+  // subtitles pulled 2026-10-14 by the daily patrol). The video reads each
+  // unlock recipe on screen; DDG was used to confirm the video exists but no
+  // second written source has published these recipes yet. Everything below is
+  // video-stated, nothing inferred. Rarity left "" until a readable list
+  // publishes one; `verified` is true because the obtain method itself is
+  // concretely sourced, per the file's own rule.
+  {
+    slug: "hollow-reaper",
+    name: "Hollow Reaper",
+    origin: "In-game class: Hollow Reaper (Update 3.5, Hollows vs Reapers)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Hollow Reaper is the Update 3.5 class creators are already calling broken. You craft it at the Forge: fuse a Hollow Sword with Hollow Shards — the new currency that drops in the Hollows Realm dungeon — plus 5 demonic metals, 250 exotic essence and 50 purity stones.",
+    steps: [
+      "Run the new Hollows Realm dungeon (opens at level 220) and collect Hollow Shards from it.",
+      "Also gather 5 demonic metals, 250 exotic essence and 50 purity stones — standard late-game crafting materials.",
+      "Bring a Hollow Sword and the Hollow Shards to the Forge.",
+      "Craft the fusion. The video calls the result the strongest class in the update.",
+    ],
+    aliases: [
+      "how to get hollow reaper dungeon lootr",
+      "dungeon lootr hollow reaper",
+      "hollow reaper recipe dungeon lootr",
+      "dungeon lootr hollow shards",
+    ],
+    route: "Item unlock",
+    standing:
+      "Too new for any readable tier list — Update 3.5 landed Oct 10 and no list we can read has graded its classes. The creator overview calls Hollow Reaper the strongest and most broken class in the update, which is attention rather than a ranking.",
+    grind:
+      "Gated by the Hollows Realm dungeon: you need to be level 220 to enter, then farm Hollow Shards there on top of the 5/250/50 material stack. Plan on several runs before the Forge has everything.",
+    related: ["destruction-lance", "mastermind", "dreadlord"],
+    extraFaq: [
+      {
+        q: "Is Hollow Reaper the best class in Update 3.5?",
+        a: "That's the creator consensus so far — the overview video calls it the most broken class in the update. No tier list has formally ranked it yet, so treat it as early buzz, not a settled ranking.",
+      },
+      {
+        q: "Where do Hollow Shards drop?",
+        a: "In the new Hollows Realm dungeon, the Update 3.5 dungeon that opens at level 220. They are the fusion material for the Hollow Reaper craft at the Forge.",
+      },
+      {
+        q: "Is Hollow Reaper free?",
+        a: "Yes. It's a Forge craft from Hollows Realm drops plus standard materials — no Robux bundle is involved, unlike the Update 3.5 Mastermind.",
+      },
+    ],
+    metaDesc:
+      "How to get Hollow Reaper in Dungeon Lootr: forge a Hollow Sword with Hollow Shards from the Hollows Realm dungeon plus demonic metals, exotic essence and purity stones. Updated Oct 2026.",
+    videoId: "41ZazrgEo2s",
+    verified: true,
+  },
+  {
+    slug: "destruction-lance",
+    name: "Destruction Lance",
+    origin: "In-game class: Destruction Lance (Update 3.5, GUILDS update)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Destruction Lance is the Update 3.5 quest class. Talk to the new NPC Sorrow and complete his quest: bring an Imperfect Hogyorb — a 1% drop from the Hollows Realm dungeon's sub-boss, with pity at 200 kills — plus 10 demonic metals, 50 purity stones, 500 exotic essence and 7.5M gold.",
+    steps: [
+      "Reach level 220 and run the new Hollows Realm dungeon.",
+      "Farm the dungeon's sub-boss until an Imperfect Hogyorb drops. The video states a 1% drop rate with a 200-kill pity.",
+      "Collect 10 demonic metals, 50 purity stones, 500 exotic essence and 7.5M gold.",
+      "Find NPC Sorrow and turn the materials in to receive the Destruction Lance class.",
+    ],
+    aliases: [
+      "how to get destruction lance dungeon lootr",
+      "dungeon lootr destruction lance",
+      "destruction lance quest dungeon lootr",
+      "imperfect hogyorb dungeon lootr",
+      "sorrow npc dungeon lootr",
+    ],
+    route: "Quest",
+    standing:
+      "No readable tier list ranks it yet — the same creator overview introduces it as the update's dedicated quest class without grading it. Unranked is an honest answer until a list we can read says otherwise.",
+    grind:
+      "The long pole is the Imperfect Hogyorb: a 1% drop off the Hollows Realm sub-boss, with pity guaranteeing it by 200 kills. On top of that, 7.5M gold and the essence/purity/metal stack make this the most material-heavy unlock of Update 3.5.",
+    related: ["hollow-reaper", "mastermind", "jetstream"],
+    extraFaq: [
+      {
+        q: "Who is Sorrow in Dungeon Lootr?",
+        a: "The new NPC added with Update 3.5's GUILDS update. He hands out the Destruction Lance quest — bring him an Imperfect Hogyorb plus the listed materials and he grants the class.",
+      },
+      {
+        q: "What is an Imperfect Hogyorb and where does it drop?",
+        a: "A crafting quest item from the Hollows Realm dungeon's sub-boss. The creator overview states a 1% drop rate with a pity that guarantees one by 200 kills.",
+      },
+      {
+        q: "Is Destruction Lance free?",
+        a: "Yes. It's a quest turn-in from dungeon drops and farmed materials — no Robux involved. The gold and material cost is high, but everything is earnable in-game.",
+      },
+    ],
+    metaDesc:
+      "How to get Destruction Lance in Dungeon Lootr: NPC Sorrow's quest needs an Imperfect Hogyorb (1% Hollows Realm drop, 200 pity) plus metals, essence, purity stones and 7.5M gold. Updated Oct 2026.",
+    videoId: "41ZazrgEo2s",
+    verified: true,
+  },
+  {
+    slug: "mastermind",
+    name: "Mastermind",
+    origin: "In-game class: Mastermind (Update 3.5, Godhood Pack)",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Mastermind is the Update 3.5 premium class, sold in the Robux 'Godhood Pack' (the video prices it around R$ 799). The bundle also includes a hypnosis sword, and Mastermind is a permanent class.",
+    steps: [
+      "Open the in-game shop and find the Godhood Pack under the Update 3.5 offerings.",
+      "Buy the pack for the listed Robux price (around R$ 799 per the video).",
+      "The pack grants the Mastermind class permanently, alongside its hypnosis sword.",
+    ],
+    aliases: [
+      "how to get mastermind dungeon lootr",
+      "dungeon lootr mastermind",
+      "godhood pack dungeon lootr",
+      "mastermind class dungeon lootr",
+    ],
+    route: "Robux bundle",
+    standing:
+      "No readable tier list ranks it yet. Being the paid pack class, expect creator showcases before tier lists catch up — we will update this page when a list we can read publishes a grade.",
+    grind:
+      "No grind — it's a Robux purchase. If you're free-to-play, the Update 3.5 craft (Hollow Reaper) and quest (Destruction Lance) classes are the earnable equivalents this update.",
+    related: ["hollow-reaper", "destruction-lance", "shadow-vagrant"],
+    extraFaq: [
+      {
+        q: "How much does the Godhood Pack cost?",
+        a: "The creator overview prices it around R$ 799. Check the in-game shop for the live price in your region, since Robux pack prices can differ.",
+      },
+      {
+        q: "Is Mastermind permanent?",
+        a: "Yes. The video describes Mastermind as a permanent class granted by the Godhood Pack, alongside the hypnosis sword also included in the bundle.",
+      },
+      {
+        q: "Is Mastermind free?",
+        a: "No. It's the Update 3.5 Robux bundle class. The free classes of this update are Hollow Reaper (craft) and Destruction Lance (quest).",
+      },
+    ],
+    metaDesc:
+      "How to get Mastermind in Dungeon Lootr: the Update 3.5 premium class from the Godhood Pack (around R$ 799), with a hypnosis sword. Free alternatives inside. Updated Oct 2026.",
+    videoId: "41ZazrgEo2s",
+    verified: true,
+  },
+
   // --- Update 3 (2026-10-03/05, Expedition + Pets) — five free classes.
   // Two independent sources agree on the names AND the obtain route:
   //   1. dungeonlootr.org /classes/ + /expedition/ (stamped updated 2026-10-04)

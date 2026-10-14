@@ -17,7 +17,7 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-10-11";
+export const UPDATES_LAST_CHECKED = "2026-10-14";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
@@ -32,7 +32,7 @@ export const UPDATES: UpdateEntry[] = [
     date: "2026-10-10",
     title: "Update 3.5 - Guilds, Hollow Realm and hardcore mode",
     detail:
-      "Game updated Oct 10, 2026 19:18 UTC and the Roblox listing now reads [\ud83d\udee1\ufe0f GUILDS] Dungeon Lootr. Creator overview coverage from the same day reports a guild system, a new dungeon called Hollow Realm, the level cap raised to 350, an equipment infusion system, a hardcore mode and a limited Hollow vs Reaper event — plus three new classes and two new Aspects whose names no list we trust has published yet. Unlike every major update before it, the code list did not rotate: four aggregators were re-checked on Oct 11 and all still carry the same five active codes.",
+      "Game updated Oct 10, 2026 19:18 UTC and the Roblox listing now reads [\ud83d\udee1\ufe0f GUILDS] Dungeon Lootr. Creator overview coverage from the same day reports a guild system, a new dungeon called Hollow Realm, the level cap raised to 350, an equipment infusion system, a hardcore mode and a limited Hollow vs Reaper event — plus three new classes and two new Aspects whose names no list we trust has published yet. Unlike every major update before it, the code list did not rotate: four aggregators were re-checked on Oct 11 and all still carry the same five active codes. The three classes were named on Oct 14 from the creator overview (41ZazrgEo2s): Hollow Reaper (forge Hollow Shards from the new Hollows Realm dungeon), Destruction Lance (NPC Sorrow's quest, gated by the Imperfect Hogyorb off the Hollows Realm sub-boss) and Mastermind (the paid Godhood Pack class). See the three new unit pages and the Hollows Realm guide for the sourced recipes.",
     evidence: "API timestamp",
   },
   {
