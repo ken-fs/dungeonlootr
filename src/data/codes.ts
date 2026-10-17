@@ -113,7 +113,11 @@ export interface GameCode {
 }
 
 /** Date the codes list was last human-verified (drives the freshness stamp). */
-export const CODES_LAST_CHECKED = "2026-10-12";
+// 2026-10-17 re-check: UrGameTips (r.jina.ai, "checked October 16, 2026") lists
+// the same 8 working codes and the same 26 expired; TryHardGuides unchanged
+// (STARK/TOWER still single-source); Roblox API still shows the 2026-10-12
+// 00:22 UTC GUILDS build, so no new batch. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-17";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
@@ -229,11 +233,11 @@ export const CODE_SOURCES: CodeSource[] = [
   {
     name: "ClickBytes Roblox group",
     href: "https://www.roblox.com/communities/110427303/ClickBytes",
-    what: "Milestone codes (likes, favorites, player count) celebrate group goals - and you must be a member to redeem anything anyway.",
+    what: "You must be a member to redeem anything. Early milestone codes (likes, favorites, player count) were tied to group goals, but none has dropped since mid-September.",
   },
   {
     name: "In-game update drops",
     href: "https://www.roblox.com/games/106484206883664/Dungeon-Lootr",
-    what: "Big patches and re-launches ship with a code (FULLRELEASE, LOOTRISBACK). Check the game description after every update.",
+    what: "Every big update now ships a batch of codes (Update 3 had five, the GUILDS update had three). Check back here on update day.",
   },
 ];

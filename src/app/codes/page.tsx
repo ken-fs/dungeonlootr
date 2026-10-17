@@ -51,11 +51,15 @@ const faq = [
   },
   {
     q: "When do new Dungeon Lootr codes come out?",
-    a: "Two reliable triggers. Community milestones - past codes like 8KLIKE, 10KFAV and 20KPLAYERS dropped when the game hit like, favorite and player-count goals, so the next milestone is always being approached. And content updates - FULLRELEASE and LOOTRISBACK shipped with major patches. Watching the official Discord around update day catches nearly every code within hours.",
+    a: "On update day. Every big update since September has shipped its own batch: five codes with Update 3 (Oct 2026) and three with the GUILDS update (VASTO, HOLLOWREALM, UPDATE3.5). Early on, milestone codes like 8KLIKE and 45KLIKE dropped at like and visit goals. That has stopped: the game passed 100K favorites and 30M visits with no milestone code. So watch the official Discord when an update lands.",
   },
   {
     q: "What rewards do Dungeon Lootr codes give?",
-    a: "Coins for early progression, Luck Potions that boost class-spin odds, Forge and Reforge Stone Bundles for gear rolls, Aspect Gems, and occasional GM Blessings. Milestone codes usually bundle several at once, which is why redeeming them immediately matters more than hoarding.",
+    a: "The current codes mostly give Lucky Spins (for class spins), Aspect Gems, Exotic Ingots, Perfect Reforge Stones, Spirit Prisms, Affix Seals and Mystery Boxes. OKAMI also gives 200 Expedition Points for the Expedition Shop. Older codes gave Coins, Luck Potions and GM Blessings.",
+  },
+  {
+    q: "Where is the Codes button in Dungeon Lootr?",
+    a: "Most guides put it on the left side of the screen. UrGameTips' Oct 16 guide describes a newer path: open Menu on the left, pick More, then Codes, paste the code and press Claim. If you can't see a Codes button, try that path.",
   },
   {
     q: "Do Dungeon Lootr codes expire?",
@@ -63,7 +67,7 @@ const faq = [
   },
   {
     q: "How often is this codes list updated?",
-    a: `We re-check the list daily and re-verify every code against the game's official channels before marking it working. The stamp at the top of this page shows the exact day of the last verification pass - currently ${CODES_LAST_CHECKED}. Anything we cannot confirm is parked in the unconfirmed section instead of being presented as fact.`,
+    a: `We re-check the list daily. A code only gets the working stamp once two independent sources list it, and we check the game's Roblox update time to catch new batches. The stamp at the top of this page shows the last check - currently ${CODES_LAST_CHECKED}. Codes that only one site lists stay off the working list.`,
   },
 ];
 
@@ -100,6 +104,13 @@ export default function CodesPage() {
         <Rune as="h1" color="gold" className="text-3xl sm:text-5xl">
           Dungeon Lootr Codes
         </Rune>
+        {active.length > 0 && (
+          <p className="mt-3 text-fg">
+            There are {active.length} working {SITE.game} codes right now (checked{" "}
+            {CODES_LAST_CHECKED}): {active.map((c) => c.code).join(", ")}. Codes are
+            case-sensitive, so copy them exactly. You must join the ClickBytes Roblox group first.
+          </p>
+        )}
         <p className="mt-3 text-dim">
           Every working {SITE.game} code for {MONTH_YEAR}, cross-checked and dated. Redeem
           them fast - Roblox codes expire quickly. Dungeon Lootr is also widely searched as
@@ -157,9 +168,15 @@ export default function CodesPage() {
           </Rune>
           <ul className="mt-3 space-y-2 text-sm text-dim">
             <li>
-              <span className="display glow-gold">Luck Potions →</span> save them for bulk class
+              <span className="display glow-gold">Lucky Spins →</span> save them for bulk class
               spins - the <Link href="/tier-list/">S-tier picks on the class tier list</Link>{" "}
               are what you want to land.
+            </li>
+            <li>
+              <span className="display glow-gold">Expedition Points →</span> the 200 from OKAMI
+              go toward a free class item in the Expedition Shop. Our{" "}
+              <Link href="/shop/">Dungeon Lootr shop guide</Link> lists every shop, gamepass and
+              Robux pack.
             </li>
             <li>
               <span className="display glow-gold">Aspect Gems →</span> roll a passive for your
@@ -258,10 +275,10 @@ export default function CodesPage() {
           Where New Codes Drop
         </Rune>
         <p className="mt-3 text-dim">
-          {SITE.game} codes are not random - the list above shows the pattern.
-          Milestone codes (8KLIKE, 10KFAV, 20KPLAYERS) celebrate community goals, and
-          update codes (FULLRELEASE, LOOTRISBACK) ship with patches. These are the
-          channels that get them first, ranked by speed:
+          {SITE.game} codes are not random - the list above shows the pattern. These days
+          they ship in batches with each big update (UPDATE3, then UPDATE3.5). The old
+          milestone codes (8KLIKE, 10KFAV, 45KLIKE) seem to be done. These are the channels
+          that get new codes first, ranked by speed:
         </p>
         <ul className="mt-4 space-y-4">
           {CODE_SOURCES.map((s, i) => (

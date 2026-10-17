@@ -165,7 +165,12 @@ export default function PayloadPage() {
         </Rune>
         <p className="mt-3 text-sm text-dim">
           Prices are listed only where a creator stated them on camera. &ldquo;Not confirmed&rdquo;
-          means we have not seen the number - not that it is free.
+          means we have not seen the number - not that it is free. For the Robux shop and the
+          other currency shops, see the{" "}
+          <Link href="/shop/" className="text-arcane hover:underline">
+            Dungeon Lootr shop guide
+          </Link>
+          .
         </p>
         <div className="mt-4 space-y-3">
           {SHOP.map((item) => (
@@ -251,6 +256,11 @@ export default function PayloadPage() {
           <li>
             <Link href="/units/fey/" className="text-arcane hover:underline">
               How to get Fey
+            </Link>
+          </li>
+          <li>
+            <Link href="/shop/" className="text-arcane hover:underline">
+              Every shop and gamepass
             </Link>
           </li>
           <li>

@@ -146,6 +146,12 @@ export default function BeginnerGuide() {
           and item unlocks like the Infinity Core gate others. Check the{" "}
           <Link href="/tier-list/">class tier list</Link> before committing your spins.
         </p>
+        <p className="mt-3 text-dim">
+          Other classes are bought. Some cost Robux packs, and some cost points you earn in a
+          mode, like Fey in the Payload shop. The{" "}
+          <Link href="/shop/">Dungeon Lootr shop guide</Link> lists every shop, all 8
+          gamepasses and which classes are free.
+        </p>
       </Slab>
 
       <Slab>
