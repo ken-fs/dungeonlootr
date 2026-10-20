@@ -32,7 +32,7 @@ export const UPDATES: UpdateEntry[] = [
     date: "2026-10-20",
     title: "Halloween build - listing renamed, no new codes yet",
     detail:
-      "Game updated Oct 20, 2026 06:32 UTC (Roblox API) and the listing now reads [🎃 HALLOWEEN] Dungeon Lootr. No source has published what the update contains yet, so we list no classes or items for it. No new code came with it: UrGameTips (October 2026 list) and Beebom (last updated Oct 5) still show the same active codes, and TryHardGuides blocked our check. We'll add details once a creator video or the group announcement confirms them.",
+      "Game updated Oct 20, 2026 06:48 UTC (Roblox API) and the listing now reads [🎃 HALLOWEEN] Dungeon Lootr. No source has published what the update contains yet, so we list no classes or items for it. No new code came with it: UrGameTips (October 2026 list) and Beebom (last updated Oct 5) still show the same active codes, and TryHardGuides blocked our check. We'll add details once a creator video or the group announcement confirms them.",
     evidence: "API timestamp",
   },
   {
