@@ -17,14 +17,14 @@ export interface UpdateEntry {
 }
 
 /** Date of the last tracking pass (drives the freshness stamp). */
-export const UPDATES_LAST_CHECKED = "2026-10-20";
+export const UPDATES_LAST_CHECKED = "2026-10-21";
 
 /** Snapshot from the official Roblox Games API, universe 9656201728. */
 export const LIVE_STATS = {
-  asOf: "2026-10-20",
-  playing: "509",
+  asOf: "2026-10-21",
+  playing: "504",
   visits: "32.8M",
-  favorites: "114,074",
+  favorites: "114,209",
 } as const;
 
 export const UPDATES: UpdateEntry[] = [
@@ -32,7 +32,7 @@ export const UPDATES: UpdateEntry[] = [
     date: "2026-10-20",
     title: "Halloween build - listing renamed, no new codes yet",
     detail:
-      "Game updated Oct 20, 2026 06:48 UTC (Roblox API) and the listing now reads [🎃 HALLOWEEN] Dungeon Lootr. No source has published what the update contains yet, so we list no classes or items for it. No new code came with it: UrGameTips (October 2026 list) and Beebom (last updated Oct 5) still show the same active codes, and TryHardGuides blocked our check. We'll add details once a creator video or the group announcement confirms them.",
+      "Game updated Oct 20, 2026 06:48 UTC and again Oct 21, 2026 04:09 UTC (Roblox API), and the listing now reads [🎃 HALLOWEEN] Dungeon Lootr. No source has published what the update contains yet, so we list no classes or items for it. No new code came with it: UrGameTips (October 2026 list) and Beebom (last updated Oct 5) still show the same active codes (re-checked Oct 21), and TryHardGuides blocked our check. We'll add details once a creator video or the group announcement confirms them.",
     evidence: "API timestamp",
   },
   {
