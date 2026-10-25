@@ -117,7 +117,11 @@ export interface GameCode {
 // the same 8 working codes and the same 26 expired; TryHardGuides unchanged
 // (STARK/TOWER still single-source); Roblox API still shows the 2026-10-12
 // 00:22 UTC GUILDS build, so no new batch. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-10-17";
+// 2026-10-25 re-check: Roblox API shows the game renamed "[🎃] Dungeon Lootr",
+// updated 2026-10-25 01:56 UTC (Halloween build). UrGameTips (modified Oct 11)
+// and TryHardGuides (Oct 12) still list the same 8 working codes; Beebom is
+// stale (Oct 5). No source lists a new code yet. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-25";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
