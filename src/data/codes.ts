@@ -121,7 +121,11 @@ export interface GameCode {
 // updated 2026-10-25 01:56 UTC (Halloween build). UrGameTips (modified Oct 11)
 // and TryHardGuides (Oct 12) still list the same 8 working codes; Beebom is
 // stale (Oct 5). No source lists a new code yet. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-10-25";
+// 2026-10-26 re-check: Roblox API shows a further build (updated 2026-10-26
+// 02:25 UTC). TryHardGuides (Oct 12), UrGameTips (Oct) and ProGameGuides (Oct 11)
+// list no new code. ProGameGuides alone calls the Update 3 batch inactive;
+// Beebom/UrGameTips/TryHard still list it active, so no expiry. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-26";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
