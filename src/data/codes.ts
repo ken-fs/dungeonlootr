@@ -130,6 +130,10 @@ export interface GameCode {
 // 8 working codes, STARK/TOWER still single-source. ProGameGuides blocked
 // (Cloudflare). A creator video titled "Halloween Update 4 codes" (Oct 18)
 // exists but its captions were rate-limited, so nothing was confirmed. No add, no expire.
+// 2026-10-27 (later): ProGameGuides (r.jina.ai, "October 2026 [GUILDS]") now lists
+// STARK and TOWER as working, with the same rewards TryHardGuides prints, so the
+// two codes have two sources and are added. Roblox API: build updated 2026-10-27
+// 14:25 UTC (still "[🎃] Dungeon Lootr"); no new code from any source for it.
 export const CODES_LAST_CHECKED = "2026-10-27";
 
 export const CODES: GameCode[] = [
@@ -155,6 +159,12 @@ export const CODES: GameCode[] = [
   { code: "VASTO", reward: "15 Lucky Spin + 3 Aspect Gem + 5 Exotic Ingot + 10 Mystery Box", status: "active", note: "GUILDS update code. TryHardGuides + UrGameTips agree it is new; figures from UrGameTips." },
   { code: "HOLLOWREALM", reward: "20 Lucky Spin + 3 Perfect Reforge Stone + 3 Spirit Prism", status: "active", note: "GUILDS update code. Dual source; figures from UrGameTips." },
   { code: "UPDATE3.5", reward: "25 Lucky Spin + 3 Aspect Gem + 5 Affix Seal + 10 Reforge Stone Bundle", status: "active", note: "GUILDS update code - the dot is part of it. Dual source; figures from UrGameTips." },
+
+  // STARK / TOWER: TryHardGuides (Oct 12) + ProGameGuides (checked Oct 27) both
+  // list them with identical rewards. Not read off an in-game toast; the two
+  // pages may share an origin, so keep the note.
+  { code: "STARK", reward: "30 Lucky Spin + 10 Purity Stone + 15 Exotic Essence + 5 Perfect Reforge Stone", status: "active", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
+  { code: "TOWER", reward: "40 Lucky Spin + 10 Reforge Stone Bundle + 5 Affix Seal + 10 Mystery Box", status: "active", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
 
   // --- Retired in the Update 3 rotation (2026-10-06). Every one of these was
   // active in our list until this pull. Destructoid's expired rows name all
