@@ -125,7 +125,12 @@ export interface GameCode {
 // 02:25 UTC). TryHardGuides (Oct 12), UrGameTips (Oct) and ProGameGuides (Oct 11)
 // list no new code. ProGameGuides alone calls the Update 3 batch inactive;
 // Beebom/UrGameTips/TryHard still list it active, so no expiry. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-10-26";
+// 2026-10-27 re-check: Roblox API shows another build (updated 2026-10-26
+// 20:16 UTC). TryHardGuides (REST API, modified Oct 12) is unchanged: same
+// 8 working codes, STARK/TOWER still single-source. ProGameGuides blocked
+// (Cloudflare). A creator video titled "Halloween Update 4 codes" (Oct 18)
+// exists but its captions were rate-limited, so nothing was confirmed. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-27";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
