@@ -134,7 +134,12 @@ export interface GameCode {
 // STARK and TOWER as working, with the same rewards TryHardGuides prints, so the
 // two codes have two sources and are added. Roblox API: build updated 2026-10-27
 // 14:25 UTC (still "[🎃] Dungeon Lootr"); no new code from any source for it.
-export const CODES_LAST_CHECKED = "2026-10-27";
+// 2026-10-28 re-check: Roblox API shows build updated 2026-10-27 16:34 UTC (still
+// "[🎃] Dungeon Lootr"). UrGameTips (r.jina.ai, "October 2026") lists the same 8
+// Update 3 / GUILDS codes (no STARK/TOWER) and the same 26 expired; TryHardGuides
+// (modified Oct 12) and ProGameGuides (Oct 11) unchanged; Destructoid (Oct 26)
+// says "still looking for new codes". No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-28";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
