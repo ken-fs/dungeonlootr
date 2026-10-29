@@ -139,7 +139,10 @@ export interface GameCode {
 // Update 3 / GUILDS codes (no STARK/TOWER) and the same 26 expired; TryHardGuides
 // (modified Oct 12) and ProGameGuides (Oct 11) unchanged; Destructoid (Oct 26)
 // says "still looking for new codes". No add, no expire.
-export const CODES_LAST_CHECKED = "2026-10-28";
+// 2026-10-29 re-check: UrGameTips (October 2026), TryHardGuides (REST, modified
+// Oct 12), ProGameGuides and Destructoid (Oct 26) list the same working codes as
+// ours. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-29";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
