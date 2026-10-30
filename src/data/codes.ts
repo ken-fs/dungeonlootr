@@ -145,7 +145,10 @@ export interface GameCode {
 // 2026-10-30 re-check: Roblox API shows build updated 2026-10-29 22:08 UTC (still
 // "[🎃] Dungeon Lootr"). UrGameTips (October 2026), Beebom (Oct 5) and TryHardGuides
 // (REST, modified Oct 12) show no new code and no new expiry. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-10-30";
+// 2026-10-31 re-check: Roblox API shows build updated 2026-10-30 19:31 UTC (still
+// "[🎃] Dungeon Lootr"). UrGameTips (modified Oct 11), TryHardGuides (REST, modified
+// Oct 12) and Beebom (Oct 5) list no new code and no new expiry. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-10-31";
 
 export const CODES: GameCode[] = [
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
