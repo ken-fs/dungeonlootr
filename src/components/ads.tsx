@@ -48,12 +48,33 @@ function AdBanner({ unit }: { unit: BannerUnit }) {
   useEffect(() => {
     const el = ref.current;
     if (!el || el.childElementCount > 0) return;
+    // Load only once the slot is on screen (or close), 2026-10-31: injecting on mount loaded every unit,
+    // including ones hidden by CSS at this breakpoint: impressions for ads nobody saw. A display:none
+    // element never intersects, so a hidden unit never loads.
+    const load = () => {
+    if (el.childElementCount > 0) return;
     const opts = document.createElement("script");
     opts.text = `atOptions = ${JSON.stringify({ key: unit.key, format: "iframe", height: unit.height, width: unit.width, params: {} })};`;
     const invoke = document.createElement("script");
     invoke.src = `https://www.highrevenueformat.com/${unit.key}/invoke.js`;
     invoke.async = false;
     el.append(opts, invoke);
+    };
+    if (!("IntersectionObserver" in window)) {
+      if (el.offsetParent) load();
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          load();
+          io.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
   }, [unit]);
 
   return (
