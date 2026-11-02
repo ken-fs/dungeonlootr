@@ -119,9 +119,115 @@ export interface Unit {
 // readable list publishes one — unlike earlier batches, no tier list we can
 // read has graded 3.5 classes yet.
 
-export const UNITS_LAST_CHECKED = "2026-10-14";
+export const UNITS_LAST_CHECKED = "2026-11-02";
 
 export const UNITS: Unit[] = [
+  // --- Update 4 (2026-10-18, Undead Conquest) — four classes; three pages so far.
+  // Source: creator overview PP1OObEmviI (captions) + official update log screen
+  // read by the patrol. Unlock items are video clues; costs are unconfirmed.
+  // Moonlit Melancholy (Columbina) still has no page.
+  {
+    slug: "ains",
+    name: "Fallen Down",
+    origin: "In-game class: Fallen Down (Ains, Update 4)",
+    searchName: "Ains",
+    anime: "",
+    rarity: "",
+    obtain:
+      "Fallen Down (Ains) is one of four classes added in Update 4. It has three unlock routes, free and paid. The creator video points to the World Item Fragment as the unlock item. Costs and exact steps are unconfirmed.",
+    steps: [
+      "Update 4 adds the Undead Conquest mode. Ains is the boss at the end of it, in the Necropolis.",
+      "The creator video links Fallen Down to the World Item Fragment. How many you need isn't confirmed.",
+      "There are free and paid routes. We haven't confirmed the steps for either one yet.",
+    ],
+    aliases: ["how to get ains dungeon lootr", "dungeon lootr ains", "dungeon lootr fallen down"],
+    route: "Unknown",
+    standing: "Too new to be ranked. Update 4 shipped on Oct 18 and no readable tier list has graded these classes yet.",
+    grind: "Unknown. The routes exist, but no source we trust has listed the costs.",
+    related: ["hollow-reaper", "mastermind"],
+    extraFaq: [
+      {
+        q: "Is Fallen Down free?",
+        a: "It has a free route and a paid route, per the Update 4 creator video. We haven't confirmed the steps for either.",
+      },
+      {
+        q: "Who is Fallen Down based on?",
+        a: "Ains. The in-game class name is Fallen Down.",
+      },
+    ],
+    metaDesc:
+      "How to get Fallen Down (Ains) in Dungeon Lootr: the Update 4 class, its unlock item and what's still unconfirmed. Updated Nov 2026.",
+    videoId: "PP1OObEmviI",
+    verified: false,
+  },
+  {
+    slug: "kaneki",
+    name: "One-Eyed Rampage",
+    origin: "In-game class: One-Eyed Rampage (Kaneki, Update 4)",
+    searchName: "Kaneki",
+    anime: "",
+    rarity: "",
+    obtain:
+      "One-Eyed Rampage (Kaneki) is one of four classes added in Update 4. It has three unlock routes, free and paid. The creator video points to the One-Eyed Mask as the unlock item. Costs and exact steps are unconfirmed.",
+    steps: [
+      "Update 4 adds the Undead Conquest mode, which also gives Conquest Sigils for the event shop.",
+      "The creator video links One-Eyed Rampage to the One-Eyed Mask. How many you need isn't confirmed.",
+      "There are free and paid routes. We haven't confirmed the steps for either one yet.",
+    ],
+    aliases: ["how to get kaneki dungeon lootr", "dungeon lootr kaneki", "dungeon lootr one-eyed rampage"],
+    route: "Unknown",
+    standing: "Too new to be ranked. Update 4 shipped on Oct 18 and no readable tier list has graded these classes yet.",
+    grind: "Unknown. The routes exist, but no source we trust has listed the costs.",
+    related: ["hollow-reaper", "mastermind"],
+    extraFaq: [
+      {
+        q: "Is One-Eyed Rampage free?",
+        a: "It has a free route and a paid route, per the Update 4 creator video. We haven't confirmed the steps for either.",
+      },
+      {
+        q: "Who is One-Eyed Rampage based on?",
+        a: "Kaneki. The in-game class name is One-Eyed Rampage.",
+      },
+    ],
+    metaDesc:
+      "How to get One-Eyed Rampage (Kaneki) in Dungeon Lootr: the Update 4 class, its unlock item and what's still unconfirmed. Updated Nov 2026.",
+    videoId: "PP1OObEmviI",
+    verified: false,
+  },
+  {
+    slug: "cid",
+    name: "I Am Atomic",
+    origin: "In-game class: I Am Atomic (Cid, Update 4)",
+    searchName: "Cid",
+    anime: "",
+    rarity: "",
+    obtain:
+      "I Am Atomic (Cid) is one of four classes added in Update 4. It has three unlock routes, free and paid. The creator video points to the Shadow Slime Core as the unlock item. Costs and exact steps are unconfirmed.",
+    steps: [
+      "Update 4 adds the Undead Conquest mode, which also gives Conquest Sigils for the event shop.",
+      "The creator video links I Am Atomic to the Shadow Slime Core. How many you need isn't confirmed.",
+      "There are free and paid routes. We haven't confirmed the steps for either one yet.",
+    ],
+    aliases: ["how to get cid dungeon lootr", "dungeon lootr cid", "dungeon lootr i am atomic"],
+    route: "Unknown",
+    standing: "Too new to be ranked. Update 4 shipped on Oct 18 and no readable tier list has graded these classes yet.",
+    grind: "Unknown. The routes exist, but no source we trust has listed the costs.",
+    related: ["hollow-reaper", "mastermind"],
+    extraFaq: [
+      {
+        q: "Is I Am Atomic free?",
+        a: "It has a free route and a paid route, per the Update 4 creator video. We haven't confirmed the steps for either.",
+      },
+      {
+        q: "Who is I Am Atomic based on?",
+        a: "Cid. The in-game class name is I Am Atomic.",
+      },
+    ],
+    metaDesc:
+      "How to get I Am Atomic (Cid) in Dungeon Lootr: the Update 4 class, its unlock item and what's still unconfirmed. Updated Nov 2026.",
+    videoId: "PP1OObEmviI",
+    verified: false,
+  },
   // --- Update 3.5 (2026-10-10, GUILDS / Hollows vs Reapers) — three new classes.
   // Single source: creator overview 41ZazrgEo2s ("MASSIVE UPDATE 3.5 OVERVIEW",
   // subtitles pulled 2026-10-14 by the daily patrol). The video reads each
