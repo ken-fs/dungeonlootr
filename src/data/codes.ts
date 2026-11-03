@@ -155,9 +155,21 @@ export interface GameCode {
 // Lootr", updated 2026-11-01 20:54 UTC. UrGameTips (r.jina.ai, "November 2026"), TryHardGuides
 // (REST, modified Oct 12) and ProGameGuides (Oct 11) list no new code and no new
 // expiry. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-11-02";
+// 2026-11-03: Roblox API shows "[NEW Gamemode] Dungeon Lootr" updated 2026-11-03
+// 00:36 UTC. Three new codes, dual-sourced: TryHardGuides (REST, modified Nov 2,
+// marked NEW) + ProGameGuides (r.jina.ai, "Updated: November 2, 2026", marked NEW):
+// UPDATE5, ARSENALCRAWL, THANKSFORWAITING. Both print only partial rewards, so
+// rewards stay unconfirmed except THANKSFORWAITING (ProGameGuides: 3 Perfect
+// Reforge Stones). UrGameTips and Beebom have not caught up. No expiry.
+export const CODES_LAST_CHECKED = "2026-11-03";
 
 export const CODES: GameCode[] = [
+  // --- New Gamemode batch (2026-11-02/03). Dual source: TryHardGuides + ProGameGuides,
+  // both marked NEW on Nov 2. Rewards are only partly published, so we copy what is listed. ---
+  { code: "UPDATE5", reward: "Freebies (reward details unconfirmed)", status: "active", note: "New Gamemode update code. TryHardGuides + ProGameGuides list it; neither prints the reward." },
+  { code: "ARSENALCRAWL", reward: "Exotic Ingot (amount and other items unconfirmed)", status: "active", note: "New Gamemode update code. ProGameGuides lists only an Exotic Ingot (spelled 'Exocit Ignot'); TryHardGuides prints no reward." },
+  { code: "THANKSFORWAITING", reward: "3 Perfect Reforge Stone (other items unconfirmed)", status: "active", note: "New Gamemode update code. Reward per ProGameGuides; TryHardGuides prints no reward." },
+
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
   // on the same five codes and the same reward figures: Beebom, RadioTimes and
   // Destructoid, all dated Oct 5. RadioTimes and Destructoid match exactly on
