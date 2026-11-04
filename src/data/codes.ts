@@ -166,7 +166,11 @@ export interface GameCode {
 // with the same reward. TryHardGuides (REST, modified Nov 2) does not carry it yet.
 // Beebom alone calls SLIME / UPDATE3 expired; UrGameTips still lists them active,
 // so no expiry.
-export const CODES_LAST_CHECKED = "2026-11-04";
+// 2026-11-05 re-check: Beebom (Nov 3) lists SLIME / UPDATE3 expired; UrGameTips (Nov 4)
+// only "removed" them from working (its expired list of 26 does not name them);
+// TryHardGuides (REST, modified Nov 2) still lists both active. Only one explicit
+// expired vote, so no expiry. No new code from any source. No add, no expire.
+export const CODES_LAST_CHECKED = "2026-11-05";
 
 export const CODES: GameCode[] = [
   { code: "UPDATE4", reward: "5 Aspect Gem", status: "active", note: "Update 4 code. Beebom + UrGameTips list it with the same reward; not tested in-game by us." },
