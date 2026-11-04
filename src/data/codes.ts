@@ -161,9 +161,16 @@ export interface GameCode {
 // UPDATE5, ARSENALCRAWL, THANKSFORWAITING. Both print only partial rewards, so
 // rewards stay unconfirmed except THANKSFORWAITING (ProGameGuides: 3 Perfect
 // Reforge Stones). UrGameTips and Beebom have not caught up. No expiry.
-export const CODES_LAST_CHECKED = "2026-11-03";
+// 2026-11-04: UPDATE4 (5 Aspect Gem) added: Beebom (r.jina.ai, "Updated: November 3,
+// 2026", marked NEW) + UrGameTips (r.jina.ai, "November 2026") both list it active
+// with the same reward. TryHardGuides (REST, modified Nov 2) does not carry it yet.
+// Beebom alone calls SLIME / UPDATE3 expired; UrGameTips still lists them active,
+// so no expiry.
+export const CODES_LAST_CHECKED = "2026-11-04";
 
 export const CODES: GameCode[] = [
+  { code: "UPDATE4", reward: "5 Aspect Gem", status: "active", note: "Update 4 code. Beebom + UrGameTips list it with the same reward; not tested in-game by us." },
+
   // --- New Gamemode batch (2026-11-02/03). Dual source: TryHardGuides + ProGameGuides,
   // both marked NEW on Nov 2. Rewards are only partly published, so we copy what is listed. ---
   { code: "UPDATE5", reward: "Freebies (reward details unconfirmed)", status: "active", note: "New Gamemode update code. TryHardGuides + ProGameGuides list it; neither prints the reward." },
