@@ -124,5 +124,6 @@ if [ -n "$ACTION" ]; then
       || ship_notify "📋 内容同步提醒" "$repo 有变动，自动更新没接上：查看 $repo/reports/patrol-$DATE.md"
   done
 else
-  ship_notify "📋 内容同步正常" "三站 codes 无变化，站点正常"
+  # 2026-11-06 用户定：只有出问题才告诉我——「同步正常」不推
+  echo "三站 codes 无变化，站点正常"
 fi
