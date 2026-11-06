@@ -170,7 +170,13 @@ export interface GameCode {
 // only "removed" them from working (its expired list of 26 does not name them);
 // TryHardGuides (REST, modified Nov 2) still lists both active. Only one explicit
 // expired vote, so no expiry. No new code from any source. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-11-05";
+// 2026-11-06: Roblox API shows build updated 2026-11-06 02:31 UTC ("[NEW Gamemode]
+// Dungeon Lootr"); no source lists a new code for it. SLIME and UPDATE3 now expired:
+// Beebom (Nov 3) + ProGameGuides (Nov 2) both list them in their expired lists
+// (UrGameTips also dropped them from working). STARK / TOWER / SorryForDelay /
+// EXPEDITION / OKAMI are expired on ProGameGuides only (UrGameTips still lists
+// the last three active, Beebom lists none), so they stay active. No new code.
+export const CODES_LAST_CHECKED = "2026-11-06";
 
 export const CODES: GameCode[] = [
   { code: "UPDATE4", reward: "5 Aspect Gem", status: "active", note: "Update 4 code. Beebom + UrGameTips list it with the same reward; not tested in-game by us." },
@@ -190,8 +196,8 @@ export const CODES: GameCode[] = [
   // 21:13 UTC. No code here has been read off an in-game redemption toast yet -
   // that is the next upgrade, same as we did for the Update 2 batch. ---
   { code: "SorryForDelay", reward: "15 Perfect Reforge Stone + 15 Spirit Prism + 15 Exotic Ingot", status: "active", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
-  { code: "UPDATE3", reward: "50 Lucky Spin + 10 Affix Seal + 20 Reforge Stone Bundle", status: "active", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
-  { code: "SLIME", reward: "50 Lucky Spin + 5 Perfect Reforge Stone + 5 Spirit Prism", status: "active", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
+  { code: "UPDATE3", reward: "50 Lucky Spin + 10 Affix Seal + 20 Reforge Stone Bundle", status: "expired", note: "Update 3 code. Beebom + ProGameGuides both list it as expired (Nov 2026)." },
+  { code: "SLIME", reward: "50 Lucky Spin + 5 Perfect Reforge Stone + 5 Spirit Prism", status: "expired", note: "Update 3 code. Beebom + ProGameGuides both list it as expired (Nov 2026)." },
   { code: "EXPEDITION", reward: "15 Exotic Ingot + 10 GM Blessing III + 50 Mystery Box + 5k Stars", status: "active", note: "Update 3 code, named after the new Expedition mode. Aggregator-sourced reward figures." },
   { code: "OKAMI", reward: "200 Expedition Point + 1 Revive Sigil + 5 Reforge Stone", status: "active", note: "Update 3 code. RadioTimes + Destructoid agree on these figures; Beebom lists a different OKAMI reward (Revive Sigils + 3 Perfect Reforge Stone) that no other source matches, so we do not use it." },
 
