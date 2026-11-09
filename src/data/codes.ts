@@ -176,16 +176,21 @@ export interface GameCode {
 // (UrGameTips also dropped them from working). STARK / TOWER / SorryForDelay /
 // EXPEDITION / OKAMI are expired on ProGameGuides only (UrGameTips still lists
 // the last three active, Beebom lists none), so they stay active. No new code.
-export const CODES_LAST_CHECKED = "2026-11-06";
+// 2026-11-09: Roblox API shows build updated 2026-11-08 22:44 UTC ("[NEW Gamemode]
+// Dungeon Lootr"). No new code from any source (UrGameTips "November 2026",
+// TryHardGuides REST modified Nov 2, ProGameGuides Nov 2, Beebom without the Nov 2 codes).
+// UrGameTips now prints rewards for the three Nov 2 codes; copied as listed (UPDATE5 is
+// UrGameTips-only; the other two agree with ProGameGuides' partial figures). No add, no expire.
+export const CODES_LAST_CHECKED = "2026-11-09";
 
 export const CODES: GameCode[] = [
   { code: "UPDATE4", reward: "5 Aspect Gem", status: "active", note: "Update 4 code. Beebom + UrGameTips list it with the same reward; not tested in-game by us." },
 
   // --- New Gamemode batch (2026-11-02/03). Dual source: TryHardGuides + ProGameGuides,
   // both marked NEW on Nov 2. Rewards are only partly published, so we copy what is listed. ---
-  { code: "UPDATE5", reward: "Freebies (reward details unconfirmed)", status: "active", note: "New Gamemode update code. TryHardGuides + ProGameGuides list it; neither prints the reward." },
-  { code: "ARSENALCRAWL", reward: "Exotic Ingot (amount and other items unconfirmed)", status: "active", note: "New Gamemode update code. ProGameGuides lists only an Exotic Ingot (spelled 'Exocit Ignot'); TryHardGuides prints no reward." },
-  { code: "THANKSFORWAITING", reward: "3 Perfect Reforge Stone (other items unconfirmed)", status: "active", note: "New Gamemode update code. Reward per ProGameGuides; TryHardGuides prints no reward." },
+  { code: "UPDATE5", reward: "3 Aspect Gem", status: "active", note: "New Gamemode update code. TryHardGuides + ProGameGuides list the code; the reward is per UrGameTips only." },
+  { code: "ARSENALCRAWL", reward: "5 Exotic Ingot", status: "active", note: "New Gamemode update code. UrGameTips lists 5 Exotic Ingot; ProGameGuides lists an Exotic Ingot without an amount; TryHardGuides prints no reward." },
+  { code: "THANKSFORWAITING", reward: "3 Perfect Reforge Stone + 3 Spirit Prism", status: "active", note: "New Gamemode update code. UrGameTips lists both items; ProGameGuides lists the 3 Perfect Reforge Stone; TryHardGuides prints no reward." },
 
   // --- Update 3 batch (2026-10-05/06, Update 3 + Pets). Three aggregators agree
   // on the same five codes and the same reward figures: Beebom, RadioTimes and
