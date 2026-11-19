@@ -182,7 +182,8 @@ export interface GameCode {
 // UrGameTips now prints rewards for the three Nov 2 codes; copied as listed (UPDATE5 is
 // UrGameTips-only; the other two agree with ProGameGuides' partial figures). No add, no expire.
 // 2026-11-19: Tower Ascension codes added. TryHardGuides, UrGameTips and ProGameGuides
-// list the same codes and rewards; no new expiry is confirmed by two sources.
+// list the same codes and rewards. ProGameGuides marks the five older codes inactive
+// and Destructoid marks them expired; UrGameTips / TryHardGuides still list some as working.
 export const CODES_LAST_CHECKED = "2026-11-19";
 
 export const CODES: GameCode[] = [
@@ -205,11 +206,11 @@ export const CODES: GameCode[] = [
   // the game renamed to "Dungeon Lootr [💧Pets + UPD]" and updated 2026-10-05
   // 21:13 UTC. No code here has been read off an in-game redemption toast yet -
   // that is the next upgrade, same as we did for the Update 2 batch. ---
-  { code: "SorryForDelay", reward: "15 Perfect Reforge Stone + 15 Spirit Prism + 15 Exotic Ingot", status: "active", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
+  { code: "SorryForDelay", reward: "15 Perfect Reforge Stone + 15 Spirit Prism + 15 Exotic Ingot", status: "expired", note: "Update 3 code. Aggregator-sourced reward figures; no creator footage read yet." },
   { code: "UPDATE3", reward: "50 Lucky Spin + 10 Affix Seal + 20 Reforge Stone Bundle", status: "expired", note: "Update 3 code. Beebom + ProGameGuides both list it as expired (Nov 2026)." },
   { code: "SLIME", reward: "50 Lucky Spin + 5 Perfect Reforge Stone + 5 Spirit Prism", status: "expired", note: "Update 3 code. Beebom + ProGameGuides both list it as expired (Nov 2026)." },
-  { code: "EXPEDITION", reward: "15 Exotic Ingot + 10 GM Blessing III + 50 Mystery Box + 5k Stars", status: "active", note: "Update 3 code, named after the new Expedition mode. Aggregator-sourced reward figures." },
-  { code: "OKAMI", reward: "200 Expedition Point + 1 Revive Sigil + 5 Reforge Stone", status: "active", note: "Update 3 code. RadioTimes + Destructoid agree on these figures; Beebom lists a different OKAMI reward (Revive Sigils + 3 Perfect Reforge Stone) that no other source matches, so we do not use it." },
+  { code: "EXPEDITION", reward: "15 Exotic Ingot + 10 GM Blessing III + 50 Mystery Box + 5k Stars", status: "expired", note: "Update 3 code, named after the new Expedition mode. Aggregator-sourced reward figures." },
+  { code: "OKAMI", reward: "200 Expedition Point + 1 Revive Sigil + 5 Reforge Stone", status: "expired", note: "Update 3 code. RadioTimes + Destructoid agree on these figures; Beebom lists a different OKAMI reward (Revive Sigils + 3 Perfect Reforge Stone) that no other source matches, so we do not use it." },
 
   // --- GUILDS update batch (2026-10-12). Dual source: TryHardGuides +
   // UrGameTips, both dated within a day of the update. Reward figures from
@@ -223,8 +224,8 @@ export const CODES: GameCode[] = [
   // STARK / TOWER: TryHardGuides (Oct 12) + ProGameGuides (checked Oct 27) both
   // list them with identical rewards. Not read off an in-game toast; the two
   // pages may share an origin, so keep the note.
-  { code: "STARK", reward: "30 Lucky Spin + 10 Purity Stone + 15 Exotic Essence + 5 Perfect Reforge Stone", status: "active", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
-  { code: "TOWER", reward: "40 Lucky Spin + 10 Reforge Stone Bundle + 5 Affix Seal + 10 Mystery Box", status: "active", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
+  { code: "STARK", reward: "30 Lucky Spin + 10 Purity Stone + 15 Exotic Essence + 5 Perfect Reforge Stone", status: "expired", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
+  { code: "TOWER", reward: "40 Lucky Spin + 10 Reforge Stone Bundle + 5 Affix Seal + 10 Mystery Box", status: "expired", note: "Listed by TryHardGuides and ProGameGuides with the same rewards. Not tested in-game by us." },
 
   // --- Retired in the Update 3 rotation (2026-10-06). Every one of these was
   // active in our list until this pull. Destructoid's expired rows name all
