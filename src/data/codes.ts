@@ -181,9 +181,14 @@ export interface GameCode {
 // TryHardGuides REST modified Nov 2, ProGameGuides Nov 2, Beebom without the Nov 2 codes).
 // UrGameTips now prints rewards for the three Nov 2 codes; copied as listed (UPDATE5 is
 // UrGameTips-only; the other two agree with ProGameGuides' partial figures). No add, no expire.
-export const CODES_LAST_CHECKED = "2026-11-09";
+// 2026-11-19: Tower Ascension codes added. TryHardGuides, UrGameTips and ProGameGuides
+// list the same codes and rewards; no new expiry is confirmed by two sources.
+export const CODES_LAST_CHECKED = "2026-11-19";
 
 export const CODES: GameCode[] = [
+  { code: "UPDATE55", reward: "25 Lucky Spin + 3 Aspect Gem", status: "active", note: "Tower Ascension update code. TryHardGuides + UrGameTips + ProGameGuides list the same reward; not tested in-game by us." },
+  { code: "TOWERASCENSION", reward: "10 Lucky Spin + 5 Exotic Ingot", status: "active", note: "Tower Ascension update code. TryHardGuides + UrGameTips + ProGameGuides list the same reward; not tested in-game by us." },
+  { code: "PHANTOMVAULT", reward: "3 Perfect Reforge Stone + 3 Spirit Prism", status: "active", note: "Tower Ascension update code. TryHardGuides + UrGameTips + ProGameGuides list the same reward; not tested in-game by us." },
   { code: "UPDATE4", reward: "5 Aspect Gem", status: "active", note: "Update 4 code. Beebom + UrGameTips list it with the same reward; not tested in-game by us." },
 
   // --- New Gamemode batch (2026-11-02/03). Dual source: TryHardGuides + ProGameGuides,
