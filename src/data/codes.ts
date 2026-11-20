@@ -187,6 +187,10 @@ export interface GameCode {
 // 2026-11-20 re-check: Roblox API shows "[Tower Ascension] Dungeon Lootr" updated
 // 2026-11-19 20:21 UTC. UrGameTips (modified Nov 15), TryHardGuides (REST, modified
 // Nov 16) and Beebom (Nov 3) list no new code and no new expiry. No add, no expire.
+// 2026-11-20 (later): Roblox API shows a further build (updated 2026-11-20 00:39 UTC,
+// "[Tower Ascension] Dungeon Lootr"). UrGameTips (r.jina.ai, "November 2026") lists the
+// same 13 working codes and 26 expired; TryHardGuides REST still modified Nov 16.
+// No new code, no new expiry.
 export const CODES_LAST_CHECKED = "2026-11-20";
 
 export const CODES: GameCode[] = [
