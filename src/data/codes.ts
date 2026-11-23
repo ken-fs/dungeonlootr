@@ -195,7 +195,10 @@ export interface GameCode {
 // 2026-11-22 01:20 UTC. UrGameTips (r.jina.ai, "November 2026") lists the same 13
 // working codes; TryHardGuides (REST, modified Nov 16) and Beebom (Nov 1 update) show
 // no new code and no new expiry. No add, no expire.
-export const CODES_LAST_CHECKED = "2026-11-22";
+// 2026-11-23 re-check: Roblox API still shows "[Tower Ascension] Dungeon Lootr".
+// UrGameTips (modified Nov 15), TryHardGuides (REST, modified Nov 16) and Beebom
+// (Nov 3) list the same codes; no new code, no new expiry.
+export const CODES_LAST_CHECKED = "2026-11-23";
 
 export const CODES: GameCode[] = [
   { code: "UPDATE55", reward: "25 Lucky Spin + 3 Aspect Gem", status: "active", note: "Tower Ascension update code. TryHardGuides + UrGameTips + ProGameGuides list the same reward; not tested in-game by us." },
