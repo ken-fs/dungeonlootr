@@ -140,7 +140,7 @@ export default async function UnitPage({
           </div>
           <div>
             <dt className="display text-xs uppercase text-dim">Method</dt>
-            <dd className="text-fg">{unit.steps.length > 0 ? "Confirmed" : "Verifying"}</dd>
+            <dd className="text-fg">{unit.verified ? "Confirmed" : "Verifying"}</dd>
           </div>
           <div>
             <dt className="display text-xs uppercase text-dim">Route</dt>
@@ -200,9 +200,19 @@ export default async function UnitPage({
         </Rune>
         <p className="mt-3 text-dim">{unit.standing}</p>
         <p className="mt-3 text-sm text-dim">
-          See where {unit.name} lands against the rest of the roster on our{" "}
-          <Link href="/tier-list/">class tier list</Link>, and pair it with the right roll
-          from the <Link href="/aspect-tier-list/">aspect tier list</Link>.
+          {unit.kind === "weapon" ? (
+            <>
+              This character weapon is not an entry on our{" "}
+              <Link href="/tier-list/">class tier list</Link>. Compare build modifiers on the{" "}
+              <Link href="/aspect-tier-list/">aspect tier list</Link>.
+            </>
+          ) : (
+            <>
+              See where {unit.name} lands against the rest of the roster on our{" "}
+              <Link href="/tier-list/">class tier list</Link>, and pair it with the right roll
+              from the <Link href="/aspect-tier-list/">aspect tier list</Link>.
+            </>
+          )}
         </p>
       </Slab>
 

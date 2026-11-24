@@ -1,6 +1,6 @@
 /**
- * Dungeon Lootr units - the anime-crossover CLASSES players search
- * "how to get" for.
+ * Dungeon Lootr units - the anime-crossover CLASSES and character weapons
+ * players search "how to get" for.
  * RULE: never invent obtain methods. Where a reliable source didn't state the
  * unlock, `obtain` explains what IS known and flags the method as unconfirmed;
  * `verified` is true only when a concrete obtain method is sourced.
@@ -76,8 +76,10 @@
 export interface Unit {
   slug: string;
   name: string;
-  /** In-game class name + origin character. */
+  /** In-game class/weapon name + origin character. */
   origin: string;
+  /** Character weapons share the unit template but are not class-tier entries. */
+  kind?: "weapon";
   /** Anime-name variant players search instead of the in-game class name.
    *  When set, page title/H1 lead with it: "How to Get {searchName} ({name})".
    *  Evidence: GSC 2026-09 shows "how to get toji" (209 imp) landing on
@@ -95,7 +97,7 @@ export interface Unit {
   /** Search-intent aliases. */
   aliases: string[];
   /** Unlock route category - "Unknown" until a method is verified (never guess). */
-  route: "Item unlock" | "Evolution" | "Class roll" | "Quest" | "Robux bundle" | "Battle Pass" | "Unobtainable" | "Unknown";
+  route: "Item unlock" | "Evolution" | "Class roll" | "Weapon roll" | "Quest" | "Robux bundle" | "Battle Pass" | "Unobtainable" | "Unknown";
   /** Community standing, sourced from tier lists/showcases. */
   standing: string;
   /** Practical grind expectation derived from the sourced method - "" if no method. */
@@ -119,9 +121,129 @@ export interface Unit {
 // readable list publishes one — unlike earlier batches, no tier list we can
 // read has graded 3.5 classes yet.
 
-export const UNITS_LAST_CHECKED = "2026-11-02";
+export const UNITS_LAST_CHECKED = "2026-11-24";
 
 export const UNITS: Unit[] = [
+  // --- Arsenal Crawl character weapons (creator video published 2026-11-03).
+  // Single source: Valentless, lITKzHv16bk. The patrol read its frames on 11-10
+  // and re-pulled the en-orig captions on 11-24. Denji's 10-mark goal, Megumin's
+  // Exotic banner and Kurumi's UNLOCKED state are visible; per-clear rewards,
+  // exact banner odds and Kurumi's full unlock route are not independently confirmed.
+  {
+    slug: "denji",
+    name: "Denji",
+    origin: "Denji character weapon (Arsenal Crawl update)",
+    kind: "weapon",
+    anime: "Chainsaw Man",
+    rarity: "",
+    obtain:
+      "Denji is the free Arsenal Crawl reward at 10 marks. Valentless's Nov 3 update video shows the reward track reading “Denji · 0/10 marks”. The 10-mark goal is visible; the per-clear rewards below are creator-reported, not an in-game retest by this site.",
+    steps: [
+      "Open Arsenal Crawl and find Denji on its reward track. The visible goal is 10 marks; check your own counter before choosing a difficulty.",
+      "Farm marks by clearing the mode. Valentless reports 3 marks for a Nightmare clear, but that amount has not been independently confirmed as fixed for every run.",
+      "His suggested free route is about three Nightmare clears plus one Normal clear to reach Denji. Treat that as his estimate, not a guaranteed clear count, and follow the 10-mark counter.",
+    ],
+    aliases: ["how to get denji dungeon lootr", "dungeon lootr denji", "denji marks", "arsenal crawl denji"],
+    route: "Item unlock",
+    standing:
+      "There is no sourced tier placement for Denji yet. The cited video establishes the unlock route rather than providing a full Denji damage showcase, so we do not infer a ranking from the character's popularity or from other weapons.",
+    grind:
+      "A short Arsenal Crawl grind rather than spins, according to the creator. Only the 10-mark target is directly shown; Nightmare's 3-mark reward and the three-Nightmare-plus-one-Normal estimate remain single-creator claims.",
+    related: ["megumin", "kurumi"],
+    extraFaq: [
+      {
+        q: "Is Denji free in Dungeon Lootr?",
+        a: "Yes, the creator shows a free Arsenal Crawl route: collect 10 marks and claim Denji. That route does not require Robux. We have not ruled out other obtain routes.",
+      },
+      {
+        q: "How many Nightmare runs do I need for Denji?",
+        a: "Valentless suggests about three Nightmare clears plus one Normal clear. He also reports 3 marks per Nightmare clear. Both details are creator-reported; your own 10-mark counter is the reliable progress check.",
+      },
+      {
+        q: "Is Denji a class or a weapon?",
+        a: "The video calls Denji a weapon and shows its Arsenal Crawl reward goal. We file it under Units with the other character unlocks, but do not place it on the class tier list.",
+      },
+    ],
+    metaDesc:
+      "How to get Denji in Dungeon Lootr: the free Arsenal Crawl 10-mark reward, creator-reported Nightmare marks and run-count caveats. Updated Nov 2026.",
+    videoId: "lITKzHv16bk",
+    verified: true,
+  },
+  {
+    slug: "megumin",
+    name: "Megumin",
+    origin: "Megumin character weapon (Megumin Banner)",
+    kind: "weapon",
+    anime: "KonoSuba",
+    rarity: "Exotic",
+    obtain:
+      "Megumin is an Exotic character weapon found through the Megumin Banner in the spin interface. Valentless's footage shows “Exotic Megumin” and a “Megumin Banner 0/68” counter. The banner route is confirmed; its exact Normal/Lucky odds and what 0/68 represents are not.",
+    steps: [
+      "Open the spin interface where the creator finds Megumin under his spinables, then select the Megumin Banner if it is available on your account.",
+      "Check the banner's current cost and probability panel before spending spins. The video does not provide reliable Normal or Lucky rates, so do not substitute generic Exotic rates.",
+      "Roll on the Megumin Banner for Megumin. The visible 0/68 counter is not explained in the footage; do not treat 68 rolls as a confirmed pity guarantee.",
+    ],
+    aliases: ["how to get megumin dungeon lootr", "dungeon lootr megumin", "megumin banner", "megumin spin rate"],
+    route: "Weapon roll",
+    standing:
+      "Valentless briefly shows Megumin's ultimate and says his setup reaches high damage, with better results when moving stats into Intelligence. He also says he has barely used her and calls the ultimate VFX buggy, so this is an early showcase, not a settled meta verdict.",
+    grind:
+      "Luck-based banner rolls. A reliable roll budget cannot be calculated until the dedicated banner's price and odds are readable; the 0/68 label alone is not enough.",
+    related: ["denji", "kurumi"],
+    extraFaq: [
+      {
+        q: "What is Megumin's exact spin rate?",
+        a: "Unconfirmed. The footage confirms Exotic rarity and the Megumin Banner, but does not establish exact Normal or Lucky pull rates. Check the probability panel in your own game before rolling.",
+      },
+      {
+        q: "Does Megumin have a 68-roll pity?",
+        a: "Not confirmed. “Megumin Banner 0/68” is visible, but the creator does not explain the counter. This video alone does not prove that 68 rolls guarantee Megumin or any other reward.",
+      },
+      {
+        q: "Is Megumin worth rolling for?",
+        a: "The early creator showcase is promising on damage, especially with Intelligence, but he says he has barely tested her and notes buggy ultimate VFX. Wait for more testing if you only want a proven meta weapon.",
+      },
+    ],
+    metaDesc:
+      "How to get Megumin in Dungeon Lootr: the Exotic Megumin Banner route, the unexplained 0/68 counter and unconfirmed spin rates. Updated Nov 2026.",
+    videoId: "lITKzHv16bk",
+    verified: true,
+  },
+  {
+    slug: "kurumi",
+    name: "Kurumi",
+    origin: "Kurumi character weapon (Arsenal Crawl reward track)",
+    kind: "weapon",
+    anime: "Date A Live",
+    rarity: "",
+    obtain:
+      "Kurumi's exact unlock requirement is still unconfirmed. Valentless says he grinded for her, and the Nov 3 footage shows “Kurumi · UNLOCKED” on the Arsenal Crawl reward track plus Support gameplay. Because that account already owns her, the video does not reveal the required marks, drop condition or a repeatable purchase path.",
+    steps: [],
+    aliases: ["how to get kurumi dungeon lootr", "dungeon lootr kurumi", "kurumi arsenal crawl", "kurumi support weapon"],
+    route: "Unknown",
+    standing:
+      "The creator demonstrates Kurumi as a Support weapon with self-healing, ally-healing attempts and clones. He likes the character but calls the moveset stiff and meter-locked, and does not expect Support to be meta in his high-damage setup. That is one creator's early opinion, not a tier-list consensus.",
+    grind: "",
+    related: ["denji", "megumin"],
+    extraFaq: [
+      {
+        q: "Is Kurumi free in Dungeon Lootr?",
+        a: "Valentless says he grinded for Kurumi and contrasts that with buying her, but he does not show the requirement on a locked account. We therefore cannot publish confirmed free steps, a mark total or an exact paid price.",
+      },
+      {
+        q: "Does Kurumi use Denji's 10-mark requirement?",
+        a: "Not confirmed. Denji has his own visible 10-mark goal; Kurumi's panel already says UNLOCKED in the video. Do not copy Denji's number into Kurumi's unlock condition.",
+      },
+      {
+        q: "Is Kurumi a Support weapon?",
+        a: "Yes, that is how the creator presents her. His gameplay and commentary show a Support role with self-healing and an attempt to heal allies, alongside clone-focused attacks. His negative meta comments are opinion, not a measured tier ranking.",
+      },
+    ],
+    metaDesc:
+      "How to get Kurumi in Dungeon Lootr: what the Arsenal Crawl footage confirms, why her exact unlock cost is unknown and how her Support kit works.",
+    videoId: "lITKzHv16bk",
+    verified: false,
+  },
   // --- Update 4 (2026-10-18, Undead Conquest) — four classes; three pages so far.
   // Source: creator overview PP1OObEmviI (captions) + official update log screen
   // read by the patrol. Unlock items are video clues; costs are unconfirmed.

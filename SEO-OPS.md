@@ -183,3 +183,11 @@ GSC 出现 pt/es 语种国家展示 → i18n Phase 1 优先级上调
 - **animeexpeditions**：Eclipse 到期争议（GamesRadar+RadioTimes 预告 9/12 到期 vs UrGameTips+Beebom 仍列 active）→ 用 expires 字段展示预警，等实测源
 - **patrol 脚本修正**：animeexpeditions 简报从"0 active"更新为实际状态（Eclipse 批次 4 码）
 - 部署 Version `c992c2f6`
+
+### 2026-11-24 Denji / Megumin / Kurumi 单位页
+
+- **证据**：Valentless `lITKzHv16bk`（11-03 发布）；11-10 抽帧 + 11-24 重读 `en-orig` 字幕。三者按原视频写作 character weapons，不混称为职业榜单位。
+- **新增**：`/units/denji/`（Arsenal Crawl 10-mark 免费路线；Nightmare 3 marks 与三次 Nightmare + 一次 Normal 只署名创作者）；`/units/megumin/`（Exotic / Megumin Banner，Normal/Lucky 出率及 0/68 含义未确认）；`/units/kurumi/`（只确认 UNLOCKED、Support 实战，完整解锁条件未确认）。
+- **模板修正**：单位页 Method 改由 `verified` 判定，不再因存在 steps 就误标 Confirmed；武器条目使用 `kind: "weapon"`，不暗示它们已进入职业榜。
+- **验证**：`pnpm build` 通过，48 个单位路由及 3 个新 sitemap URL 均生成；改动文件 ESLint 通过；3 页桌面 / 手机均 200、无 JS 错误或横向溢出。
+- **仍等来源**：Denji 固定掉落与精确刷本次数、Megumin 出率 / 0/68、Kurumi 完整路线。未获第二个创作者或游戏内面板前，保持页面现有的未确认标注。
